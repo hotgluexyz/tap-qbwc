@@ -109,8 +109,8 @@ def _xsd_element_to_singer(element: XsdElement, seen: Set[int]) -> Any:
     return singer_type
 
 
-def _resolve_ret_element(xsd_schema: Any, response_element: str) -> XsdElement:
-    """Look up the *Ret child element for a QBXML *Rs response type."""
+def _resolve_ret_elements(xsd_schema: Any, response_element: str) -> list[XsdElement]:
+    """Look up all *Ret child elements for a QBXML *Rs response type."""
     type_name = f"{response_element}Type"
     try:
         rs_type = xsd_schema.types[type_name]
@@ -127,10 +127,15 @@ def _resolve_ret_element(xsd_schema: Any, response_element: str) -> XsdElement:
     ]
     if not ret_elements:
         raise ValueError(f"No *Ret child element found under XSD type {type_name!r}")
-    if len(ret_elements) > 1:
-        names = [el.local_name for el in ret_elements]
-        raise ValueError(f"Ambiguous *Ret children under XSD type {type_name!r}: {names}")
-    return ret_elements[0]
+    return ret_elements
+
+
+def _ret_element_to_item_type(ret_name: str) -> str:
+    """Derive a type label from a *Ret element name (e.g. ItemServiceRet → Service)."""
+    name = ret_name[:-3] if ret_name.endswith("Ret") else ret_name
+    if name.startswith("Item") and len(name) > 4:
+        name = name[4:]
+    return name
 
 
 class QBWCBaseStream(Stream):
@@ -268,6 +273,26 @@ class QBWCBaseStream(Stream):
 class QBWCDynamicSchemaStream(QBWCBaseStream):
     """QBWC dynamic schema stream class."""
 
+    def parse_response(self, response: dict) -> Iterable[dict]:
+        """Yield records from one or more *Ret arrays under the response element."""
+        # Ensure schema build has populated _ret_element_names / records_jsonpath.
+        _ = self.schema
+        ret_names = getattr(self, "_ret_element_names", None)
+        if not ret_names or len(ret_names) == 1:
+            yield from super().parse_response(response)
+            return
+
+        rs_list = response.get(self.response_element) or []
+        if not rs_list:
+            return
+        rs_body = rs_list[0]
+        for ret_name in ret_names:
+            for record in rs_body.get(ret_name) or []:
+                if self.name == "items":
+                    yield {**record, "ItemType": _ret_element_to_item_type(ret_name)}
+                else:
+                    yield record
+
     @property
     def schema(self) -> Dict[str, Any]:
         """Build Singer schema from the QBD XSD for ``response_element``."""
@@ -278,17 +303,39 @@ class QBWCDynamicSchemaStream(QBWCBaseStream):
         if not getattr(self, "response_element", None):
             raise ValueError(f"{type(self).__name__} must define response_element")
 
-        ret_element = _resolve_ret_element(
+        ret_elements = _resolve_ret_elements(
             self._tap.qbd_xml_schemas,
             self.response_element,
         )
-        self.records_jsonpath = f"$.{self.response_element}.[0].{ret_element.local_name}[*]"
-        properties = [
-            th.Property(
-                el.local_name,
-                _xsd_element_to_singer(el, set()),
+        self._ret_element_names = [el.local_name for el in ret_elements]
+
+        if len(ret_elements) == 1:
+            ret_element = ret_elements[0]
+            self.records_jsonpath = (
+                f"$.{self.response_element}.[0].{ret_element.local_name}[*]"
             )
-            for el in _iter_child_elements(ret_element.type)
-        ]
+            properties = [
+                th.Property(
+                    el.local_name,
+                    _xsd_element_to_singer(el, set()),
+                )
+                for el in _iter_child_elements(ret_element.type)
+            ]
+        else:
+            seen_props: dict[str, th.Property] = {}
+            for ret_element in ret_elements:
+                for el in _iter_child_elements(ret_element.type):
+                    if el.local_name not in seen_props:
+                        seen_props[el.local_name] = th.Property(
+                            el.local_name,
+                            _xsd_element_to_singer(el, set()),
+                        )
+            properties = [
+                *seen_props.values(),
+            ]
+
+            if self.name == "items":
+                th.Property("ItemType", th.StringType)
+
         self._schema = th.PropertiesList(*properties).to_dict()
         return self._schema

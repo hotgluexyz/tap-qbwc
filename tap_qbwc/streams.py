@@ -81,8 +81,8 @@ class ItemSitesStream(QBWCDynamicSchemaStream):
     """Stream for ``item_sites``."""
 
     name = "item_sites"
-    response_element = "ItemSiteQueryRs"
-    request_element = "ItemSiteQueryRq"
+    response_element = "ItemSitesQueryRs"
+    request_element = "ItemSitesQueryRq"
     primary_keys = ["ListID"]
     replication_key = None
     replication_key_filter_field = None
