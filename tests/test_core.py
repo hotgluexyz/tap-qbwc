@@ -9,7 +9,7 @@ from tap_qbwc.tap import TapQBWC
 SAMPLE_CONFIG = {
     "start_date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d"),
     # TODO: Initialize minimal tap config
-    "access_key": "placeholder",
+    "token": "placeholder",
 }
 
 # _test_stream_connections makes live HTTP calls; excluded by default.
