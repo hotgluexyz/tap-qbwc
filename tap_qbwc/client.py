@@ -170,12 +170,3 @@ class QBWCClient:
                 f"Dict mapping failed validation against XSD rules. Payload data: {payload_dict} - Error: {e}"
             ) from e
 
-    def get_processed_records_count(self) -> int:
-        # use lock to get the processed records count
-        with self.lock:
-            return self._processed_records_count
-
-    def get_total_estimated_records_count(self) -> int:
-        # use lock to get the total estimated records count
-        with self.lock:
-            return self._total_estimated_records_count
