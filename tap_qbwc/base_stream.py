@@ -151,10 +151,10 @@ class QBWCBaseStream(Stream):
 
     @property
     def metadata(self) -> MetadataMapping:
-        mapping = super().metadata  
-        
+        mapping = super().metadata
+
         if self.replication_key:
-            rep_key_metadata =mapping.get(("properties", self.replication_key))
+            rep_key_metadata = mapping.get(("properties", self.replication_key))
             if rep_key_metadata:
                 rep_key_metadata.selected = True
 
@@ -163,7 +163,7 @@ class QBWCBaseStream(Stream):
     @cached_property
     def selected_properties(self):
         selected_properties = []
-        for key, value in self.metadata.items():         
+        for key, value in self.metadata.items():
             if isinstance(key, tuple) and len(key) == 2 and value.selected:
                 field_name = key[-1]
                 selected_properties.append(field_name)
@@ -175,7 +175,10 @@ class QBWCBaseStream(Stream):
             start_date = self.get_starting_time(context)
             start_date_str = start_date.strftime("%Y-%m-%dT%H:%M:%S+00:00")
 
-            if self.replication_key_filter_field == "ModifiedDateRangeFilter":
+            if self.replication_key_filter_field in [
+                "ModifiedDateRangeFilter",
+                "TransactionModifiedDateRangeFilter",
+            ]:
                 return {
                     "FromModifiedDate": start_date_str,
                 }

@@ -283,3 +283,14 @@ class ChecksStream(QBWCDynamicSchemaStream):
     replication_key = "TimeModified"
     replication_key_filter_field = "ModifiedDateRangeFilter"
     include_line_items = True
+
+
+class TransactionsStream(QBWCDynamicSchemaStream):
+    """Stream for ``transactions``."""
+
+    name = "transactions"
+    response_element = "TransactionQueryRs"
+    request_element = "TransactionQueryRq"
+    primary_keys = ["TxnID"]
+    replication_key = "TimeModified"
+    replication_key_filter_field = "TransactionModifiedDateRangeFilter"

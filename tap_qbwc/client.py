@@ -17,7 +17,11 @@ class QBWCClient:
         self.request_timeout = self.config["request_timeout"]
         self.qbwc_is_alive_timeout = self.config["qbwc_is_alive_timeout"]
         self.qbd_xml_schemas = qbd_xml_schemas
-        self.base_url = "https://qbwc-qa.hotglue.xyz" if self.config.get("is_sandbox", False) else "https://qbwc.hotglue.com"
+        self.base_url = (
+            "https://qbwc-qa.hotglue.xyz"
+            if self.config.get("is_sandbox", False)
+            else "https://qbwc.hotglue.com"
+        )
         self.total_estimated_records_count = 0
         self.total_processed_records_count = 0
 
