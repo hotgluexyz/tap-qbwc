@@ -97,6 +97,9 @@ class PriceLevelsStream(QBWCDynamicSchemaStream):
     primary_keys = ["ListID"]
     replication_key = "TimeModified"
     replication_key_filter_field = "FromModifiedDate"
+    # use a high page size for price levels because it doesn't support pagination
+    page_size = 10000
+    should_paginate = False
 
 
 class UnitOfMeasureSetsStream(QBWCDynamicSchemaStream):
@@ -108,7 +111,9 @@ class UnitOfMeasureSetsStream(QBWCDynamicSchemaStream):
     primary_keys = ["ListID"]
     replication_key = "TimeModified"
     replication_key_filter_field = "FromModifiedDate"
-
+    # use a high page size for unit of measure sets because it doesn't support pagination
+    page_size = 10000
+    should_paginate = False
 
 class SalesTaxCodesStream(QBWCDynamicSchemaStream):
     """Stream for ``sales_tax_codes``."""
@@ -119,6 +124,9 @@ class SalesTaxCodesStream(QBWCDynamicSchemaStream):
     primary_keys = ["ListID"]
     replication_key = "TimeModified"
     replication_key_filter_field = "FromModifiedDate"
+    # use a high page size for sales tax codes because it doesn't support pagination
+    page_size = 10000
+    should_paginate = False
 
 
 class ItemSalesTaxesStream(QBWCDynamicSchemaStream):
