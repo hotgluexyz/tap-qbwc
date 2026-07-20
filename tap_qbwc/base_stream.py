@@ -214,6 +214,12 @@ class QBWCBaseStream(Stream):
         iterator_id = extract_jsonpath(f"$.{self.response_element}.[0].@iteratorID", input=response)
         return next(iterator_id, None)
 
+    def raise_for_error(self, response: dict):
+        error_code = next(extract_jsonpath(f"$.{self.response_element}.[0].@statusCode", input=response), None)
+        error_message = next(extract_jsonpath(f"$.{self.response_element}.[0].@statusMessage", input=response), None)
+        if error_code and error_code not in [0, 1]:
+            raise Exception(f"QBWC API returned an error: {error_code} - {error_message}. Response: {response}")
+
     def extract_remaining_records(self, response: dict) -> int:
         remaining_records = extract_jsonpath(
             f"$.{self.response_element}.[0].@iteratorRemainingCount", input=response
@@ -226,6 +232,7 @@ class QBWCBaseStream(Stream):
         while True:
             request_payload = self.prepare_request_payload(context, iterator_id=iterator_id)
             response = self._tap.client.make_request(request_payload)
+            self.raise_for_error(response)
             yield from self.parse_response(response)
 
             if not self.should_paginate:

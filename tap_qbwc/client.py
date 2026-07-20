@@ -126,7 +126,7 @@ class QBWCClient:
                     f"Unknown response status: {data['status']} - Response: {data} - Request XML: {request_xml}"
                 )
 
-    def make_request(self, request_data: str, request_timeout: Optional[int] = None) -> dict:
+    def make_request(self, request_data: dict, request_timeout: Optional[int] = None) -> dict:
         """Make a request to QBWC."""
         if not self.session_id:
             raise Exception("Session ID not found. Please create a session first.")
