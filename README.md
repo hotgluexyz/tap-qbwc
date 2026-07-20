@@ -76,7 +76,7 @@ tap-qbwc --help
 | ------- | ---- | -------- | ------- | ----------- |
 | `token` | string | yes | — | Bearer token used to authenticate with the Hotglue QBWC API (**sensitive**). |
 | `start_date` | string (datetime) | no | `2000-01-01T00:00:00Z` | Earliest `TimeModified` to sync on incremental streams. |
-| `request_timeout` | integer | no | `1800` | How long to wait for a QBWC request to complete, in seconds. |
+| `request_timeout` | integer | no | `1200` | How long to wait for a QBWC request to complete, in seconds. |
 | `qbwc_is_alive_timeout` | integer | no | `3600` | How long to wait for the QBWC host ping (`HostQueryRq`) to complete, in seconds. |
 | `is_sandbox` | boolean | no | `false` | When `true`, use the sandbox QBWC host instead of production. |
 
@@ -88,7 +88,7 @@ Run `tap-qbwc --about` (or `tap-qbwc --about --format=markdown`) for the authori
 {
   "token": "YOUR_HOTGLUE_QBWC_TOKEN",
   "start_date": "2000-01-01T00:00:00Z",
-  "request_timeout": 1800,
+  "request_timeout": 1200,
   "qbwc_is_alive_timeout": 3600,
   "is_sandbox": false
 }

@@ -85,7 +85,7 @@ class TapQBWC(Tap):
         th.Property(
             "request_timeout",
             th.IntegerType,
-            default=1800,
+            default=1200,
             description="How long to wait for a QBWC request to complete in seconds",
         ),
         th.Property(
