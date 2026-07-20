@@ -7,6 +7,7 @@ from typing import Any, Dict, Set, Iterable, Optional
 
 from hotglue_singer_sdk import Stream, typing as th
 from hotglue_singer_sdk.helpers.jsonpath import extract_jsonpath
+from hotglue_singer_sdk.helpers._singer import MetadataMapping
 from xmlschema.validators import XsdElement, XsdType
 
 
@@ -148,13 +149,25 @@ class QBWCBaseStream(Stream):
     include_line_items = False
     records_jsonpath: str = "$[*]"
 
+    @property
+    def metadata(self) -> MetadataMapping:
+        mapping = super().metadata  
+        
+        if self.replication_key:
+            rep_key_metadata =mapping.get(("properties", self.replication_key))
+            if rep_key_metadata:
+                rep_key_metadata.selected = True
+
+        return mapping
+
     @cached_property
     def selected_properties(self):
         selected_properties = []
-        for key, value in self.metadata.items():
+        for key, value in self.metadata.items():         
             if isinstance(key, tuple) and len(key) == 2 and value.selected:
                 field_name = key[-1]
                 selected_properties.append(field_name)
+
         return selected_properties
 
     def get_replication_key_filter_value(self, context: dict | None) -> str | dict | None:
