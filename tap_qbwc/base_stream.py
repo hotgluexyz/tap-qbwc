@@ -215,10 +215,16 @@ class QBWCBaseStream(Stream):
         return next(iterator_id, None)
 
     def raise_for_error(self, response: dict):
-        error_code = next(extract_jsonpath(f"$.{self.response_element}.[0].@statusCode", input=response), None)
-        error_message = next(extract_jsonpath(f"$.{self.response_element}.[0].@statusMessage", input=response), None)
+        error_code = next(
+            extract_jsonpath(f"$.{self.response_element}.[0].@statusCode", input=response), None
+        )
+        error_message = next(
+            extract_jsonpath(f"$.{self.response_element}.[0].@statusMessage", input=response), None
+        )
         if error_code and error_code not in [0, 1]:
-            raise Exception(f"QBWC API returned an error: {error_code} - {error_message}. Response: {response}")
+            raise Exception(
+                f"QBWC API returned an error: {error_code} - {error_message}. Response: {response}"
+            )
 
     def extract_remaining_records(self, response: dict) -> int:
         remaining_records = extract_jsonpath(
@@ -318,9 +324,7 @@ class QBWCDynamicSchemaStream(QBWCBaseStream):
 
         if len(ret_elements) == 1:
             ret_element = ret_elements[0]
-            self.records_jsonpath = (
-                f"$.{self.response_element}.[0].{ret_element.local_name}[*]"
-            )
+            self.records_jsonpath = f"$.{self.response_element}.[0].{ret_element.local_name}[*]"
             properties = [
                 th.Property(
                     el.local_name,

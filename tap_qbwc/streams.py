@@ -115,6 +115,7 @@ class UnitOfMeasureSetsStream(QBWCDynamicSchemaStream):
     page_size = 5000
     should_paginate = False
 
+
 class SalesTaxCodesStream(QBWCDynamicSchemaStream):
     """Stream for ``sales_tax_codes``."""
 

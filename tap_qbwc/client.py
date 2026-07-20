@@ -169,4 +169,3 @@ class QBWCClient:
             raise Exception(
                 f"Dict mapping failed validation against XSD rules. Payload data: {payload_dict} - Error: {e}"
             ) from e
-
