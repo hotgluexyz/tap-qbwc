@@ -133,7 +133,7 @@ def _resolve_ret_element(xsd_schema: Any, response_element: str) -> XsdElement:
     return ret_elements[0]
 
 
-class QWBCBaseStream(Stream):
+class QBWCBaseStream(Stream):
     """QBWC base stream class."""
 
     response_element: str
@@ -265,7 +265,7 @@ class QWBCBaseStream(Stream):
         return None
 
 
-class QBWCDynamicSchemaStream(QWBCBaseStream):
+class QBWCDynamicSchemaStream(QBWCBaseStream):
     """QBWC dynamic schema stream class."""
 
     @property
