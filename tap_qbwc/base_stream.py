@@ -96,6 +96,26 @@ def _complex_to_object(xsd_type: XsdType, seen: Set[int]) -> th.ObjectType:
     return th.ObjectType(*properties)
 
 
+def _is_repeating_element(element: XsdElement) -> bool:
+    """True when the element can appear more than once in instance data.
+
+    Includes elements whose own maxOccurs is >1/unbounded, and elements whose
+    parent model group (choice/sequence/all) is repeating — e.g. QBD's
+    ``<xsd:choice maxOccurs="unbounded">`` wrapping ItemLineRet /
+    ItemGroupLineRet, where each child still has maxOccurs=1.
+    """
+    max_occurs = element.max_occurs
+    if max_occurs is None or max_occurs > 1:
+        return True
+
+    parent = getattr(element, "parent", None)
+    if parent is not None and getattr(parent, "model", None) in ("choice", "sequence", "all"):
+        parent_max = getattr(parent, "max_occurs", 1)
+        if parent_max is None or parent_max > 1:
+            return True
+    return False
+
+
 def _xsd_element_to_singer(element: XsdElement, seen: Set[int]) -> Any:
     """Convert an XSD element to a Singer type, wrapping arrays when needed."""
     xsd_type = element.type
@@ -104,8 +124,7 @@ def _xsd_element_to_singer(element: XsdElement, seen: Set[int]) -> Any:
     else:
         singer_type = _xsd_simple_to_singer(xsd_type)
 
-    max_occurs = element.max_occurs
-    if max_occurs is None or max_occurs > 1:
+    if _is_repeating_element(element):
         return th.ArrayType(singer_type)
     return singer_type
 
