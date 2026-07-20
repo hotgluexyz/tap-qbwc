@@ -29,6 +29,7 @@ class QBWCClient:
             response = requests.post(
                 f"{self.base_url}/authenticate",
                 headers={"Authorization": f"Bearer {self.config['token']}"},
+                timeout=30,
             )
         except Exception as e:
             raise Exception(f"Failed to authenticate: {e}") from e
@@ -72,6 +73,7 @@ class QBWCClient:
             f"{self.base_url}/send_qbwc_request",
             params={"session_id": self.session_id},
             json=payload,
+            timeout=30,
         )
 
         if response.status_code == 429:
@@ -91,6 +93,7 @@ class QBWCClient:
         response = requests.get(
             f"{self.base_url}/get_qbwc_response",
             params={"session_id": self.session_id, "request_id": request_id},
+            timeout=30,
         )
 
         response.raise_for_status()
