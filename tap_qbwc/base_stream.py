@@ -191,7 +191,7 @@ class QBWCBaseStream(Stream):
 
     def get_replication_key_filter_value(self, context: dict | None) -> str | dict | None:
         if self.replication_key and self.replication_key_filter_field:
-            start_date = self.get_starting_time(context)
+            start_date = self.get_starting_time(context, is_inclusive=True)
             start_date_str = start_date.strftime("%Y-%m-%dT%H:%M:%S+00:00")
 
             if self.replication_key_filter_field in [
@@ -381,7 +381,7 @@ class QBWCDynamicSchemaStream(QBWCBaseStream):
             ]
 
             if self.name == "items":
-                th.Property("ItemType", th.StringType)
+                properties.append(th.Property("ItemType", th.StringType))
 
         self._schema = th.PropertiesList(*properties).to_dict()
         return self._schema
