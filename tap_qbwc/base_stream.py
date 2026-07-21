@@ -381,7 +381,7 @@ class QBWCDynamicSchemaStream(QBWCBaseStream):
             ]
 
             if self.name == "items":
-                th.Property("ItemType", th.StringType)
+                properties.append(th.Property("ItemType", th.StringType))
 
         self._schema = th.PropertiesList(*properties).to_dict()
         return self._schema
