@@ -100,6 +100,12 @@ class TapQBWC(Tap):
             default=False,
             description="Whether to use the sandbox environment",
         ),
+        th.Property(
+            "report_periods",
+            th.IntegerType,
+            description="The number of months to report on for incremental syncs",
+            default=3,
+        ),
     ).to_dict()
 
     def __init__(
