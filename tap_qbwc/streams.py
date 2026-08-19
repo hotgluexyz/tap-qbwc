@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 
+from typing import Iterable
+
+from typing_extensions import override
+
 from tap_qbwc.base_stream import QBWCDynamicSchemaStream
 
 
@@ -294,3 +298,43 @@ class TransactionsStream(QBWCDynamicSchemaStream):
     primary_keys = ["TxnID"]
     replication_key = "TimeModified"
     replication_key_filter_field = "TransactionModifiedDateRangeFilter"
+
+
+class PreferencesStream(QBWCDynamicSchemaStream):
+    """Stream for ``preference`` (company settings including ClosingDate)."""
+
+    name = "preference"
+    response_element = "PreferencesQueryRs"
+    request_element = "PreferencesQueryRq"
+    primary_keys = []
+    replication_key = None
+    replication_key_filter_field = None
+    should_paginate = False
+
+    @override
+    def prepare_request_payload(
+        self,
+        context: dict | None,
+        iterator_id: str | None,
+        is_count_request: bool = False,
+    ) -> dict | None:
+        # PreferencesQueryRq only supports IncludeRetElement — no MaxReturned/iterator.
+        request_data: dict = {}
+        if self.selected_properties:
+            request_data["IncludeRetElement"] = self.selected_properties
+        return {self.request_element: request_data}
+
+    @override
+    def parse_response(self, response: dict) -> Iterable[dict]:
+        rs_list = response.get(self.response_element) or []
+        if not rs_list:
+            return
+
+        prefs = rs_list[0].get("PreferencesRet")
+        if not prefs:
+            return
+
+        if isinstance(prefs, list):
+            yield from prefs
+        else:
+            yield prefs

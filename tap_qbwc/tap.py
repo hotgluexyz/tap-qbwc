@@ -34,6 +34,7 @@ from tap_qbwc.streams import (
     JournalEntriesStream,
     ChecksStream,
     TransactionsStream,
+    PreferencesStream,
 )
 
 STREAM_TYPES = [
@@ -61,6 +62,7 @@ STREAM_TYPES = [
     JournalEntriesStream,
     ChecksStream,
     TransactionsStream,
+    PreferencesStream,
 ]
 
 
