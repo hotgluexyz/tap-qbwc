@@ -5,7 +5,7 @@ A [Singer](https://www.singer.io/) tap that extracts **QuickBooks Desktop** data
 ## Features
 
 - Talks to QuickBooks Desktop through Hotglue QBWC: authenticate with a Bearer token, send qbXML requests, and poll for responses.
-- Uses **qbXML 13.0** and builds stream schemas dynamically from the bundled QBD XSD (`tap_qbwc/qbd_xml_schemas`).
+- Uses **qbXML 13.0** and builds stream schemas dynamically from the Intuit XSD bundle shipped in [`qbwc-common`](https://github.com/hotgluexyz/qbwc-common).
 - Incremental sync on `TimeModified` (bookmark + optional `start_date`), except full-table `item_sites`.
 - Iterator-based pagination (default page size 200). Some list streams that do not support iterators use a single large page (`page_size=5000`).
 
