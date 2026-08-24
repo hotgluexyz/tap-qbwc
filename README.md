@@ -13,32 +13,32 @@ A [Singer](https://www.singer.io/) tap that extracts **QuickBooks Desktop** data
 
 | Stream | qbXML query | Primary key | Replication key | Notes |
 | ------ | ----------- | ----------- | ----------------- | ----- |
-| `accounts` | `AccountQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
-| `classes` | `ClassQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
-| `customers` | `CustomerQueryRq` | `ListID` | `TimeModified` | Paginated |
-| `vendors` | `VendorQueryRq` | `ListID` | `TimeModified` | Paginated |
-| `items` | `ItemQueryRq` | `ListID` | `TimeModified` | Merges multiple `*Ret` types; adds `ItemType` |
-| `inventory_items` | `ItemInventoryQueryRq` | `ListID` | `TimeModified` | Paginated |
+| `account` | `AccountQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
+| `class` | `ClassQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
+| `customer` | `CustomerQueryRq` | `ListID` | `TimeModified` | Paginated |
+| `vendor` | `VendorQueryRq` | `ListID` | `TimeModified` | Paginated |
+| `item` | `ItemQueryRq` | `ListID` | `TimeModified` | Merges multiple `*Ret` types; adds `ItemType` |
+| `inventory_item` | `ItemInventoryQueryRq` | `ListID` | `TimeModified` | Paginated |
 | `item_sites` | `ItemSitesQueryRq` | `ListID` | — | Full table |
-| `price_levels` | `PriceLevelQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
-| `unit_of_measure_sets` | `UnitOfMeasureSetQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
-| `sales_tax_codes` | `SalesTaxCodeQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
-| `item_sales_taxes` | `ItemSalesTaxQueryRq` | `ListID` | `TimeModified` | Paginated |
-| `bills` | `BillQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `bill_payments_check` | `BillPaymentCheckQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `bill_payments_credit_card` | `BillPaymentCreditCardQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `invoices` | `InvoiceQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `purchase_orders` | `PurchaseOrderQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `credit_memos` | `CreditMemoQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `sales_orders` | `SalesOrderQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `sales_receipts` | `SalesReceiptQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `vendor_credits` | `VendorCreditQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `estimates` | `EstimateQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `journal_entries` | `JournalEntryQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `checks` | `CheckQueryRq` | `TxnID` | `TimeModified` | Includes line items |
-| `transactions` | `TransactionQueryRq` | `TxnID` | `TimeModified` | Uses `TransactionModifiedDateRangeFilter` |
+| `price_level` | `PriceLevelQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
+| `unit_of_measure_set` | `UnitOfMeasureSetQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
+| `sales_tax_code` | `SalesTaxCodeQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
+| `item_sales_tax` | `ItemSalesTaxQueryRq` | `ListID` | `TimeModified` | Paginated |
+| `bill` | `BillQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `bill_payment_check` | `BillPaymentCheckQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `bill_payment_credit_card` | `BillPaymentCreditCardQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `invoice` | `InvoiceQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `purchase_order` | `PurchaseOrderQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `credit_memo` | `CreditMemoQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `sale_order` | `SalesOrderQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `sales_receipt` | `SalesReceiptQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `vendor_credit` | `VendorCreditQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `estimate` | `EstimateQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `journal_entry` | `JournalEntryQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `check` | `CheckQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `transaction_list` | `TransactionQueryRq` | `TxnID` | `TimeModified` | Uses `TransactionModifiedDateRangeFilter` |
 
-**Incremental filters:** list streams use `FromModifiedDate`; most transaction streams use `ModifiedDateRangeFilter` / `FromModifiedDate`; `transactions` uses `TransactionModifiedDateRangeFilter`. Selected catalog properties are passed as `IncludeRetElement`. Transaction streams listed above also set `IncludeLineItems=true`.
+**Incremental filters:** list streams use `FromModifiedDate`; most transaction streams use `ModifiedDateRangeFilter` / `FromModifiedDate`; `transaction_list` uses `TransactionModifiedDateRangeFilter`. Selected catalog properties are passed as `IncludeRetElement`. Transaction streams listed above also set `IncludeLineItems=true`.
 
 ## Requirements
 

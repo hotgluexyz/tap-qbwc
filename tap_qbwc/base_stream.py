@@ -336,7 +336,7 @@ class QBWCDynamicSchemaStream(QBWCBaseStream):
         rs_body = rs_list[0]
         for ret_name in ret_names:
             for record in rs_body.get(ret_name) or []:
-                if self.name == "items":
+                if self.name == "item":
                     yield {**record, "ItemType": _ret_element_to_item_type(ret_name)}
                 else:
                     yield record
@@ -380,7 +380,7 @@ class QBWCDynamicSchemaStream(QBWCBaseStream):
                 *seen_props.values(),
             ]
 
-            if self.name == "items":
+            if self.name == "item":
                 properties.append(th.Property("ItemType", th.StringType))
 
         self._schema = th.PropertiesList(*properties).to_dict()
