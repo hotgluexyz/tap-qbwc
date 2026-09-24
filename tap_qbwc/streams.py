@@ -3,14 +3,17 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from typing import Iterable
+
+from typing_extensions import override
 
 from tap_qbwc.base_stream import QBWCDynamicSchemaStream
 
 
 class AccountsStream(QBWCDynamicSchemaStream):
-    """Stream for ``accounts``."""
+    """Stream for ``account``."""
 
-    name = "accounts"
+    name = "account"
     response_element = "AccountQueryRs"
     request_element = "AccountQueryRq"
     primary_keys = ["ListID"]
@@ -22,9 +25,9 @@ class AccountsStream(QBWCDynamicSchemaStream):
 
 
 class ClassesStream(QBWCDynamicSchemaStream):
-    """Stream for ``classes``."""
+    """Stream for ``class``."""
 
-    name = "classes"
+    name = "class"
     response_element = "ClassQueryRs"
     request_element = "ClassQueryRq"
     primary_keys = ["ListID"]
@@ -36,9 +39,9 @@ class ClassesStream(QBWCDynamicSchemaStream):
 
 
 class CustomersStream(QBWCDynamicSchemaStream):
-    """Stream for ``customers``."""
+    """Stream for ``customer``."""
 
-    name = "customers"
+    name = "customer"
     response_element = "CustomerQueryRs"
     request_element = "CustomerQueryRq"
     primary_keys = ["ListID"]
@@ -47,9 +50,9 @@ class CustomersStream(QBWCDynamicSchemaStream):
 
 
 class VendorsStream(QBWCDynamicSchemaStream):
-    """Stream for ``vendors``."""
+    """Stream for ``vendor``."""
 
-    name = "vendors"
+    name = "vendor"
     response_element = "VendorQueryRs"
     request_element = "VendorQueryRq"
     primary_keys = ["ListID"]
@@ -58,9 +61,9 @@ class VendorsStream(QBWCDynamicSchemaStream):
 
 
 class ItemsStream(QBWCDynamicSchemaStream):
-    """Stream for ``items``."""
+    """Stream for ``item``."""
 
-    name = "items"
+    name = "item"
     response_element = "ItemQueryRs"
     request_element = "ItemQueryRq"
     primary_keys = ["ListID"]
@@ -69,9 +72,9 @@ class ItemsStream(QBWCDynamicSchemaStream):
 
 
 class InventoryItemsStream(QBWCDynamicSchemaStream):
-    """Stream for ``inventory_items``."""
+    """Stream for ``inventory_item``."""
 
-    name = "inventory_items"
+    name = "inventory_item"
     response_element = "ItemInventoryQueryRs"
     request_element = "ItemInventoryQueryRq"
     primary_keys = ["ListID"]
@@ -91,9 +94,9 @@ class ItemSitesStream(QBWCDynamicSchemaStream):
 
 
 class PriceLevelsStream(QBWCDynamicSchemaStream):
-    """Stream for ``price_levels``."""
+    """Stream for ``price_level``."""
 
-    name = "price_levels"
+    name = "price_level"
     response_element = "PriceLevelQueryRs"
     request_element = "PriceLevelQueryRq"
     primary_keys = ["ListID"]
@@ -105,9 +108,9 @@ class PriceLevelsStream(QBWCDynamicSchemaStream):
 
 
 class UnitOfMeasureSetsStream(QBWCDynamicSchemaStream):
-    """Stream for ``unit_of_measure_sets``."""
+    """Stream for ``unit_of_measure_set``."""
 
-    name = "unit_of_measure_sets"
+    name = "unit_of_measure_set"
     response_element = "UnitOfMeasureSetQueryRs"
     request_element = "UnitOfMeasureSetQueryRq"
     primary_keys = ["ListID"]
@@ -119,9 +122,9 @@ class UnitOfMeasureSetsStream(QBWCDynamicSchemaStream):
 
 
 class SalesTaxCodesStream(QBWCDynamicSchemaStream):
-    """Stream for ``sales_tax_codes``."""
+    """Stream for ``sales_tax_code``."""
 
-    name = "sales_tax_codes"
+    name = "sales_tax_code"
     response_element = "SalesTaxCodeQueryRs"
     request_element = "SalesTaxCodeQueryRq"
     primary_keys = ["ListID"]
@@ -133,9 +136,9 @@ class SalesTaxCodesStream(QBWCDynamicSchemaStream):
 
 
 class ItemSalesTaxesStream(QBWCDynamicSchemaStream):
-    """Stream for ``item_sales_taxes``."""
+    """Stream for ``item_sales_tax``."""
 
-    name = "item_sales_taxes"
+    name = "item_sales_tax"
     response_element = "ItemSalesTaxQueryRs"
     request_element = "ItemSalesTaxQueryRq"
     primary_keys = ["ListID"]
@@ -144,9 +147,9 @@ class ItemSalesTaxesStream(QBWCDynamicSchemaStream):
 
 
 class BillsStream(QBWCDynamicSchemaStream):
-    """Stream for ``bills``."""
+    """Stream for ``bill``."""
 
-    name = "bills"
+    name = "bill"
     response_element = "BillQueryRs"
     request_element = "BillQueryRq"
     primary_keys = ["TxnID"]
@@ -156,9 +159,9 @@ class BillsStream(QBWCDynamicSchemaStream):
 
 
 class BillPaymentsCheckStream(QBWCDynamicSchemaStream):
-    """Stream for ``bill_payments_check``."""
+    """Stream for ``bill_payment_check``."""
 
-    name = "bill_payments_check"
+    name = "bill_payment_check"
     response_element = "BillPaymentCheckQueryRs"
     request_element = "BillPaymentCheckQueryRq"
     primary_keys = ["TxnID"]
@@ -168,9 +171,9 @@ class BillPaymentsCheckStream(QBWCDynamicSchemaStream):
 
 
 class BillPaymentsCreditCardStream(QBWCDynamicSchemaStream):
-    """Stream for ``bill_payments_credit_card``."""
+    """Stream for ``bill_payment_credit_card``."""
 
-    name = "bill_payments_credit_card"
+    name = "bill_payment_credit_card"
     response_element = "BillPaymentCreditCardQueryRs"
     request_element = "BillPaymentCreditCardQueryRq"
     primary_keys = ["TxnID"]
@@ -180,9 +183,9 @@ class BillPaymentsCreditCardStream(QBWCDynamicSchemaStream):
 
 
 class InvoicesStream(QBWCDynamicSchemaStream):
-    """Stream for ``invoices``."""
+    """Stream for ``invoice``."""
 
-    name = "invoices"
+    name = "invoice"
     response_element = "InvoiceQueryRs"
     request_element = "InvoiceQueryRq"
     primary_keys = ["TxnID"]
@@ -192,9 +195,9 @@ class InvoicesStream(QBWCDynamicSchemaStream):
 
 
 class PurchaseOrdersStream(QBWCDynamicSchemaStream):
-    """Stream for ``purchase_orders``."""
+    """Stream for ``purchase_order``."""
 
-    name = "purchase_orders"
+    name = "purchase_order"
     response_element = "PurchaseOrderQueryRs"
     request_element = "PurchaseOrderQueryRq"
     primary_keys = ["TxnID"]
@@ -204,9 +207,9 @@ class PurchaseOrdersStream(QBWCDynamicSchemaStream):
 
 
 class CreditMemosStream(QBWCDynamicSchemaStream):
-    """Stream for ``credit_memos``."""
+    """Stream for ``credit_memo``."""
 
-    name = "credit_memos"
+    name = "credit_memo"
     response_element = "CreditMemoQueryRs"
     request_element = "CreditMemoQueryRq"
     primary_keys = ["TxnID"]
@@ -216,9 +219,9 @@ class CreditMemosStream(QBWCDynamicSchemaStream):
 
 
 class SalesOrdersStream(QBWCDynamicSchemaStream):
-    """Stream for ``sales_orders``."""
+    """Stream for ``sale_order``."""
 
-    name = "sales_orders"
+    name = "sale_order"
     response_element = "SalesOrderQueryRs"
     request_element = "SalesOrderQueryRq"
     primary_keys = ["TxnID"]
@@ -228,9 +231,9 @@ class SalesOrdersStream(QBWCDynamicSchemaStream):
 
 
 class SalesReceiptsStream(QBWCDynamicSchemaStream):
-    """Stream for ``sales_receipts``."""
+    """Stream for ``sales_receipt``."""
 
-    name = "sales_receipts"
+    name = "sales_receipt"
     response_element = "SalesReceiptQueryRs"
     request_element = "SalesReceiptQueryRq"
     primary_keys = ["TxnID"]
@@ -240,9 +243,9 @@ class SalesReceiptsStream(QBWCDynamicSchemaStream):
 
 
 class VendorCreditsStream(QBWCDynamicSchemaStream):
-    """Stream for ``vendor_credits``."""
+    """Stream for ``vendor_credit``."""
 
-    name = "vendor_credits"
+    name = "vendor_credit"
     response_element = "VendorCreditQueryRs"
     request_element = "VendorCreditQueryRq"
     primary_keys = ["TxnID"]
@@ -252,9 +255,9 @@ class VendorCreditsStream(QBWCDynamicSchemaStream):
 
 
 class EstimatesStream(QBWCDynamicSchemaStream):
-    """Stream for ``estimates``."""
+    """Stream for ``estimate``."""
 
-    name = "estimates"
+    name = "estimate"
     response_element = "EstimateQueryRs"
     request_element = "EstimateQueryRq"
     primary_keys = ["TxnID"]
@@ -264,9 +267,9 @@ class EstimatesStream(QBWCDynamicSchemaStream):
 
 
 class JournalEntriesStream(QBWCDynamicSchemaStream):
-    """Stream for ``journal_entries``."""
+    """Stream for ``journal_entry``."""
 
-    name = "journal_entries"
+    name = "journal_entry"
     response_element = "JournalEntryQueryRs"
     request_element = "JournalEntryQueryRq"
     primary_keys = ["TxnID"]
@@ -276,9 +279,9 @@ class JournalEntriesStream(QBWCDynamicSchemaStream):
 
 
 class ChecksStream(QBWCDynamicSchemaStream):
-    """Stream for ``checks``."""
+    """Stream for ``check``."""
 
-    name = "checks"
+    name = "check"
     response_element = "CheckQueryRs"
     request_element = "CheckQueryRq"
     primary_keys = ["TxnID"]
@@ -288,9 +291,9 @@ class ChecksStream(QBWCDynamicSchemaStream):
 
 
 class TransactionsStream(QBWCDynamicSchemaStream):
-    """Stream for ``transactions``."""
+    """Stream for ``transaction_list``."""
 
-    name = "transactions"
+    name = "transaction_list"
     response_element = "TransactionQueryRs"
     request_element = "TransactionQueryRq"
     primary_keys = ["TxnID"]
@@ -345,3 +348,42 @@ class TransactionsStream(QBWCDynamicSchemaStream):
             "FromTxnDate": from_txn_date.strftime("%Y-%m-%d"),
         }
         return payload
+
+class PreferencesStream(QBWCDynamicSchemaStream):
+    """Stream for ``preference`` (company settings including ClosingDate)."""
+
+    name = "preference"
+    response_element = "PreferencesQueryRs"
+    request_element = "PreferencesQueryRq"
+    primary_keys = []
+    replication_key = None
+    replication_key_filter_field = None
+    should_paginate = False
+
+    @override
+    def prepare_request_payload(
+        self,
+        context: dict | None,
+        iterator_id: str | None,
+        is_count_request: bool = False,
+    ) -> dict | None:
+        # PreferencesQueryRq only supports IncludeRetElement - no MaxReturned/iterator.
+        request_data: dict = {}
+        if self.selected_properties:
+            request_data["IncludeRetElement"] = self.selected_properties
+        return {self.request_element: request_data}
+
+    @override
+    def parse_response(self, response: dict) -> Iterable[dict]:
+        rs_list = response.get(self.response_element) or []
+        if not rs_list:
+            return
+
+        prefs = rs_list[0].get("PreferencesRet")
+        if not prefs:
+            return
+
+        if isinstance(prefs, list):
+            yield from prefs
+        else:
+            yield prefs

@@ -11,9 +11,9 @@ license = "Apache 2.0"
 
 [tool.poetry.dependencies]
 python = ">=3.10"
-requests = "^2.34.2"
 xmlschema = "^4.3.2"
 hotglue-singer-sdk = "^1.0.40"
+qbwc-common = { git = "https://github.com/hotgluexyz/qbwc-common.git", branch = "main" }
 
 [build-system]
 requires = ["poetry-core>=1.0.8"]
@@ -45,7 +45,7 @@ commands = [ [ "pytest", { replace = "posargs", default = [ "tests" ], extend = 
 [tool.tox.env.lint]
 description = "run ruff linter and formatter check"
 skip_install = true
-deps = ["ruff>=0.15"]
+deps = ["ruff>=0.15.0,<0.16.0"]
 commands = [
     ["ruff", "check", "."],
     ["ruff", "format", "--check", "."],
