@@ -10,11 +10,15 @@ exclude = [
     "dist",
     ".secrets",
     ".vscode",
-    ".tox"
+    ".tox",
+    "*.md"
 ]
 
 [lint]
-extend-select = ["C901"]
+# Pin the selection explicitly so linting is stable across ruff releases. Newer
+# ruff versions broadened the implicit default `select`, which flags pre-existing
+# idiomatic code; this restores the intended ruleset (ruff's classic default + C901).
+select = ["E4", "E7", "E9", "F", "C901"]
 ignore = ["E731"]
 
 [lint.mccabe]
