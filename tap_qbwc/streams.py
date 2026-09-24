@@ -349,6 +349,7 @@ class TransactionsStream(QBWCDynamicSchemaStream):
         }
         return payload
 
+
 class PreferencesStream(QBWCDynamicSchemaStream):
     """Stream for ``preference`` (company settings including ClosingDate)."""
 
