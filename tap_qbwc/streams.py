@@ -38,6 +38,20 @@ class ClassesStream(QBWCDynamicSchemaStream):
     should_paginate = False
 
 
+class CurrenciesStream(QBWCDynamicSchemaStream):
+    """Stream for ``currency``."""
+
+    name = "currency"
+    response_element = "CurrencyQueryRs"
+    request_element = "CurrencyQueryRq"
+    primary_keys = ["ListID"]
+    replication_key = "TimeModified"
+    replication_key_filter_field = "FromModifiedDate"
+    # No pagination; ISO 4217 is ~260 codes — 500 covers that plus user-defined.
+    page_size = 500
+    should_paginate = False
+
+
 class CustomersStream(QBWCDynamicSchemaStream):
     """Stream for ``customer``."""
 
