@@ -388,3 +388,43 @@ class PreferencesStream(QBWCDynamicSchemaStream):
             yield from prefs
         else:
             yield prefs
+
+
+class CompanyStream(QBWCDynamicSchemaStream):
+    """Stream for ``company`` (CompanyQueryRq / CompanyRet, e.g. CompanyName)."""
+
+    name = "company"
+    response_element = "CompanyQueryRs"
+    request_element = "CompanyQueryRq"
+    primary_keys = []
+    replication_key = None
+    replication_key_filter_field = None
+    should_paginate = False
+
+    @override
+    def prepare_request_payload(
+        self,
+        context: dict | None,
+        iterator_id: str | None,
+        is_count_request: bool = False,
+    ) -> dict | None:
+        # CompanyQueryRq only supports IncludeRetElement / OwnerID - no MaxReturned/iterator.
+        request_data: dict = {}
+        if self.selected_properties:
+            request_data["IncludeRetElement"] = self.selected_properties
+        return {self.request_element: request_data}
+
+    @override
+    def parse_response(self, response: dict) -> Iterable[dict]:
+        rs_list = response.get(self.response_element) or []
+        if not rs_list:
+            return
+
+        company = rs_list[0].get("CompanyRet")
+        if not company:
+            return
+
+        if isinstance(company, list):
+            yield from company
+        else:
+            yield company
