@@ -12,6 +12,7 @@ from typing_extensions import override
 from tap_qbwc.streams import (
     AccountsStream,
     ClassesStream,
+    CurrenciesStream,
     CustomersStream,
     VendorsStream,
     ItemsStream,
@@ -41,6 +42,7 @@ from tap_qbwc.streams import (
 STREAM_TYPES = [
     AccountsStream,
     ClassesStream,
+    CurrenciesStream,
     CustomersStream,
     VendorsStream,
     ItemsStream,
