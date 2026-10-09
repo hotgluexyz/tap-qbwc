@@ -28,6 +28,7 @@ A [Singer](https://www.singer.io/) tap that extracts **QuickBooks Desktop** data
 | `bill_payment_check` | `BillPaymentCheckQueryRq` | `TxnID` | `TimeModified` | Includes line items |
 | `bill_payment_credit_card` | `BillPaymentCreditCardQueryRq` | `TxnID` | `TimeModified` | Includes line items |
 | `invoice` | `InvoiceQueryRq` | `TxnID` | `TimeModified` | Includes line items |
+| `receive_payment` | `ReceivePaymentQueryRq` | `TxnID` | `TimeModified` | Includes line items |
 | `purchase_order` | `PurchaseOrderQueryRq` | `TxnID` | `TimeModified` | Includes line items |
 | `credit_memo` | `CreditMemoQueryRq` | `TxnID` | `TimeModified` | Includes line items |
 | `sale_order` | `SalesOrderQueryRq` | `TxnID` | `TimeModified` | Includes line items |
