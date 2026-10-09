@@ -208,6 +208,18 @@ class InvoicesStream(QBWCDynamicSchemaStream):
     include_line_items = True
 
 
+class ReceivePaymentsStream(QBWCDynamicSchemaStream):
+    """Stream for ``receive_payment``."""
+
+    name = "receive_payment"
+    response_element = "ReceivePaymentQueryRs"
+    request_element = "ReceivePaymentQueryRq"
+    primary_keys = ["TxnID"]
+    replication_key = "TimeModified"
+    replication_key_filter_field = "ModifiedDateRangeFilter"
+    include_line_items = True
+
+
 class PurchaseOrdersStream(QBWCDynamicSchemaStream):
     """Stream for ``purchase_order``."""
 
