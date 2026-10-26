@@ -15,6 +15,7 @@ A [Singer](https://www.singer.io/) tap that extracts **QuickBooks Desktop** data
 | ------ | ----------- | ----------- | ----------------- | ----- |
 | `account` | `AccountQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
 | `class` | `ClassQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=5000` |
+| `currency` | `CurrencyQueryRq` | `ListID` | `TimeModified` | No iterator; `page_size=500` |
 | `customer` | `CustomerQueryRq` | `ListID` | `TimeModified` | Paginated |
 | `vendor` | `VendorQueryRq` | `ListID` | `TimeModified` | Paginated |
 | `item` | `ItemQueryRq` | `ListID` | `TimeModified` | Merges multiple `*Ret` types; adds `ItemType` |
