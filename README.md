@@ -6,7 +6,7 @@ A [Singer](https://www.singer.io/) tap that extracts **QuickBooks Desktop** data
 
 - Talks to QuickBooks Desktop through Hotglue QBWC: authenticate with a Bearer token, send qbXML requests, and poll for responses.
 - Uses **qbXML 13.0** and builds stream schemas dynamically from the Intuit XSD bundle shipped in [`qbwc-common`](https://github.com/hotgluexyz/qbwc-common).
-- Incremental sync on `TimeModified` (bookmark + optional `start_date`), except full-table `item_sites` and `preference`.
+- Incremental sync on `TimeModified` (bookmark + optional `start_date`), except full-table `item_sites`, `preference`, and `company`.
 - Iterator-based pagination (default page size 200). Some list streams that do not support iterators use a single large page (`page_size=5000`).
 
 ### Streams
@@ -39,6 +39,7 @@ A [Singer](https://www.singer.io/) tap that extracts **QuickBooks Desktop** data
 | `check` | `CheckQueryRq` | `TxnID` | `TimeModified` | Includes line items |
 | `transaction_list` | `TransactionQueryRq` | `TxnID` | `TimeModified` | Uses `TransactionModifiedDateRangeFilter` |
 | `preference` | `PreferencesQueryRq` | — | — | Company settings; includes `AccountingPreferences.ClosingDate` |
+| `company` | `CompanyQueryRq` | — | — | Full table; no pagination |
 
 **Incremental filters:** list streams use `FromModifiedDate`; most transaction streams use `ModifiedDateRangeFilter` / `FromModifiedDate`; `transaction_list` uses `TransactionModifiedDateRangeFilter`. Selected catalog properties are passed as `IncludeRetElement`. Transaction streams listed above also set `IncludeLineItems=true`.
 
