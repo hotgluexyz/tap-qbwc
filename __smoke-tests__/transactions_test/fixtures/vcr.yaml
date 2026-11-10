@@ -1,0 +1,729 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/authenticate
+  response:
+    body:
+      string: '{"session_id": "b25a7952-5251-505d-b136-95bcfe573051"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:49:57 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <HostQueryRq
+      />\n    </QBXMLMsgsRq>\n</QBXML>", "request_timeout": 3600, "total_processed_records_count":
+      0, "total_estimated_records_count": 0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=b25a7952-5251-505d-b136-95bcfe573051
+  response:
+    body:
+      string: '{"request_id": "01e62acb-673b-5fa7-b06f-af455a1991a6"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:49:58 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=b25a7952-5251-505d-b136-95bcfe573051&request_id=01e62acb-673b-5fa7-b06f-af455a1991a6
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><HostQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-cPjUepjIp\"><HostRet><ProductName>-Fallback-scrubbed-zRUJkhdoSIHJdtZKkgTdDKSKvMEgtRXztPrcuBKPfvfzXpwevucDOljbTnXLiSDzhXamlKLt</ProductName><MajorVersion>49</MajorVersion><MinorVersion>5</MinorVersion><Country>Fa</Country><SupportedQBXMLVersion>8.5</SupportedQBXMLVersion><SupportedQBXMLVersion>6.4</SupportedQBXMLVersion><SupportedQBXMLVersion>6.5</SupportedQBXMLVersion><SupportedQBXMLVersion>3.0</SupportedQBXMLVersion><SupportedQBXMLVersion>4.2</SupportedQBXMLVersion><SupportedQBXMLVersion>1.8</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>1.4</SupportedQBXMLVersion><SupportedQBXMLVersion>8.9</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>18.2</SupportedQBXMLVersion><SupportedQBXMLVersion>60.7</SupportedQBXMLVersion><SupportedQBXMLVersion>97.7</SupportedQBXMLVersion><SupportedQBXMLVersion>01.1</SupportedQBXMLVersion><SupportedQBXMLVersion>16.7</SupportedQBXMLVersion><SupportedQBXMLVersion>92.3</SupportedQBXMLVersion><SupportedQBXMLVersion>72.3</SupportedQBXMLVersion><SupportedQBXMLVersion>33.2</SupportedQBXMLVersion><IsAutomaticLogin>false</IsAutomaticLogin><QBFileMode>SingleUser</QBFileMode></HostRet></HostQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:50:04 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '1508'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <TransactionQueryRq
+      metaData=\"MetaDataOnly\">\n            <TransactionModifiedDateRangeFilter>\n                <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            </TransactionModifiedDateRangeFilter>\n        </TransactionQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '568'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=b25a7952-5251-505d-b136-95bcfe573051
+  response:
+    body:
+      string: '{"request_id": "914188ab-02a9-5d4d-bfdd-f505e66c8fc0"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:50:05 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=b25a7952-5251-505d-b136-95bcfe573051&request_id=914188ab-02a9-5d4d-bfdd-f505e66c8fc0
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><TransactionQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-cPjUepjIp\"
+        retCount=\"153\" /></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '216'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:50:05 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <TransactionQueryRq
+      iterator=\"Start\" metaData=\"NoMetaData\">\n            <MaxReturned>200</MaxReturned>\n            <TransactionModifiedDateRangeFilter>\n                <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            </TransactionModifiedDateRangeFilter>\n            <IncludeRetElement>TxnType</IncludeRetElement>\n            <IncludeRetElement>TxnID</IncludeRetElement>\n            <IncludeRetElement>TxnLineID</IncludeRetElement>\n            <IncludeRetElement>TimeCreated</IncludeRetElement>\n            <IncludeRetElement>TimeModified</IncludeRetElement>\n            <IncludeRetElement>EntityRef</IncludeRetElement>\n            <IncludeRetElement>AccountRef</IncludeRetElement>\n            <IncludeRetElement>TxnDate</IncludeRetElement>\n            <IncludeRetElement>RefNumber</IncludeRetElement>\n            <IncludeRetElement>Amount</IncludeRetElement>\n            <IncludeRetElement>CurrencyRef</IncludeRetElement>\n            <IncludeRetElement>ExchangeRate</IncludeRetElement>\n            <IncludeRetElement>AmountInHomeCurrency</IncludeRetElement>\n            <IncludeRetElement>Memo</IncludeRetElement>\n        </TransactionQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      153}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1505'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=b25a7952-5251-505d-b136-95bcfe573051
+  response:
+    body:
+      string: '{"request_id": "0b3cd19b-8ef7-5ff8-aef3-04442f634d87"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:50:05 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=b25a7952-5251-505d-b136-95bcfe573051&request_id=0b3cd19b-8ef7-5ff8-aef3-04442f634d87
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><TransactionQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-cPjUepjIp\"
+        iteratorRemainingCount=\"0\" iteratorID=\"991ef940-b589-5157-b826-a7d5984d9aac\"><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-wgFyGhOIJPSqkr</TxnID><TimeCreated>2015-11-06T17:04:59+00:00</TimeCreated><TimeModified>2026-07-09T13:36:57+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2026-07-09</TxnDate><RefNumber>-Fallback-scrubbed-obYMIJUCd</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-MDBuEsTxqBMwRU</TxnID><TimeCreated>1984-01-04T00:44:47+00:00</TimeCreated><TimeModified>2026-07-09T13:55:53+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-07-09</TxnDate><RefNumber>-Fallback-scrubbed-OwTGlWXIx</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>InventoryAdjustment</TxnType><TxnID>-Fallback-scrubbed-OBCLwUTAofCXLa</TxnID><TimeCreated>1970-02-12T04:50:40+00:00</TimeCreated><TimeModified>2026-07-08T15:32:33+00:00</TimeModified><AccountRef><ListID>Fake-176ac3e29077e00b572df3d604bb273</ListID><FullName>Fake-James
+        Dickerson</FullName></AccountRef><TxnDate>2026-07-08</TxnDate><Amount>-1885.82</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-1885.82</AmountInHomeCurrency><Memo>-Fallback-scrubbed-sdvPSfCaiEcxCDFfpQmBDcxg</Memo></TransactionRet><TransactionRet><TxnType>BillPaymentCheck</TxnType><TxnID>-Fallback-scrubbed-ChlnlsyPNZjyfD</TxnID><TimeCreated>1981-03-09T23:14:37+00:00</TimeCreated><TimeModified>2026-06-09T19:30:34+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Tracy
+        Smith</FullName></AccountRef><TxnDate>2026-06-08</TxnDate><Amount>-92.30</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-92.30</AmountInHomeCurrency><Memo>-Fallback-scrubbed-cWHAiFLeeHgQkhNP</Memo></TransactionRet><TransactionRet><TxnType>CreditMemo</TxnType><TxnID>-Fallback-scrubbed-VZlElOnonjJVDv</TxnID><TimeCreated>1979-03-16T15:37:47+00:00</TimeCreated><TimeModified>2026-06-08T22:49:56+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-06-08</TxnDate><RefNumber>-Fallback-scrubbed-QsAwsmoIemd</RefNumber><Amount>-18.45</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-18.45</AmountInHomeCurrency><Memo>-Fallback-scrubbed-QwMZHLJSQZprpsWjJSbHOthIRnWBFFTETQaCXcdBJPMDDpBEHHH</Memo></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-WUytCwKhvwKTZi</TxnID><TimeCreated>2011-02-14T17:47:27+00:00</TimeCreated><TimeModified>2026-06-09T19:30:28+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-06-08</TxnDate><RefNumber>-Fallback-scrubbed-YAVqcsKxKUI</RefNumber><Amount>97.63</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>97.63</AmountInHomeCurrency><Memo>-Fallback-scrubbed-spoiKBQFkBDnVjrnoEtWPqfsdTLorwgAc</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-XwIfKXphJObuwV</TxnID><TimeCreated>2014-04-26T05:12:52+00:00</TimeCreated><TimeModified>2026-06-09T19:30:32+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-06-03</TxnDate><RefNumber>-Fallback-scrubbed-odneXGwwVNB</RefNumber><Amount>-114.06</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-114.06</AmountInHomeCurrency><Memo>-Fallback-scrubbed-asyUlcjjYMqriadWzKoPBIFLqqLpRD</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-YdSiOjgyuzimBx</TxnID><TimeCreated>2004-02-28T20:42:23+00:00</TimeCreated><TimeModified>2026-06-08T16:47:08+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-06-03</TxnDate><RefNumber>-Fallback-scrubbed-hXgzCgxeFGa</RefNumber><Amount>-861.82</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-861.82</AmountInHomeCurrency><Memo>-Fallback-scrubbed-TdAzCbcipFAmmTwO</Memo></TransactionRet><TransactionRet><TxnType>BillPaymentCheck</TxnType><TxnID>-Fallback-scrubbed-BSuoaCnVefUDnP</TxnID><TimeCreated>1988-09-27T22:44:21+00:00</TimeCreated><TimeModified>2026-06-09T19:30:32+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Tracy
+        Smith</FullName></AccountRef><TxnDate>2026-06-03</TxnDate><Amount>-315.49</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-315.49</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>BillPaymentCreditCard</TxnType><TxnID>-Fallback-scrubbed-vpBeSlAhLYJZju</TxnID><TimeCreated>2007-12-27T00:27:34+00:00</TimeCreated><TimeModified>2026-06-09T19:30:32+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-9e7e3a0059a86103b73c380e74cda75</ListID><FullName>Fake-Hannah
+        Castillo</FullName></AccountRef><TxnDate>2026-06-03</TxnDate><Amount>-245.49</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-245.49</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>BillPaymentCheck</TxnType><TxnID>-Fallback-scrubbed-WTjSbCkvHTTkdc</TxnID><TimeCreated>1997-01-07T04:26:57+00:00</TimeCreated><TimeModified>2026-06-09T19:30:32+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Tracy
+        Smith</FullName></AccountRef><TxnDate>2026-06-03</TxnDate><RefNumber>7</RefNumber><Amount>-803.16</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-803.16</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>VendorCredit</TxnType><TxnID>-Fallback-scrubbed-IFRkIxkvQxSZSQ</TxnID><TimeCreated>2010-11-01T00:22:28+00:00</TimeCreated><TimeModified>2026-06-09T19:30:34+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-06-03</TxnDate><RefNumber>-Fallback-scrubbed-LjpfTVaQyccggWopWr</RefNumber><Amount>39119.59</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>39119.59</AmountInHomeCurrency><Memo>-Fallback-scrubbed-QjBUYd</Memo></TransactionRet><TransactionRet><TxnType>BillPaymentCheck</TxnType><TxnID>-Fallback-scrubbed-BHsgVxcfMggfjZ</TxnID><TimeCreated>2021-05-01T07:31:32+00:00</TimeCreated><TimeModified>2026-06-09T19:30:34+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Tracy
+        Smith</FullName></AccountRef><TxnDate>2026-06-03</TxnDate><RefNumber>2</RefNumber><Amount>-693.52</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-693.52</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-nuDSwXwUvmQoRL</TxnID><TimeCreated>2000-12-20T10:22:50+00:00</TimeCreated><TimeModified>2026-06-02T21:05:57+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-06-02</TxnDate><RefNumber>-Fallback-scrubbed-HVfFzgaHm</RefNumber><Amount>50.79</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>50.79</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-qMycFDfCKfvnzE</TxnID><TimeCreated>1999-04-05T08:29:47+00:00</TimeCreated><TimeModified>2026-06-02T21:14:42+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-06-02</TxnDate><RefNumber>-Fallback-scrubbed-ihcLbjTFP</RefNumber><Amount>50.79</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>50.79</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-NKOmxygYpJojch</TxnID><TimeCreated>1993-02-02T23:11:29+00:00</TimeCreated><TimeModified>2026-06-02T21:29:17+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-06-02</TxnDate><RefNumber>-Fallback-scrubbed-KjmVZqmUY</RefNumber><Amount>50.79</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>50.79</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-cGQntXahOGIvzj</TxnID><TimeCreated>2004-06-19T14:46:37+00:00</TimeCreated><TimeModified>2026-06-02T21:31:58+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-06-02</TxnDate><RefNumber>-Fallback-scrubbed-AiyRObbQW</RefNumber><Amount>50.79</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>50.79</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-btWXsWoKIAdHNS</TxnID><TimeCreated>2012-06-29T02:16:53+00:00</TimeCreated><TimeModified>2026-05-27T15:03:45+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-05-27</TxnDate><RefNumber>-Fallback-scrubbed-eqdknlHVPnYE</RefNumber><Amount>-973.36</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-973.36</AmountInHomeCurrency><Memo>-Fallback-scrubbed-cTTXCCUtDdEZzKZOQxqFvrwF</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-bnwxLenLpHHAbR</TxnID><TimeCreated>2008-10-31T14:35:54+00:00</TimeCreated><TimeModified>2026-05-27T17:39:15+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-05-27</TxnDate><RefNumber>-Fallback-scrubbed-XVqlMihAQPCr</RefNumber><Amount>-973.36</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-973.36</AmountInHomeCurrency><Memo>-Fallback-scrubbed-KHhiKLlTrwskCPGgaIUIbguKLds</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-mBSKmdDVGkEPnz</TxnID><TimeCreated>1977-02-23T23:52:27+00:00</TimeCreated><TimeModified>2026-05-26T23:14:38+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-05-26</TxnDate><RefNumber>-Fallback-scrubbed-rKKiJCtdyKxM</RefNumber><Amount>-973.36</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-973.36</AmountInHomeCurrency><Memo>-Fallback-scrubbed-AOZTbyseknaOErAjVeIgbNBWBjcJ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-QzYQUwLEnejcKQ</TxnID><TimeCreated>1972-06-05T01:17:11+00:00</TimeCreated><TimeModified>2026-05-26T23:30:14+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-05-26</TxnDate><RefNumber>-Fallback-scrubbed-CiKbIEldnEAkf</RefNumber><Amount>-973.36</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-973.36</AmountInHomeCurrency><Memo>-Fallback-scrubbed-mQwmcaHAYApYCmuHsDKjZmnDUGcldIeHDWbdO</Memo></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-WIjfAtLmvknmUX</TxnID><TimeCreated>2023-04-11T21:06:21+00:00</TimeCreated><TimeModified>2026-05-08T12:53:44+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-gihDyxNpbQg</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-ZhHEEVatsIjctg</TxnID><TimeCreated>1973-01-21T05:10:33+00:00</TimeCreated><TimeModified>2026-05-08T21:29:33+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-iySAdFrTj</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-mWpVfqBTNIxnFz</TxnID><TimeCreated>1994-02-12T23:30:07+00:00</TimeCreated><TimeModified>2026-05-08T22:13:07+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-FNUaQVWaO</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-jRERXkonoSnVli</TxnID><TimeCreated>1980-05-17T16:34:53+00:00</TimeCreated><TimeModified>2026-05-11T15:33:29+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-QPutyljUJm</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-ZABcRMHIBjXtSV</TxnID><TimeCreated>1981-03-10T21:35:20+00:00</TimeCreated><TimeModified>2026-05-11T15:51:29+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-vxRBEhvzQR</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-eYHryuCVtJtyjg</TxnID><TimeCreated>1992-12-29T14:47:39+00:00</TimeCreated><TimeModified>2026-05-11T16:36:35+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-ZNBQuudsZW</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-YhPEswWMdQbqGI</TxnID><TimeCreated>2019-05-19T10:39:59+00:00</TimeCreated><TimeModified>2026-05-11T16:39:37+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-YhMDNVjYMb</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-ehbVNAvGOJpWgE</TxnID><TimeCreated>1970-11-25T06:18:35+00:00</TimeCreated><TimeModified>2026-05-11T16:53:16+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-JEMiEDIWRc</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-WTGIVCJGlVkGUI</TxnID><TimeCreated>1975-11-08T19:03:11+00:00</TimeCreated><TimeModified>2026-05-15T15:42:57+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-MtJqTVpYp</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-dZXvgENGrIoUHx</TxnID><TimeCreated>2026-06-07T23:20:11+00:00</TimeCreated><TimeModified>2026-06-24T19:47:42+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-sKOmjyHgmrO</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-DJJItlmBoFsNKY</TxnID><TimeCreated>2015-02-02T06:08:41+00:00</TimeCreated><TimeModified>2026-06-24T20:40:16+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-OlwpUNgXGcG</RefNumber><Amount>840.61</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>840.61</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-QSVOdWIQoHbTLz</TxnID><TimeCreated>2021-10-25T00:00:01+00:00</TimeCreated><TimeModified>2026-06-24T20:49:44+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-05-08</TxnDate><RefNumber>-Fallback-scrubbed-LfzMCsWbnrS</RefNumber><Amount>917.80</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>917.80</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Estimate</TxnType><TxnID>-Fallback-scrubbed-BBKzabEMiheDcZ</TxnID><TimeCreated>1984-09-25T00:23:07+00:00</TimeCreated><TimeModified>2026-04-13T14:56:09+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-5fcfa10e8436ae50956c911af449e99</ListID><FullName>Fake-Maxwell
+        Miller</FullName></AccountRef><TxnDate>2026-03-31</TxnDate><RefNumber>7</RefNumber><Amount>6.70</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>6.70</AmountInHomeCurrency><Memo>-Fallback-scrubbed-CDnWQmfvX</Memo></TransactionRet><TransactionRet><TxnType>BillPaymentCreditCard</TxnType><TxnID>-Fallback-scrubbed-RTcdtvZJTKXGde</TxnID><TimeCreated>1981-10-07T17:54:18+00:00</TimeCreated><TimeModified>2026-01-28T12:58:15+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-9e7e3a0059a86103b73c380e74cda75</ListID><FullName>Fake-Hannah
+        Castillo</FullName></AccountRef><TxnDate>2026-01-30</TxnDate><Amount>-534.03</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-534.03</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>BillPaymentCreditCard</TxnType><TxnID>-Fallback-scrubbed-HAVYKqQFeNGOpo</TxnID><TimeCreated>1973-04-19T12:21:35+00:00</TimeCreated><TimeModified>2026-01-28T10:09:04+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-9e7e3a0059a86103b73c380e74cda75</ListID><FullName>Fake-Hannah
+        Castillo</FullName></AccountRef><TxnDate>2026-01-29</TxnDate><Amount>-201.97</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-201.97</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>BillPaymentCheck</TxnType><TxnID>-Fallback-scrubbed-TWEgPeRhRWUnCH</TxnID><TimeCreated>1986-08-06T03:14:04+00:00</TimeCreated><TimeModified>2026-01-28T12:58:44+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Tracy
+        Smith</FullName></AccountRef><TxnDate>2026-01-29</TxnDate><Amount>-108.68</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-108.68</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-kTHDCzXHzxuIMr</TxnID><TimeCreated>2002-03-09T21:46:32+00:00</TimeCreated><TimeModified>2026-01-28T09:44:44+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-01-28</TxnDate><RefNumber>-Fallback-scrubbed-vRXJYdrAmJyeRn</RefNumber><Amount>-2435.53</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-2435.53</AmountInHomeCurrency><Memo>-Fallback-scrubbed-DRrCfKtTZ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-PYzVUjrmbxzaTH</TxnID><TimeCreated>2010-06-04T18:08:41+00:00</TimeCreated><TimeModified>2026-01-28T09:44:20+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-01-28</TxnDate><RefNumber>-Fallback-scrubbed-TgdzHCfHmylwCR</RefNumber><Amount>-114.06</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-114.06</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>BillPaymentCheck</TxnType><TxnID>-Fallback-scrubbed-TBUpiFVHcSxeVU</TxnID><TimeCreated>1996-12-29T14:59:27+00:00</TimeCreated><TimeModified>2026-01-28T09:46:28+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Tracy
+        Smith</FullName></AccountRef><TxnDate>2026-01-28</TxnDate><Amount>-2435.53</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-2435.53</AmountInHomeCurrency><Memo>-Fallback-scrubbed-DRrCfKtTZ</Memo></TransactionRet><TransactionRet><TxnType>BillPaymentCreditCard</TxnType><TxnID>-Fallback-scrubbed-WQhYYhqohsEkco</TxnID><TimeCreated>1999-05-07T10:41:39+00:00</TimeCreated><TimeModified>2026-01-28T09:47:31+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-9e7e3a0059a86103b73c380e74cda75</ListID><FullName>Fake-Hannah
+        Castillo</FullName></AccountRef><TxnDate>2026-01-28</TxnDate><Amount>-114.06</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-114.06</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-NbChpYEXMWxXAB</TxnID><TimeCreated>2021-10-12T16:46:18+00:00</TimeCreated><TimeModified>2026-01-28T11:14:13+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-01-28</TxnDate><RefNumber>-Fallback-scrubbed-LWhdwuOXhd</RefNumber><Amount>-973.36</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-973.36</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-LJeYxbRSQIkfKl</TxnID><TimeCreated>2003-08-28T02:50:20+00:00</TimeCreated><TimeModified>2026-01-28T11:14:48+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-01-28</TxnDate><RefNumber>-Fallback-scrubbed-wiKYopcbzY</RefNumber><Amount>-517.39</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-517.39</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-ZmAHiYSOoJaegJ</TxnID><TimeCreated>1978-05-23T16:58:39+00:00</TimeCreated><TimeModified>2026-01-28T10:08:07+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-01-26</TxnDate><RefNumber>-Fallback-scrubbed-qbufzLnWlWsjRR</RefNumber><Amount>-201.97</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-201.97</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-tJofeODpBuscwW</TxnID><TimeCreated>2017-10-31T23:22:46+00:00</TimeCreated><TimeModified>2026-03-20T11:47:48+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2026-01-19</TxnDate><RefNumber>-Fallback-scrubbed-vMaelybEmjubDPS</RefNumber><Amount>-636.40</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-636.40</AmountInHomeCurrency><Memo>-Fallback-scrubbed-NvleAWFRzwbFrrz</Memo></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-WwCwPupsRqHYMe</TxnID><TimeCreated>1996-12-31T09:37:54+00:00</TimeCreated><TimeModified>2026-03-20T13:33:57+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-01-19</TxnDate><RefNumber>-Fallback-scrubbed-zDDHVncgdk</RefNumber><Amount>278.38</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>278.38</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-rItTpfxbZaORUe</TxnID><TimeCreated>2003-04-21T17:45:50+00:00</TimeCreated><TimeModified>2026-02-23T21:23:37+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2026-01-15</TxnDate><RefNumber>-Fallback-scrubbed-JZvFesazMiPBnsIADtWx</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-TKJYdPKTsatmaH</TxnID><TimeCreated>2021-10-10T17:02:47+00:00</TimeCreated><TimeModified>2026-03-11T19:09:39+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2026-01-15</TxnDate><RefNumber>-Fallback-scrubbed-RvvrYTOA</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-PzwWHcGvScCbDh</TxnID><TimeCreated>2001-08-26T05:37:21+00:00</TimeCreated><TimeModified>2026-03-11T20:58:17+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2026-01-15</TxnDate><RefNumber>-Fallback-scrubbed-IxQYBIQBTPJPpgPdCt</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-xBkXcGlCPTMZrr</TxnID><TimeCreated>2016-08-31T08:33:09+00:00</TimeCreated><TimeModified>2026-05-05T20:23:48+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2026-01-15</TxnDate><RefNumber>-Fallback-scrubbed-AyqcaeIcMiMiJIDnPzP</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-QKfjneXiIBgBNn</TxnID><TimeCreated>1982-02-10T07:23:11+00:00</TimeCreated><TimeModified>2026-02-23T21:23:35+00:00</TimeModified><EntityRef><ListID>Fake-181a2eba2afa4fbc290d8d043306975</ListID><FullName>Fake-Rhonda
+        Welch</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-01-08</TxnDate><RefNumber>-Fallback-scrubbed-lIfchkb</RefNumber><Amount>581.31</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>581.31</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>CreditMemo</TxnType><TxnID>-Fallback-scrubbed-WmeidWjuEdZKmP</TxnID><TimeCreated>2001-11-27T20:34:09+00:00</TimeCreated><TimeModified>2026-02-23T21:23:36+00:00</TimeModified><EntityRef><ListID>Fake-181a2eba2afa4fbc290d8d043306975</ListID><FullName>Fake-Rhonda
+        Welch</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2026-01-08</TxnDate><RefNumber>-Fallback-scrubbed-okWrfmliTu</RefNumber><Amount>-762.89</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-762.89</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-SkllZezYMdpLNG</TxnID><TimeCreated>1987-12-22T00:16:16+00:00</TimeCreated><TimeModified>2026-01-08T19:19:59+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-01-06</TxnDate><RefNumber>98167</RefNumber><Amount>-27.86</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-27.86</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-qRRAzutDKxAsyi</TxnID><TimeCreated>2020-01-23T12:56:03+00:00</TimeCreated><TimeModified>2026-01-08T19:20:28+00:00</TimeModified><EntityRef><ListID>Fake-778eed7b220e8550ed84108ae0c8bc4</ListID><FullName>Fake-Darryl
+        Lawson</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2026-01-06</TxnDate><RefNumber>98167</RefNumber><Amount>-55.26</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-55.26</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-mRQeqoxVwkzApE</TxnID><TimeCreated>1983-08-14T10:50:05+00:00</TimeCreated><TimeModified>2025-12-14T21:57:52+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-svlcS</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-XOgbmKVSDTMFth</TxnID><TimeCreated>2009-07-07T16:55:09+00:00</TimeCreated><TimeModified>2025-12-15T22:39:57+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-umkBh</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-DAjyLVaiPRfFIh</TxnID><TimeCreated>1986-10-22T03:49:34+00:00</TimeCreated><TimeModified>2025-12-15T22:56:26+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-EeOEP</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-OwTCuyArQYdyJT</TxnID><TimeCreated>1989-08-16T17:35:35+00:00</TimeCreated><TimeModified>2025-12-15T23:05:14+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-zYxqG</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-nmHoweGJHJMEUc</TxnID><TimeCreated>2013-11-04T13:02:28+00:00</TimeCreated><TimeModified>2025-12-15T23:12:16+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-cRlJL</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-yMotpHtHbkTuGr</TxnID><TimeCreated>2009-08-13T16:47:35+00:00</TimeCreated><TimeModified>2025-12-17T18:12:56+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-gMHcP</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-sEwPpqTQYHNYae</TxnID><TimeCreated>2015-01-30T11:03:42+00:00</TimeCreated><TimeModified>2025-12-17T18:37:28+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-VRgFjfszFV</RefNumber><Amount>992.86</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>992.86</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-ROUMrlCXQUBDUM</TxnID><TimeCreated>1993-07-07T00:29:08+00:00</TimeCreated><TimeModified>2025-12-17T18:49:04+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-lpENGGpqcb</RefNumber><Amount>815.91</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>815.91</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-BDOUbcAbPRMwHi</TxnID><TimeCreated>1986-05-09T17:11:09+00:00</TimeCreated><TimeModified>2025-12-17T19:18:07+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-VrtrSdawKd</RefNumber><Amount>641.71</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>641.71</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-DvIIGYVBDjuRzr</TxnID><TimeCreated>1987-07-06T20:06:52+00:00</TimeCreated><TimeModified>2025-12-17T19:43:49+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-yCHapxsdEi</RefNumber><Amount>992.86</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>992.86</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-zCGDxKUOVECkIS</TxnID><TimeCreated>2003-08-11T17:05:44+00:00</TimeCreated><TimeModified>2025-12-17T19:47:57+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-ORHzeIpHOX</RefNumber><Amount>763.93</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>763.93</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-uxueWVDaNivUFC</TxnID><TimeCreated>2008-09-05T12:23:49+00:00</TimeCreated><TimeModified>2025-12-18T16:26:30+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-XYCpmlARkv</RefNumber><Amount>992.86</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>992.86</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-tjmJPKntlbXYiq</TxnID><TimeCreated>1985-05-19T12:08:18+00:00</TimeCreated><TimeModified>2025-12-18T21:32:33+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-LlGdoCUq</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-wzqBESBMSNJFte</TxnID><TimeCreated>2010-08-17T08:39:01+00:00</TimeCreated><TimeModified>2025-12-19T00:58:43+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-rZCFvhRD</RefNumber><Amount>402.45</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>402.45</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-ghqqctpJaFGNuj</TxnID><TimeCreated>1997-02-09T02:34:16+00:00</TimeCreated><TimeModified>2025-12-23T16:10:54+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-KbwqdkZmwq</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-FtCFxaozLKGilk</TxnID><TimeCreated>1998-09-09T07:52:24+00:00</TimeCreated><TimeModified>2025-12-23T16:17:14+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-pDZmaRSCYm</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-fjZTAxBlBXBNpv</TxnID><TimeCreated>1996-10-04T20:11:53+00:00</TimeCreated><TimeModified>2025-12-23T16:53:43+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-BSVZMROguS</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-sxnlfFodUIlBfn</TxnID><TimeCreated>2000-03-14T10:31:28+00:00</TimeCreated><TimeModified>2025-12-23T17:25:10+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-HzBYAlkSfi</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-JxgRDHxldmBlja</TxnID><TimeCreated>1970-04-05T14:27:01+00:00</TimeCreated><TimeModified>2025-12-23T19:26:13+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-vXqswhVGnj</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-zskfhjyzFlzdFC</TxnID><TimeCreated>2008-12-01T14:29:50+00:00</TimeCreated><TimeModified>2025-12-23T21:16:09+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-PmJBSTnCbc</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-bziJsrhDcTQRHi</TxnID><TimeCreated>1985-02-23T17:43:04+00:00</TimeCreated><TimeModified>2025-12-24T13:01:49+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-AkfLnGGBnW</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-MVrMStAqqFQSci</TxnID><TimeCreated>1973-08-04T22:37:50+00:00</TimeCreated><TimeModified>2025-12-24T13:40:57+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-VyQEoQRAzG</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-UIgYEFrWdtAfrq</TxnID><TimeCreated>2016-04-14T17:00:22+00:00</TimeCreated><TimeModified>2026-01-26T16:52:30+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-UWYQYBsAV</RefNumber><Amount>78.82</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>78.82</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-dRVWQUExeBJoNH</TxnID><TimeCreated>1979-02-11T05:11:17+00:00</TimeCreated><TimeModified>2026-02-25T19:04:56+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-kGQsoWqGg</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-jqCoIMIlnayefR</TxnID><TimeCreated>2024-05-03T23:51:17+00:00</TimeCreated><TimeModified>2026-02-26T11:25:10+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-12-14</TxnDate><RefNumber>-Fallback-scrubbed-ypenToKJx</RefNumber><Amount>065.78</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>065.78</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-oXhYNmkKfCBknv</TxnID><TimeCreated>1981-07-21T23:52:13+00:00</TimeCreated><TimeModified>2025-10-23T20:26:05+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-10-23</TxnDate><RefNumber>-Fallback-scrubbed-oWzMdMGUZK</RefNumber><Amount>-5206.39</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-5206.39</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-wnEYyQtXmQksWT</TxnID><TimeCreated>2023-11-30T10:05:03+00:00</TimeCreated><TimeModified>2025-10-23T20:37:48+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-10-23</TxnDate><RefNumber>-Fallback-scrubbed-AEvtdAowBc</RefNumber><Amount>-5206.39</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-5206.39</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-wrIOimxHEhjndb</TxnID><TimeCreated>1994-11-21T00:14:46+00:00</TimeCreated><TimeModified>2025-09-05T18:48:07+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-09-05</TxnDate><RefNumber>-Fallback-scrubbed-wBXDSfuOXH</RefNumber><Amount>-4827.39</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-4827.39</AmountInHomeCurrency><Memo>-Fallback-scrubbed-MYyPVdAzCxvVWkrFWzBmXFmDxRGs</Memo></TransactionRet><TransactionRet><TxnType>SalesOrder</TxnType><TxnID>-Fallback-scrubbed-lvGvxzfPiqSJTO</TxnID><TimeCreated>2026-10-30T13:27:37+00:00</TimeCreated><TimeModified>2025-08-18T03:37:00+00:00</TimeModified><EntityRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Jessica
+        Mitchell</FullName></EntityRef><AccountRef><ListID>Fake-104b9638374b68f55764f360ad43a97</ListID><FullName>Fake-Joseph
+        Myers</FullName></AccountRef><TxnDate>2025-08-18</TxnDate><RefNumber>7</RefNumber><Amount>6.70</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>6.70</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-UCwrgzxssPaYSn</TxnID><TimeCreated>2018-09-19T21:00:22+00:00</TimeCreated><TimeModified>2025-12-18T23:20:05+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-15</TxnDate><RefNumber>-Fallback-scrubbed-supLTMViH</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-aKDaLGbSzYmljF</TxnID><TimeCreated>1990-01-20T12:16:53+00:00</TimeCreated><TimeModified>2025-12-18T23:27:49+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-15</TxnDate><RefNumber>-Fallback-scrubbed-iwqIZRREY</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-KIbPRRPjgTQKBK</TxnID><TimeCreated>2006-09-04T21:54:30+00:00</TimeCreated><TimeModified>2025-12-18T23:47:43+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-15</TxnDate><RefNumber>-Fallback-scrubbed-WUnJNoKjS</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-bEydCUXZovfntL</TxnID><TimeCreated>1976-06-27T19:42:33+00:00</TimeCreated><TimeModified>2025-12-18T23:57:15+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-15</TxnDate><RefNumber>-Fallback-scrubbed-NzUUCMFev</RefNumber><Amount>-932.22</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-932.22</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-TaQsFuLdkBcfzI</TxnID><TimeCreated>2003-06-03T02:49:28+00:00</TimeCreated><TimeModified>2025-12-19T00:20:46+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-15</TxnDate><RefNumber>-Fallback-scrubbed-CxEGqIfEB</RefNumber><Amount>-932.22</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-932.22</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-BJNibWYSiIuQwI</TxnID><TimeCreated>1977-03-03T06:49:14+00:00</TimeCreated><TimeModified>2026-01-09T15:22:31+00:00</TimeModified><EntityRef><ListID>Fake-05bea03a54d814f5be27b9ffff19a75</ListID><FullName>Fake-Carolyn
+        Miller</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-15</TxnDate><RefNumber>-Fallback-scrubbed-JZvFesazMiPBnsIADtWx</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-DvgouvOoIvXgGF</TxnID><TimeCreated>1994-07-31T16:22:00+00:00</TimeCreated><TimeModified>2026-01-19T19:04:34+00:00</TimeModified><EntityRef><ListID>Fake-39b5d38092310196bcbae85d33888e2</ListID><FullName>Fake-Bryan
+        Duarte</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-15</TxnDate><RefNumber>-Fallback-scrubbed-JZvFesazMiPBnsIADtWx</RefNumber><Amount>-273.99</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-273.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-ACpMTtUePjwsqx</TxnID><TimeCreated>1996-01-13T18:20:18+00:00</TimeCreated><TimeModified>2025-08-28T19:41:44+00:00</TimeModified><EntityRef><ListID>Fake-778eed7b220e8550ed84108ae0c8bc4</ListID><FullName>Fake-Darryl
+        Lawson</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-12</TxnDate><RefNumber>0732430</RefNumber><Amount>-6717.73</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-6717.73</AmountInHomeCurrency><Memo>-Fallback-scrubbed-CbrMLlEbXCvQRWABTwfdXpcjLZcRbQOobgcRvZqpinWCzfFdQpQYX</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-rsltEgwmVwVIQI</TxnID><TimeCreated>2025-11-17T00:56:14+00:00</TimeCreated><TimeModified>2025-09-02T19:07:03+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-12</TxnDate><RefNumber>-Fallback-scrubbed-GUvjdIylR</RefNumber><Amount>-651.47</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-651.47</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-PsHhWzpdLtgmmh</TxnID><TimeCreated>1989-05-09T17:23:48+00:00</TimeCreated><TimeModified>2025-09-02T19:48:58+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-12</TxnDate><RefNumber>-Fallback-scrubbed-GUvjdIylR</RefNumber><Amount>-651.47</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-651.47</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-PcFMkmMmFMQYky</TxnID><TimeCreated>1992-04-01T03:55:09+00:00</TimeCreated><TimeModified>2025-09-02T21:42:17+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-12</TxnDate><RefNumber>-Fallback-scrubbed-UbXeVlLTEEtKBruVXg</RefNumber><Amount>-651.47</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-651.47</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-TWGsWFNxVYKBvb</TxnID><TimeCreated>2016-11-12T19:15:21+00:00</TimeCreated><TimeModified>2025-09-02T21:50:06+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-12</TxnDate><RefNumber>-Fallback-scrubbed-UbXeVlLTEEtKBruVXg</RefNumber><Amount>-651.47</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-651.47</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-sSeAatICYuNwip</TxnID><TimeCreated>1978-10-27T17:49:49+00:00</TimeCreated><TimeModified>2025-09-04T12:52:54+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-12</TxnDate><RefNumber>-Fallback-scrubbed-onLStLDrZsaUYrmZXVCl</RefNumber><Amount>-651.47</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-651.47</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-hrqIdehhMIANhw</TxnID><TimeCreated>1991-08-27T12:41:36+00:00</TimeCreated><TimeModified>2025-09-04T12:53:32+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-12</TxnDate><RefNumber>-Fallback-scrubbed-onLStLDrZsaUYrmZXVCl</RefNumber><Amount>-651.47</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-651.47</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-xLGpPBdhTXbLpe</TxnID><TimeCreated>2021-09-07T10:19:19+00:00</TimeCreated><TimeModified>2025-09-04T14:43:33+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-12</TxnDate><RefNumber>-Fallback-scrubbed-TIhVQXxFDHCSngZXgsgo</RefNumber><Amount>-651.47</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-651.47</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-HTeGCkBoehyOED</TxnID><TimeCreated>1999-09-11T06:50:35+00:00</TimeCreated><TimeModified>2025-09-04T14:48:18+00:00</TimeModified><EntityRef><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><FullName>Fake-Tracey
+        Bridges</FullName></EntityRef><AccountRef><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><FullName>Fake-Jonathan
+        Brown</FullName></AccountRef><TxnDate>2025-08-12</TxnDate><RefNumber>-Fallback-scrubbed-TIhVQXxFDHCSngZXgsgo</RefNumber><Amount>-651.47</Amount><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Ariel
+        Gomez DDS</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-651.47</AmountInHomeCurrency><Memo>-Fallback-scrubbed-pwuBCogDsWJQ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-iKkGPbeGUhHsaO</TxnID><TimeCreated>2017-07-15T04:33:22+00:00</TimeCreated><TimeModified>2025-08-28T19:30:49+00:00</TimeModified><EntityRef><ListID>Fake-129385f9087c498244e8be35219287b</ListID><FullName>Fake-Gordon
+        Hill</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-11</TxnDate><RefNumber>6374456</RefNumber><Amount>-45302.07</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-45302.07</AmountInHomeCurrency><Memo>-Fallback-scrubbed-oSJMpMOnQwrkZIrWoiuumayIlDhUmtefbVqIQYZISUoMTZwSbKEzGHqzD</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-tDZxxNkMmlIVJh</TxnID><TimeCreated>1996-01-13T18:20:18+00:00</TimeCreated><TimeModified>2025-08-28T19:41:44+00:00</TimeModified><EntityRef><ListID>Fake-7bc6e8f7006d70d8b8872fabc0b2f87</ListID><FullName>Fake-Gary
+        Williams</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-11</TxnDate><RefNumber>14677012</RefNumber><Amount>-83920.31</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-83920.31</AmountInHomeCurrency><Memo>-Fallback-scrubbed-HaYqoIiCUPrPMeZHjCAZkrbzwlcPInRrYJhFhsApwkihrqBPgtNz</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-BImjnxPVjztLPR</TxnID><TimeCreated>1999-07-17T12:50:09+00:00</TimeCreated><TimeModified>2025-08-28T19:42:15+00:00</TimeModified><EntityRef><ListID>Fake-64adc3cb4bebde0fcf930a1f5f1cd96</ListID><FullName>Fake-Jennifer
+        Hopkins</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-11</TxnDate><RefNumber>95381014</RefNumber><Amount>-84531.62</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-84531.62</AmountInHomeCurrency><Memo>-Fallback-scrubbed-YxrjyjxScEoUlNTgEGiWABHKzWdldiFUDYfcTZnpBLRUtDaKeMtlhRbJzWYgCTkkjWOaJyWtVOoDPYajbg</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-FLKILkQQIuuDvf</TxnID><TimeCreated>1999-07-17T12:50:09+00:00</TimeCreated><TimeModified>2025-08-28T19:42:15+00:00</TimeModified><EntityRef><ListID>Fake-64adc3cb4bebde0fcf930a1f5f1cd96</ListID><FullName>Fake-Jennifer
+        Hopkins</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-11</TxnDate><RefNumber>68951009</RefNumber><Amount>-568285.36</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-568285.36</AmountInHomeCurrency><Memo>-Fallback-scrubbed-giLcbCTCZdqdIFJeNRHJBYJWnOqmmwAMsaYxkCSlzCaQfXU</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-QSeOIeGefltRpi</TxnID><TimeCreated>1979-04-15T18:20:56+00:00</TimeCreated><TimeModified>2025-08-28T19:42:16+00:00</TimeModified><EntityRef><ListID>Fake-129385f9087c498244e8be35219287b</ListID><FullName>Fake-Gordon
+        Hill</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-11</TxnDate><RefNumber>6374456</RefNumber><Amount>-45302.07</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-45302.07</AmountInHomeCurrency><Memo>-Fallback-scrubbed-oSJMpMOnQwrkZIrWoiuumayIlDhUmtefbVqIQYZISUoMTZwSbKEzGHqzD</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-MoSpLZKVukKZzu</TxnID><TimeCreated>1988-08-02T16:04:44+00:00</TimeCreated><TimeModified>2025-08-28T19:30:29+00:00</TimeModified><EntityRef><ListID>Fake-6d9feb9605d923500213245135b4092</ListID><FullName>Fake-Rhonda
+        Cox</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-07</TxnDate><RefNumber>877</RefNumber><Amount>-49145.81</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-49145.81</AmountInHomeCurrency><Memo>-Fallback-scrubbed-TckyPoivaJowHMGTJhDFXHcomGcwDIkZPFYDZgKXrhfMjQnsYKiJaBOPLaibSDWNIUbBmzmsBmmEzQapyBDBBBSzyKtZpntsRy</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-ESKXKDMsviajlK</TxnID><TimeCreated>1996-01-13T18:20:18+00:00</TimeCreated><TimeModified>2025-08-28T19:41:44+00:00</TimeModified><EntityRef><ListID>Fake-6d9feb9605d923500213245135b4092</ListID><FullName>Fake-Rhonda
+        Cox</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-07</TxnDate><RefNumber>877</RefNumber><Amount>-49145.81</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-49145.81</AmountInHomeCurrency><Memo>-Fallback-scrubbed-TckyPoivaJowHMGTJhDFXHcomGcwDIkZPFYDZgKXrhfMjQnsYKiJaBOPLaibSDWNIUbBmzmsBmmEzQapyBDBBBSzyKtZpntsRy</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-zrsoaMqmMQutTw</TxnID><TimeCreated>1975-11-13T17:05:20+00:00</TimeCreated><TimeModified>2025-08-28T19:30:50+00:00</TimeModified><EntityRef><ListID>Fake-5aa62aee7bd7837421011581fac1225</ListID><FullName>Fake-Kenneth
+        Brown</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-04</TxnDate><RefNumber>99764</RefNumber><Amount>-529806.99</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-529806.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-jlXrXWdxjyvvHLiUWAGBobfBePgAyFlvicKPIKIgowLLnPglTOzPgYU</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-sXEVfHgfpmYLHE</TxnID><TimeCreated>1981-04-01T11:59:45+00:00</TimeCreated><TimeModified>2025-08-28T19:42:17+00:00</TimeModified><EntityRef><ListID>Fake-5aa62aee7bd7837421011581fac1225</ListID><FullName>Fake-Kenneth
+        Brown</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-04</TxnDate><RefNumber>99764</RefNumber><Amount>-529806.99</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-529806.99</AmountInHomeCurrency><Memo>-Fallback-scrubbed-jlXrXWdxjyvvHLiUWAGBobfBePgAyFlvicKPIKIgowLLnPglTOzPgYU</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-UXjNqLufHtFhXy</TxnID><TimeCreated>1975-07-07T12:51:46+00:00</TimeCreated><TimeModified>2025-08-28T19:42:18+00:00</TimeModified><EntityRef><ListID>Fake-7a302c0ecdca8e0f8153ef93c2011ec</ListID><FullName>Fake-Andrew
+        Clay</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-04</TxnDate><RefNumber>5761</RefNumber><Amount>-79088.32</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-79088.32</AmountInHomeCurrency><Memo>-Fallback-scrubbed-qaTThhUGhcaFIwKozhxoNCMSTbNWNEXLMdlrnYfjznZYjrHMtFmgsfmemDrdrqNboYSrnvLXIhZYKpnIamlll</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-SxmfwZUfzKsRwA</TxnID><TimeCreated>1979-04-15T18:20:56+00:00</TimeCreated><TimeModified>2025-08-28T19:42:16+00:00</TimeModified><EntityRef><ListID>Fake-19d6ea64c61c91df01bae0f0d6cb622</ListID><FullName>Fake-Patricia
+        Garcia</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-08-03</TxnDate><RefNumber>-Fallback-scrubbed-PlZjUINHLULoxewO</RefNumber><Amount>-625105.68</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-625105.68</AmountInHomeCurrency><Memo>-Fallback-scrubbed-jlXrXWdxjyvvHLiUWAGBobfBePgAyFlvicKPIKIgowLLnPglTOzPgYU</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-nIvWbcdxyjIalf</TxnID><TimeCreated>2005-09-24T04:25:02+00:00</TimeCreated><TimeModified>2025-08-28T19:16:05+00:00</TimeModified><EntityRef><ListID>Fake-d595342a8ed6d07498f3d6b7d555e83</ListID><FullName>Fake-Brent
+        Ayala</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-07-30</TxnDate><RefNumber>-Fallback-scrubbed-sVPfXtH</RefNumber><Amount>-02033.10</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-02033.10</AmountInHomeCurrency><Memo>-Fallback-scrubbed-xyJAncDXhGKFNkUxkoyLfweDvJETmEcRbFIOqpzkUJRRntnijSBwsilQMLcCVMuIJUPWPtSak</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-AFwTYTyusszwzl</TxnID><TimeCreated>2023-11-11T12:27:10+00:00</TimeCreated><TimeModified>2025-08-28T19:30:20+00:00</TimeModified><EntityRef><ListID>Fake-d595342a8ed6d07498f3d6b7d555e83</ListID><FullName>Fake-Brent
+        Ayala</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-07-30</TxnDate><RefNumber>-Fallback-scrubbed-sVPfXtH</RefNumber><Amount>-02033.10</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-02033.10</AmountInHomeCurrency><Memo>-Fallback-scrubbed-xyJAncDXhGKFNkUxkoyLfweDvJETmEcRbFIOqpzkUJRRntnijSBwsilQMLcCVMuIJUPWPtSak</Memo></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-YDQRPJdBbBWpRd</TxnID><TimeCreated>1992-09-15T04:00:59+00:00</TimeCreated><TimeModified>2025-07-29T13:38:59+00:00</TimeModified><EntityRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Nicholas
+        Hale</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-hfsvtW</RefNumber><Amount>581.31</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>581.31</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>CreditMemo</TxnType><TxnID>-Fallback-scrubbed-xbXQmDkMulRNHN</TxnID><TimeCreated>1994-05-15T17:01:56+00:00</TimeCreated><TimeModified>2025-07-29T13:39:10+00:00</TimeModified><EntityRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Nicholas
+        Hale</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-BkTWfEik</RefNumber><Amount>-762.89</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-762.89</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>CreditMemo</TxnType><TxnID>-Fallback-scrubbed-xvcIrQCqVqJPzZ</TxnID><TimeCreated>2018-06-17T12:09:25+00:00</TimeCreated><TimeModified>2025-07-30T18:42:14+00:00</TimeModified><EntityRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Nicholas
+        Hale</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-cxvUCxQp</RefNumber><Amount>-762.89</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-762.89</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-CGbxCUqdPwgBnR</TxnID><TimeCreated>1986-09-09T16:11:47+00:00</TimeCreated><TimeModified>2025-07-30T18:48:03+00:00</TimeModified><EntityRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Nicholas
+        Hale</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-wMWYfvzfPxJ</RefNumber><Amount>581.31</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>581.31</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-AgcaaKlEdudQvW</TxnID><TimeCreated>2025-03-22T22:54:03+00:00</TimeCreated><TimeModified>2025-07-31T14:47:44+00:00</TimeModified><EntityRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Nicholas
+        Hale</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-gbrGWMwyJRd</RefNumber><Amount>581.31</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>581.31</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>CreditMemo</TxnType><TxnID>-Fallback-scrubbed-qNHFTNbCJUEuqN</TxnID><TimeCreated>1996-04-14T05:20:58+00:00</TimeCreated><TimeModified>2025-07-31T14:47:46+00:00</TimeModified><EntityRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Nicholas
+        Hale</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-qQZjosaM</RefNumber><Amount>-762.89</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-762.89</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>CreditMemo</TxnType><TxnID>-Fallback-scrubbed-pZXbUtgPUdbsXB</TxnID><TimeCreated>1975-01-08T07:38:34+00:00</TimeCreated><TimeModified>2025-07-31T20:53:01+00:00</TimeModified><EntityRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Nicholas
+        Hale</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-IrRHxbPIni</RefNumber><Amount>-762.89</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-762.89</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-OANubARlIpRPrP</TxnID><TimeCreated>2016-07-08T21:44:52+00:00</TimeCreated><TimeModified>2025-07-31T22:58:37+00:00</TimeModified><EntityRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Nicholas
+        Hale</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-MSdkQtX</RefNumber><Amount>581.31</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>581.31</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>CreditMemo</TxnType><TxnID>-Fallback-scrubbed-VRMTkiZgrmMRjc</TxnID><TimeCreated>2016-07-08T21:44:52+00:00</TimeCreated><TimeModified>2025-07-31T22:58:37+00:00</TimeModified><EntityRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Nicholas
+        Hale</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-UMtqaHyftY</RefNumber><Amount>-762.89</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-762.89</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-OQMuSWCZFpxpkt</TxnID><TimeCreated>2002-09-10T22:20:38+00:00</TimeCreated><TimeModified>2025-09-22T09:28:12+00:00</TimeModified><EntityRef><ListID>Fake-143c682169f43fc94945a942e92c0a4</ListID><FullName>Fake-Julie
+        Snow</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-WntOQoA</RefNumber><Amount>581.31</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>581.31</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>CreditMemo</TxnType><TxnID>-Fallback-scrubbed-pQKBdkQSNMzvfF</TxnID><TimeCreated>2006-07-02T05:49:48+00:00</TimeCreated><TimeModified>2025-09-22T09:28:13+00:00</TimeModified><EntityRef><ListID>Fake-143c682169f43fc94945a942e92c0a4</ListID><FullName>Fake-Julie
+        Snow</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-vJUCiUXBoT</RefNumber><Amount>-762.89</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-762.89</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-LpCXdxlqIRKbEG</TxnID><TimeCreated>1982-05-06T05:58:19+00:00</TimeCreated><TimeModified>2025-12-15T21:07:24+00:00</TimeModified><EntityRef><ListID>Fake-181a2eba2afa4fbc290d8d043306975</ListID><FullName>Fake-Rhonda
+        Welch</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-VKLukcx</RefNumber><Amount>581.31</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>581.31</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>CreditMemo</TxnType><TxnID>-Fallback-scrubbed-DIAeCXkeGuInbM</TxnID><TimeCreated>1982-05-06T05:58:19+00:00</TimeCreated><TimeModified>2025-12-15T21:07:24+00:00</TimeModified><EntityRef><ListID>Fake-181a2eba2afa4fbc290d8d043306975</ListID><FullName>Fake-Rhonda
+        Welch</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-jxpRofuQoP</RefNumber><Amount>-762.89</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-762.89</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>CreditMemo</TxnType><TxnID>-Fallback-scrubbed-cAXdnCnOHgYUVJ</TxnID><TimeCreated>2005-01-25T13:24:27+00:00</TimeCreated><TimeModified>2025-12-18T21:32:34+00:00</TimeModified><EntityRef><ListID>Fake-181a2eba2afa4fbc290d8d043306975</ListID><FullName>Fake-Rhonda
+        Welch</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-FPIXtkB</RefNumber><Amount>-762.89</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-762.89</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>CreditMemo</TxnType><TxnID>-Fallback-scrubbed-PrMFFkKbKwifQd</TxnID><TimeCreated>1993-02-01T05:03:03+00:00</TimeCreated><TimeModified>2025-12-19T00:27:11+00:00</TimeModified><EntityRef><ListID>Fake-181a2eba2afa4fbc290d8d043306975</ListID><FullName>Fake-Rhonda
+        Welch</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2025-07-28</TxnDate><RefNumber>-Fallback-scrubbed-EcPzSIu</RefNumber><Amount>-116.90</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-116.90</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-VOJtzeYbSyuQuO</TxnID><TimeCreated>1975-12-02T20:58:03+00:00</TimeCreated><TimeModified>2025-07-31T17:58:03+00:00</TimeModified><EntityRef><ListID>Fake-1506fa7644714106612730c58120bba</ListID><FullName>Fake-Amanda
+        Smith</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-07-25</TxnDate><RefNumber>-Fallback-scrubbed-UOfwxoMoPvgbR</RefNumber><Amount>-61153.52</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-61153.52</AmountInHomeCurrency><Memo>-Fallback-scrubbed-fJnmFFD</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-XqJRbfJMRTcGoL</TxnID><TimeCreated>1984-04-21T05:32:56+00:00</TimeCreated><TimeModified>2025-08-01T13:42:25+00:00</TimeModified><EntityRef><ListID>Fake-1506fa7644714106612730c58120bba</ListID><FullName>Fake-Amanda
+        Smith</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-07-25</TxnDate><RefNumber>-Fallback-scrubbed-TIBZYcGVCgbyY</RefNumber><Amount>-61153.52</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-61153.52</AmountInHomeCurrency><Memo>-Fallback-scrubbed-fJnmFFD</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-GrwfmJMFpxaVJF</TxnID><TimeCreated>2023-12-12T14:15:25+00:00</TimeCreated><TimeModified>2025-08-01T13:58:17+00:00</TimeModified><EntityRef><ListID>Fake-1506fa7644714106612730c58120bba</ListID><FullName>Fake-Amanda
+        Smith</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-07-25</TxnDate><RefNumber>-Fallback-scrubbed-eHaqzpxUTIKoF</RefNumber><Amount>-97552.50</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-97552.50</AmountInHomeCurrency><Memo>-Fallback-scrubbed-tPZxNnwRCsejvz</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-OTcOFZbTMfwSuv</TxnID><TimeCreated>2013-06-18T04:31:25+00:00</TimeCreated><TimeModified>2025-07-31T15:31:17+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-07-24</TxnDate><RefNumber>0652</RefNumber><Amount>-97714.17</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-97714.17</AmountInHomeCurrency><Memo>-Fallback-scrubbed-ZcLjalJUsjrWPRNeXgjTHxOPKLeiMTPHuRrKicHXGokIOgL</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-UtXJHoeaslfKOv</TxnID><TimeCreated>1981-04-01T11:59:45+00:00</TimeCreated><TimeModified>2025-08-28T19:42:17+00:00</TimeModified><EntityRef><ListID>Fake-48cd4305b4ccf741abf3f54ec6be8bf</ListID><FullName>Fake-Jennifer
+        Carpenter</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-07-14</TxnDate><RefNumber>0687259</RefNumber><Amount>-57371.86</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-57371.86</AmountInHomeCurrency><Memo>-Fallback-scrubbed-ojjTZCmTEhafVtsbGJSyyVtARCHoxjbLaIfUqFUPefoGscRYrqapMCxRMyQS</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-agaqnPJusheHBn</TxnID><TimeCreated>1994-05-08T04:25:30+00:00</TimeCreated><TimeModified>2025-08-28T19:30:53+00:00</TimeModified><EntityRef><ListID>Fake-0ddb5a908b11d8cfa8213f30d5fbbe1</ListID><FullName>Fake-Michael
+        Carey</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-06-25</TxnDate><RefNumber>12187090</RefNumber><Amount>-0231540.31</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-0231540.31</AmountInHomeCurrency><Memo>-Fallback-scrubbed-WZWWifOmLzenPAZbQoQNtWPR</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-NIUCmRDKVuOlrc</TxnID><TimeCreated>1975-07-07T12:51:46+00:00</TimeCreated><TimeModified>2025-08-28T19:42:18+00:00</TimeModified><EntityRef><ListID>Fake-0ddb5a908b11d8cfa8213f30d5fbbe1</ListID><FullName>Fake-Michael
+        Carey</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-06-25</TxnDate><RefNumber>12187090</RefNumber><Amount>-0231540.31</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-0231540.31</AmountInHomeCurrency><Memo>-Fallback-scrubbed-WZWWifOmLzenPAZbQoQNtWPR</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-MDkQwrcfuXBYex</TxnID><TimeCreated>1994-05-08T04:25:30+00:00</TimeCreated><TimeModified>2025-08-28T19:30:53+00:00</TimeModified><EntityRef><ListID>Fake-14efb12f7cfd4f9d5ca349039c1f227</ListID><FullName>Fake-Nicole
+        Stewart</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-06-13</TxnDate><RefNumber>82820</RefNumber><Amount>-3170636.53</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-3170636.53</AmountInHomeCurrency><Memo>-Fallback-scrubbed-EnubrtlQyIhRjRiJrHPjXwVL</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-ygqkCXXqIAVuAj</TxnID><TimeCreated>1975-07-07T12:51:46+00:00</TimeCreated><TimeModified>2025-08-28T19:42:18+00:00</TimeModified><EntityRef><ListID>Fake-14efb12f7cfd4f9d5ca349039c1f227</ListID><FullName>Fake-Nicole
+        Stewart</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-06-13</TxnDate><RefNumber>82820</RefNumber><Amount>-3170636.53</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-3170636.53</AmountInHomeCurrency><Memo>-Fallback-scrubbed-EnubrtlQyIhRjRiJrHPjXwVL</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-qnzSssGGXHGUtp</TxnID><TimeCreated>1981-04-01T11:59:45+00:00</TimeCreated><TimeModified>2025-08-28T19:42:17+00:00</TimeModified><EntityRef><ListID>Fake-48cd4305b4ccf741abf3f54ec6be8bf</ListID><FullName>Fake-Jennifer
+        Carpenter</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-06-12</TxnDate><RefNumber>9838104</RefNumber><Amount>-55291.40</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-55291.40</AmountInHomeCurrency><Memo>-Fallback-scrubbed-BmfNSaWsrbYtlpDmfpEedDPWSVDbtMcKAlOyDwtZzxJGEgREPsDlqwyoucZFmigiGgYbMksIXGZwIWyFaNKfyfGxVBqpPBqjqiJQymJiUtIJYRKRqYQzcPyNsSdxKubHhTpprxtJUsITa</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-PtceBewXUkMlEK</TxnID><TimeCreated>2023-08-22T06:53:04+00:00</TimeCreated><TimeModified>2025-08-28T18:46:32+00:00</TimeModified><EntityRef><ListID>Fake-1506fa7644714106612730c58120bba</ListID><FullName>Fake-Amanda
+        Smith</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-04-30</TxnDate><RefNumber>-Fallback-scrubbed-PNMDgQCsVdlQp</RefNumber><Amount>-52194.58</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-52194.58</AmountInHomeCurrency><Memo>-Fallback-scrubbed-YzvNlpSmUZiSYbVLhXexmmXIJazlQlpAsBTUMDrorsYkPIYztDOpCQcWQacJUhjvGRyglccsREhGRttssccfFRqsFvQNIEAbiOmhrPEbSnATGjKsVCWzomwaD</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-BiJzigPVukbIuh</TxnID><TimeCreated>2016-01-07T11:44:13+00:00</TimeCreated><TimeModified>2025-08-28T19:03:09+00:00</TimeModified><EntityRef><ListID>Fake-1506fa7644714106612730c58120bba</ListID><FullName>Fake-Amanda
+        Smith</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-04-30</TxnDate><RefNumber>-Fallback-scrubbed-PNMDgQCsVdlQp</RefNumber><Amount>-52194.58</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-52194.58</AmountInHomeCurrency><Memo>-Fallback-scrubbed-YzvNlpSmUZiSYbVLhXexmmXIJazlQlpAsBTUMDrorsYkPIYztDOpCQcWQacJUhjvGRyglccsREhGRttssccfFRqsFvQNIEAbiOmhrPEbSnATGjKsVCWzomwaD</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-rpxmiYmrsMEDrm</TxnID><TimeCreated>2002-02-15T11:28:48+00:00</TimeCreated><TimeModified>2025-06-30T12:59:09+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-04-17</TxnDate><RefNumber>-Fallback-scrubbed-zoEIfPyMNy</RefNumber><Amount>-1312.46</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-1312.46</AmountInHomeCurrency><Memo>-Fallback-scrubbed-vzJVRRgArMnkKjExCnhqdfPXtVaGbHVHogwzSzfVUutgTcfQQIzmkanLtFOWPWPVJVBVlytaFAaqllXAkqzelaPNvSHAbMfAUqEFdQMsWeXRKNlptLwKXDHvrpcwjwwrAZipkmAhuRbJltOgQMOlJTnAqjWiutTooSljqOwAjUDydqptOGRKpROOpmBNfXnCqnFYvuufPmmAkeCvLJkCPyrwxsYWWqaF</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-LvxjVZIEhZpagc</TxnID><TimeCreated>2007-05-28T09:48:45+00:00</TimeCreated><TimeModified>2025-08-28T19:03:17+00:00</TimeModified><EntityRef><ListID>Fake-1506fa7644714106612730c58120bba</ListID><FullName>Fake-Amanda
+        Smith</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-04-04</TxnDate><RefNumber>-Fallback-scrubbed-CbnWSoxCCtZPp</RefNumber><Amount>-95816.34</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-95816.34</AmountInHomeCurrency><Memo>-Fallback-scrubbed-IBhAfnabQlUDtkyVjLGqBdzipZkIYEmUOWfKEslByETMFdjnoAKLiKxZFknuwAYKINjSNtmQHhawAXlmryXYyARrEReyxMucVIlsXSvMCXoOhWCBekyTXqKsnDoTKH</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-aggVKiuVNTKNZI</TxnID><TimeCreated>2007-06-02T06:03:34+00:00</TimeCreated><TimeModified>2025-08-28T19:17:00+00:00</TimeModified><EntityRef><ListID>Fake-1506fa7644714106612730c58120bba</ListID><FullName>Fake-Amanda
+        Smith</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-04-04</TxnDate><RefNumber>-Fallback-scrubbed-CbnWSoxCCtZPp</RefNumber><Amount>-95816.34</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-95816.34</AmountInHomeCurrency><Memo>-Fallback-scrubbed-IBhAfnabQlUDtkyVjLGqBdzipZkIYEmUOWfKEslByETMFdjnoAKLiKxZFknuwAYKINjSNtmQHhawAXlmryXYyARrEReyxMucVIlsXSvMCXoOhWCBekyTXqKsnDoTKH</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-NRVuChfAgkrakc</TxnID><TimeCreated>2019-04-19T19:17:59+00:00</TimeCreated><TimeModified>2025-08-28T19:03:18+00:00</TimeModified><EntityRef><ListID>Fake-1506fa7644714106612730c58120bba</ListID><FullName>Fake-Amanda
+        Smith</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-03-21</TxnDate><RefNumber>-Fallback-scrubbed-YqrUOAWVlDLHs</RefNumber><Amount>-94795.29</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-94795.29</AmountInHomeCurrency><Memo>-Fallback-scrubbed-lmizySKmShHsuNEbHOHheLaRFFixGXFkjBnwJhqsxXnXeNPzaavZHochqTiAQmHAnsiEYOuSzNrIVPEXRonxEMTCguqHEbthlvfyTTfuAURbrrUwiRtyTZ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-WeNUHgtDdrtraw</TxnID><TimeCreated>2002-12-26T02:08:05+00:00</TimeCreated><TimeModified>2025-08-28T19:17:03+00:00</TimeModified><EntityRef><ListID>Fake-1506fa7644714106612730c58120bba</ListID><FullName>Fake-Amanda
+        Smith</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-03-21</TxnDate><RefNumber>-Fallback-scrubbed-YqrUOAWVlDLHs</RefNumber><Amount>-94795.29</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-94795.29</AmountInHomeCurrency><Memo>-Fallback-scrubbed-lmizySKmShHsuNEbHOHheLaRFFixGXFkjBnwJhqsxXnXeNPzaavZHochqTiAQmHAnsiEYOuSzNrIVPEXRonxEMTCguqHEbthlvfyTTfuAURbrrUwiRtyTZ</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-JwJlHLiMWaCHth</TxnID><TimeCreated>2013-12-19T13:54:07+00:00</TimeCreated><TimeModified>2025-07-01T00:10:59+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-03-20</TxnDate><Amount>-0230.81</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-0230.81</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-MpaPJKgKSVicGb</TxnID><TimeCreated>1977-06-02T13:49:29+00:00</TimeCreated><TimeModified>2026-07-15T21:46:16+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-03-20</TxnDate><RefNumber>-Fallback-scrubbed-cknthahbwc</RefNumber><Amount>-5812.57</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-5812.57</AmountInHomeCurrency><Memo>-Fallback-scrubbed-IJyeosnmLExhnyjlwDglsBrSBCovSeZZMxWcdbdWdYWfVflGMXfMMKMrgOPaDMpduQTjwoqDaXovGPDVupmUTV</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-kvfAHQTIYgorLe</TxnID><TimeCreated>2013-12-19T13:54:07+00:00</TimeCreated><TimeModified>2025-07-01T00:10:59+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-03-19</TxnDate><RefNumber>-Fallback-scrubbed-AfVFMAlUua</RefNumber><Amount>-0966.01</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-0966.01</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-xYffpFUSFMAl</TxnID><TimeCreated>2014-03-11T08:43:29+00:00</TimeCreated><TimeModified>2025-04-02T19:50:09+00:00</TimeModified><EntityRef><ListID>Fake-b386f4e9c485ee7fe669c453a66054c</ListID><FullName>Fake-Cynthia
+        Beard</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2025-03-07</TxnDate><RefNumber>3236</RefNumber><Amount>-20.56</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-20.56</AmountInHomeCurrency><Memo>-Fallback-scrubbed-mrXvLftZZAFk</Memo></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-JcNtIcOhNsUBlg</TxnID><TimeCreated>2017-10-14T00:39:08+00:00</TimeCreated><TimeModified>2025-07-01T00:11:02+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2023-08-08</TxnDate><RefNumber>053084</RefNumber><Amount>-0150.09</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-0150.09</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-UpWSMKkEAmUwMm</TxnID><TimeCreated>2024-09-28T20:53:12+00:00</TimeCreated><TimeModified>2025-07-01T00:11:03+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2023-04-20</TxnDate><Amount>-0230.81</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-0230.81</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-DHyTXFqHfXjoXj</TxnID><TimeCreated>2018-10-21T22:37:09+00:00</TimeCreated><TimeModified>2025-07-01T00:11:04+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2022-10-17</TxnDate><RefNumber>-Fallback-scrubbed-GTBZtVRzjXGyyZFW</RefNumber><Amount>-0551.54</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-0551.54</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Bill</TxnType><TxnID>-Fallback-scrubbed-wtnqelzNBIPTWM</TxnID><TimeCreated>2018-10-21T22:37:09+00:00</TimeCreated><TimeModified>2025-07-01T00:11:04+00:00</TimeModified><EntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Joshua
+        Combs</FullName></EntityRef><AccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Daniel
+        Martin</FullName></AccountRef><TxnDate>2022-09-26</TxnDate><RefNumber>889</RefNumber><Amount>-0230.81</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>-0230.81</AmountInHomeCurrency></TransactionRet><TransactionRet><TxnType>Invoice</TxnType><TxnID>-Fallback-scrubbed-nICvnVXuqvFyYs</TxnID><TimeCreated>2007-08-15T17:01:55+00:00</TimeCreated><TimeModified>2025-07-28T20:19:07+00:00</TimeModified><EntityRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Nicholas
+        Hale</FullName></EntityRef><AccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Maria
+        Castillo</FullName></AccountRef><TxnDate>2017-08-17</TxnDate><RefNumber>-Fallback-scrubbed-ENCvS</RefNumber><Amount>581.31</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Charles
+        Martinez</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>581.31</AmountInHomeCurrency></TransactionRet></TransactionQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:50:06 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '120038'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1

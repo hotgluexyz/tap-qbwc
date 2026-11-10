@@ -1,0 +1,305 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/authenticate
+  response:
+    body:
+      string: '{"session_id": "db9cde9a-8b33-552e-9a36-382e63a48427"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:44:55 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <HostQueryRq
+      />\n    </QBXMLMsgsRq>\n</QBXML>", "request_timeout": 3600, "total_processed_records_count":
+      0, "total_estimated_records_count": 0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=db9cde9a-8b33-552e-9a36-382e63a48427
+  response:
+    body:
+      string: '{"request_id": "955fa208-60a2-559f-b47f-4b397ec81435"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:44:55 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=db9cde9a-8b33-552e-9a36-382e63a48427&request_id=955fa208-60a2-559f-b47f-4b397ec81435
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><HostQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-ygBISpDke\"><HostRet><ProductName>-Fallback-scrubbed-JSrsUqoWfAJgOLbZQSzYbCYoZmXTZXJPyafDFmZixQHorxCBXxBFJMaFIBzoQXQNZsyhOKaI</ProductName><MajorVersion>49</MajorVersion><MinorVersion>5</MinorVersion><Country>Fa</Country><SupportedQBXMLVersion>8.5</SupportedQBXMLVersion><SupportedQBXMLVersion>6.4</SupportedQBXMLVersion><SupportedQBXMLVersion>6.5</SupportedQBXMLVersion><SupportedQBXMLVersion>3.0</SupportedQBXMLVersion><SupportedQBXMLVersion>4.2</SupportedQBXMLVersion><SupportedQBXMLVersion>1.8</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>1.4</SupportedQBXMLVersion><SupportedQBXMLVersion>8.9</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>18.2</SupportedQBXMLVersion><SupportedQBXMLVersion>60.7</SupportedQBXMLVersion><SupportedQBXMLVersion>97.7</SupportedQBXMLVersion><SupportedQBXMLVersion>01.1</SupportedQBXMLVersion><SupportedQBXMLVersion>16.7</SupportedQBXMLVersion><SupportedQBXMLVersion>92.3</SupportedQBXMLVersion><SupportedQBXMLVersion>72.3</SupportedQBXMLVersion><SupportedQBXMLVersion>33.2</SupportedQBXMLVersion><IsAutomaticLogin>false</IsAutomaticLogin><QBFileMode>SingleUser</QBFileMode></HostRet></HostQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:45:00 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '1508'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <BillPaymentCheckQueryRq
+      metaData=\"MetaDataOnly\">\n            <ModifiedDateRangeFilter>\n                <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            </ModifiedDateRangeFilter>\n        </BillPaymentCheckQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '556'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=db9cde9a-8b33-552e-9a36-382e63a48427
+  response:
+    body:
+      string: '{"request_id": "1ae8d3b3-fe10-5378-a577-c419a9449792"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:45:00 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=db9cde9a-8b33-552e-9a36-382e63a48427&request_id=1ae8d3b3-fe10-5378-a577-c419a9449792
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><BillPaymentCheckQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-ygBISpDke\"
+        retCount=\"6\" /></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '219'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:45:00 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <BillPaymentCheckQueryRq
+      iterator=\"Start\" metaData=\"NoMetaData\">\n            <MaxReturned>200</MaxReturned>\n            <ModifiedDateRangeFilter>\n                <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            </ModifiedDateRangeFilter>\n            <IncludeLineItems>true</IncludeLineItems>\n            <IncludeRetElement>TxnID</IncludeRetElement>\n            <IncludeRetElement>TimeCreated</IncludeRetElement>\n            <IncludeRetElement>TimeModified</IncludeRetElement>\n            <IncludeRetElement>EditSequence</IncludeRetElement>\n            <IncludeRetElement>TxnNumber</IncludeRetElement>\n            <IncludeRetElement>PayeeEntityRef</IncludeRetElement>\n            <IncludeRetElement>APAccountRef</IncludeRetElement>\n            <IncludeRetElement>TxnDate</IncludeRetElement>\n            <IncludeRetElement>BankAccountRef</IncludeRetElement>\n            <IncludeRetElement>Amount</IncludeRetElement>\n            <IncludeRetElement>CurrencyRef</IncludeRetElement>\n            <IncludeRetElement>ExchangeRate</IncludeRetElement>\n            <IncludeRetElement>AmountInHomeCurrency</IncludeRetElement>\n            <IncludeRetElement>RefNumber</IncludeRetElement>\n            <IncludeRetElement>Memo</IncludeRetElement>\n            <IncludeRetElement>Address</IncludeRetElement>\n            <IncludeRetElement>AddressBlock</IncludeRetElement>\n            <IncludeRetElement>IsToBePrinted</IncludeRetElement>\n            <IncludeRetElement>ExternalGUID</IncludeRetElement>\n            <IncludeRetElement>AppliedToTxnRet</IncludeRetElement>\n            <IncludeRetElement>DataExtRet</IncludeRetElement>\n        </BillPaymentCheckQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      6}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2012'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=db9cde9a-8b33-552e-9a36-382e63a48427
+  response:
+    body:
+      string: '{"request_id": "c5af03e6-2377-572f-a963-60b63338a221"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:45:01 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=db9cde9a-8b33-552e-9a36-382e63a48427&request_id=c5af03e6-2377-572f-a963-60b63338a221
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><BillPaymentCheckQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-ygBISpDke\"
+        iteratorRemainingCount=\"0\" iteratorID=\"affa341d-f6f5-50c3-bd3e-b4c934b81f1e\"><BillPaymentCheckRet><TxnID>-Fallback-scrubbed-kfXKhsySFBZrEE</TxnID><TimeCreated>2000-05-20T22:30:56+00:00</TimeCreated><TimeModified>2026-01-28T09:46:28+00:00</TimeModified><EditSequence>9242187215</EditSequence><TxnNumber>940</TxnNumber><PayeeEntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Tony
+        Lawson</FullName></PayeeEntityRef><APAccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Becky
+        Sparks</FullName></APAccountRef><TxnDate>2026-01-28</TxnDate><BankAccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Peter
+        Gray</FullName></BankAccountRef><Amount>4236.19</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Mark
+        Decker</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>4236.19</AmountInHomeCurrency><Memo>-Fallback-scrubbed-uAbGABIQp</Memo><Address><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><City>Fake-Port
+        Katherineberg</City><State>-Fallback-scrubbed-bE</State><PostalCode>60735</PostalCode><Country>-Fallback-scrubbed-DNq</Country></Address><AddressBlock><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><Addr5>Fake-42505e3b57e34ccac611dcc61f2f4a23fcac</Addr5></AddressBlock><IsToBePrinted>true</IsToBePrinted><AppliedToTxnRet><TxnID>-Fallback-scrubbed-VjEpSldkatwLkq</TxnID><TxnType>Bill</TxnType><TxnDate>2026-01-28</TxnDate><RefNumber>Fake-e9bc2afe5b96e74</RefNumber><BalanceRemaining>6.70</BalanceRemaining><Amount>4236.19</Amount></AppliedToTxnRet></BillPaymentCheckRet><BillPaymentCheckRet><TxnID>-Fallback-scrubbed-MXohDxtTzWLWbp</TxnID><TimeCreated>1974-11-20T04:12:28+00:00</TimeCreated><TimeModified>2026-01-28T12:58:44+00:00</TimeModified><EditSequence>5362729381</EditSequence><TxnNumber>720</TxnNumber><PayeeEntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Tony
+        Lawson</FullName></PayeeEntityRef><APAccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Becky
+        Sparks</FullName></APAccountRef><TxnDate>2026-01-29</TxnDate><BankAccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Peter
+        Gray</FullName></BankAccountRef><Amount>857.37</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Mark
+        Decker</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>857.37</AmountInHomeCurrency><Address><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><City>Fake-Port
+        Katherineberg</City><State>-Fallback-scrubbed-bE</State><PostalCode>60735</PostalCode><Country>-Fallback-scrubbed-DNq</Country></Address><AddressBlock><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><Addr5>Fake-42505e3b57e34ccac611dcc61f2f4a23fcac</Addr5></AddressBlock><IsToBePrinted>false</IsToBePrinted><AppliedToTxnRet><TxnID>-Fallback-scrubbed-iFJMhAtgVhbnBM</TxnID><TxnType>Bill</TxnType><TxnDate>2026-01-28</TxnDate><RefNumber>Fake-4887199fa7f01be</RefNumber><BalanceRemaining>6.70</BalanceRemaining><Amount>482.97</Amount></AppliedToTxnRet><AppliedToTxnRet><TxnID>-Fallback-scrubbed-FpzBVnfcoZjwwW</TxnID><TxnType>Bill</TxnType><TxnDate>2026-01-28</TxnDate><RefNumber>Fake-c485636d3bb6775</RefNumber><BalanceRemaining>6.70</BalanceRemaining><Amount>537.39</Amount><LinkedTxn><TxnID>-Fallback-scrubbed-HCbjZVmjWNWFbY</TxnID><TxnType>BillPaymentCreditCard</TxnType><TxnDate>2026-01-30</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-534.03</Amount></LinkedTxn></AppliedToTxnRet></BillPaymentCheckRet><BillPaymentCheckRet><TxnID>-Fallback-scrubbed-IhtZJEvtEOEnWQ</TxnID><TimeCreated>1970-03-15T17:55:38+00:00</TimeCreated><TimeModified>2026-06-09T19:30:32+00:00</TimeModified><EditSequence>3081872835</EditSequence><TxnNumber>287</TxnNumber><PayeeEntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Tony
+        Lawson</FullName></PayeeEntityRef><APAccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Becky
+        Sparks</FullName></APAccountRef><TxnDate>2026-06-03</TxnDate><BankAccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Peter
+        Gray</FullName></BankAccountRef><Amount>610.99</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Mark
+        Decker</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>610.99</AmountInHomeCurrency><Address><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><City>Fake-Port
+        Katherineberg</City><State>-Fallback-scrubbed-bE</State><PostalCode>60735</PostalCode><Country>-Fallback-scrubbed-DNq</Country></Address><AddressBlock><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><Addr5>Fake-42505e3b57e34ccac611dcc61f2f4a23fcac</Addr5></AddressBlock><IsToBePrinted>true</IsToBePrinted><AppliedToTxnRet><TxnID>-Fallback-scrubbed-XMdfLpSeRDGmGH</TxnID><TxnType>Bill</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-2f5f4a2e0b98820</RefNumber><BalanceRemaining>494.57</BalanceRemaining><Amount>96.65</Amount><LinkedTxn><TxnID>-Fallback-scrubbed-fQYKCkTPWhzZOD</TxnID><TxnType>BillPaymentCreditCard</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-53.67</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-ySpObkFHuYJcIK</TxnID><TxnType>VendorCredit</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-160ad958d40e2f7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-315.49</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-tEfjjqIJEFjgrr</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>2</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-65.10</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-YgLTYOmeUtnomJ</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-08</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-92.30</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-QzbwdHNtbVqglU</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-90.47</Amount></LinkedTxn></AppliedToTxnRet><AppliedToTxnRet><TxnID>-Fallback-scrubbed-lqtsWRHdZRajqv</TxnID><TxnType>Bill</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-a420cd3a60dc1b0</RefNumber><BalanceRemaining>495.81</BalanceRemaining><Amount>47.57</Amount><LinkedTxn><TxnID>-Fallback-scrubbed-fQYKCkTPWhzZOD</TxnID><TxnType>BillPaymentCreditCard</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-88.32</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-ySpObkFHuYJcIK</TxnID><TxnType>VendorCredit</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-160ad958d40e2f7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-06.03</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-tEfjjqIJEFjgrr</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>2</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-34.84</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-QzbwdHNtbVqglU</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-67.29</Amount></LinkedTxn></AppliedToTxnRet></BillPaymentCheckRet><BillPaymentCheckRet><TxnID>-Fallback-scrubbed-QzbwdHNtbVqglU</TxnID><TimeCreated>1988-10-03T03:34:28+00:00</TimeCreated><TimeModified>2026-06-09T19:30:32+00:00</TimeModified><EditSequence>3081872835</EditSequence><TxnNumber>497</TxnNumber><PayeeEntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Tony
+        Lawson</FullName></PayeeEntityRef><APAccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Becky
+        Sparks</FullName></APAccountRef><TxnDate>2026-06-03</TxnDate><BankAccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Peter
+        Gray</FullName></BankAccountRef><Amount>537.97</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Mark
+        Decker</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>537.97</AmountInHomeCurrency><RefNumber>7</RefNumber><Address><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><City>Fake-Port
+        Katherineberg</City><State>-Fallback-scrubbed-bE</State><PostalCode>60735</PostalCode><Country>-Fallback-scrubbed-DNq</Country></Address><AddressBlock><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><Addr5>Fake-42505e3b57e34ccac611dcc61f2f4a23fcac</Addr5></AddressBlock><IsToBePrinted>false</IsToBePrinted><AppliedToTxnRet><TxnID>-Fallback-scrubbed-XMdfLpSeRDGmGH</TxnID><TxnType>Bill</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-2f5f4a2e0b98820</RefNumber><BalanceRemaining>494.57</BalanceRemaining><Amount>06.56</Amount><DiscountAmount>83.44</DiscountAmount><DiscountAccountRef><ListID>Fake-7ccd36c93f8f0c1b67990c6078d9fc6</ListID><FullName>Fake-Dawn
+        Ellis</FullName></DiscountAccountRef><DiscountClassRef><ListID>Fake-71c6014987369449b41a6396800e97b</ListID><FullName>Fake-Cathy
+        Ramirez</FullName></DiscountClassRef><LinkedTxn><TxnID>-Fallback-scrubbed-IhtZJEvtEOEnWQ</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-20.56</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-fQYKCkTPWhzZOD</TxnID><TxnType>BillPaymentCreditCard</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-53.67</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-ySpObkFHuYJcIK</TxnID><TxnType>VendorCredit</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-160ad958d40e2f7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-315.49</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-tEfjjqIJEFjgrr</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>2</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-65.10</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-YgLTYOmeUtnomJ</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-08</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-92.30</Amount></LinkedTxn></AppliedToTxnRet><AppliedToTxnRet><TxnID>-Fallback-scrubbed-lqtsWRHdZRajqv</TxnID><TxnType>Bill</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-a420cd3a60dc1b0</RefNumber><BalanceRemaining>495.81</BalanceRemaining><Amount>96.12</Amount><DiscountAmount>85.11</DiscountAmount><DiscountAccountRef><ListID>Fake-7ccd36c93f8f0c1b67990c6078d9fc6</ListID><FullName>Fake-Dawn
+        Ellis</FullName></DiscountAccountRef><DiscountClassRef><ListID>Fake-71c6014987369449b41a6396800e97b</ListID><FullName>Fake-Cathy
+        Ramirez</FullName></DiscountClassRef><LinkedTxn><TxnID>-Fallback-scrubbed-IhtZJEvtEOEnWQ</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-32.61</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-fQYKCkTPWhzZOD</TxnID><TxnType>BillPaymentCreditCard</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-88.32</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-ySpObkFHuYJcIK</TxnID><TxnType>VendorCredit</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-160ad958d40e2f7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-06.03</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-tEfjjqIJEFjgrr</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>2</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-34.84</Amount></LinkedTxn></AppliedToTxnRet></BillPaymentCheckRet><BillPaymentCheckRet><TxnID>-Fallback-scrubbed-tEfjjqIJEFjgrr</TxnID><TimeCreated>2013-11-27T16:25:16+00:00</TimeCreated><TimeModified>2026-06-09T19:30:34+00:00</TimeModified><EditSequence>6912946469</EditSequence><TxnNumber>903</TxnNumber><PayeeEntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Tony
+        Lawson</FullName></PayeeEntityRef><APAccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Becky
+        Sparks</FullName></APAccountRef><TxnDate>2026-06-03</TxnDate><BankAccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Peter
+        Gray</FullName></BankAccountRef><Amount>114.62</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Mark
+        Decker</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>114.62</AmountInHomeCurrency><RefNumber>2</RefNumber><Address><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><City>Fake-Port
+        Katherineberg</City><State>-Fallback-scrubbed-bE</State><PostalCode>60735</PostalCode><Country>-Fallback-scrubbed-DNq</Country></Address><AddressBlock><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><Addr5>Fake-42505e3b57e34ccac611dcc61f2f4a23fcac</Addr5></AddressBlock><IsToBePrinted>false</IsToBePrinted><AppliedToTxnRet><TxnID>-Fallback-scrubbed-XMdfLpSeRDGmGH</TxnID><TxnType>Bill</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-2f5f4a2e0b98820</RefNumber><BalanceRemaining>494.57</BalanceRemaining><Amount>34.39</Amount><LinkedTxn><TxnID>-Fallback-scrubbed-IhtZJEvtEOEnWQ</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-20.56</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-fQYKCkTPWhzZOD</TxnID><TxnType>BillPaymentCreditCard</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-53.67</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-ySpObkFHuYJcIK</TxnID><TxnType>VendorCredit</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-160ad958d40e2f7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-315.49</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-YgLTYOmeUtnomJ</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-08</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-92.30</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-QzbwdHNtbVqglU</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-90.47</Amount></LinkedTxn></AppliedToTxnRet><AppliedToTxnRet><TxnID>-Fallback-scrubbed-lqtsWRHdZRajqv</TxnID><TxnType>Bill</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-a420cd3a60dc1b0</RefNumber><BalanceRemaining>495.81</BalanceRemaining><Amount>99.42</Amount><LinkedTxn><TxnID>-Fallback-scrubbed-IhtZJEvtEOEnWQ</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-32.61</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-fQYKCkTPWhzZOD</TxnID><TxnType>BillPaymentCreditCard</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-88.32</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-ySpObkFHuYJcIK</TxnID><TxnType>VendorCredit</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-160ad958d40e2f7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-06.03</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-QzbwdHNtbVqglU</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-67.29</Amount></LinkedTxn></AppliedToTxnRet></BillPaymentCheckRet><BillPaymentCheckRet><TxnID>-Fallback-scrubbed-YgLTYOmeUtnomJ</TxnID><TimeCreated>2017-11-20T05:51:55+00:00</TimeCreated><TimeModified>2026-06-09T19:30:34+00:00</TimeModified><EditSequence>6912946469</EditSequence><TxnNumber>078</TxnNumber><PayeeEntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Tony
+        Lawson</FullName></PayeeEntityRef><APAccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Becky
+        Sparks</FullName></APAccountRef><TxnDate>2026-06-08</TxnDate><BankAccountRef><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><FullName>Fake-Peter
+        Gray</FullName></BankAccountRef><Amount>50.79</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Mark
+        Decker</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>50.79</AmountInHomeCurrency><Memo>-Fallback-scrubbed-aBboivteBrtdOllX</Memo><Address><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><City>Fake-Port
+        Katherineberg</City><State>-Fallback-scrubbed-bE</State><PostalCode>60735</PostalCode><Country>-Fallback-scrubbed-DNq</Country></Address><AddressBlock><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><Addr5>Fake-42505e3b57e34ccac611dcc61f2f4a23fcac</Addr5></AddressBlock><IsToBePrinted>true</IsToBePrinted><AppliedToTxnRet><TxnID>-Fallback-scrubbed-XMdfLpSeRDGmGH</TxnID><TxnType>Bill</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-2f5f4a2e0b98820</RefNumber><BalanceRemaining>494.57</BalanceRemaining><Amount>50.79</Amount><LinkedTxn><TxnID>-Fallback-scrubbed-IhtZJEvtEOEnWQ</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-20.56</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-fQYKCkTPWhzZOD</TxnID><TxnType>BillPaymentCreditCard</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-53.67</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-ySpObkFHuYJcIK</TxnID><TxnType>VendorCredit</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-160ad958d40e2f7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-315.49</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-tEfjjqIJEFjgrr</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>2</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-65.10</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-QzbwdHNtbVqglU</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-90.47</Amount></LinkedTxn></AppliedToTxnRet></BillPaymentCheckRet></BillPaymentCheckQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:45:03 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '19809'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1

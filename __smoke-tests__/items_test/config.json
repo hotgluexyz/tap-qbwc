@@ -1,0 +1,7 @@
+{
+  "token": "scrubbed-offline-token",
+  "request_timeout": 1200,
+  "qbwc_is_alive_timeout": 3600,
+  "start_date": "2000-01-01T00:00:00Z",
+  "is_sandbox": true
+}
