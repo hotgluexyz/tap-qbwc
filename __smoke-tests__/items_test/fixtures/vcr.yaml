@@ -1,0 +1,355 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/authenticate
+  response:
+    body:
+      string: '{"session_id": "7e857e4d-8c75-59e8-8c8a-df683a1497ea"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:56:39 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <HostQueryRq
+      />\n    </QBXMLMsgsRq>\n</QBXML>", "request_timeout": 3600, "total_processed_records_count":
+      0, "total_estimated_records_count": 0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=7e857e4d-8c75-59e8-8c8a-df683a1497ea
+  response:
+    body:
+      string: '{"request_id": "9698c787-8d7d-5716-bdae-e1b3ed916ceb"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:56:40 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=7e857e4d-8c75-59e8-8c8a-df683a1497ea&request_id=9698c787-8d7d-5716-bdae-e1b3ed916ceb
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><HostQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-LOlsZtbUg\"><HostRet><ProductName>-Fallback-scrubbed-gJcuWaoIGDZuqSXPnWfJOGnonHRIRsSpluRACPryAarhSdloNoFJvyRbcmWrPigKFGHhcfcA</ProductName><MajorVersion>49</MajorVersion><MinorVersion>5</MinorVersion><Country>Fa</Country><SupportedQBXMLVersion>8.5</SupportedQBXMLVersion><SupportedQBXMLVersion>6.4</SupportedQBXMLVersion><SupportedQBXMLVersion>6.5</SupportedQBXMLVersion><SupportedQBXMLVersion>3.0</SupportedQBXMLVersion><SupportedQBXMLVersion>4.2</SupportedQBXMLVersion><SupportedQBXMLVersion>1.8</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>1.4</SupportedQBXMLVersion><SupportedQBXMLVersion>8.9</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>18.2</SupportedQBXMLVersion><SupportedQBXMLVersion>60.7</SupportedQBXMLVersion><SupportedQBXMLVersion>97.7</SupportedQBXMLVersion><SupportedQBXMLVersion>01.1</SupportedQBXMLVersion><SupportedQBXMLVersion>16.7</SupportedQBXMLVersion><SupportedQBXMLVersion>92.3</SupportedQBXMLVersion><SupportedQBXMLVersion>72.3</SupportedQBXMLVersion><SupportedQBXMLVersion>33.2</SupportedQBXMLVersion><IsAutomaticLogin>true</IsAutomaticLogin><QBFileMode>SingleUser</QBFileMode></HostRet></HostQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:56:43 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '1507'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <ItemQueryRq
+      metaData=\"MetaDataOnly\">\n            <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n        </ItemQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '449'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=7e857e4d-8c75-59e8-8c8a-df683a1497ea
+  response:
+    body:
+      string: '{"request_id": "1a7c53d2-e0fb-5315-a73c-0f0fe768e27c"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:56:43 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=7e857e4d-8c75-59e8-8c8a-df683a1497ea&request_id=1a7c53d2-e0fb-5315-a73c-0f0fe768e27c
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><ItemQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-LOlsZtbUg\"
+        retCount=\"38\" /></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '208'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:56:44 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <ItemQueryRq
+      iterator=\"Start\" metaData=\"NoMetaData\">\n            <MaxReturned>200</MaxReturned>\n            <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            <IncludeRetElement>ListID</IncludeRetElement>\n            <IncludeRetElement>TimeCreated</IncludeRetElement>\n            <IncludeRetElement>TimeModified</IncludeRetElement>\n            <IncludeRetElement>EditSequence</IncludeRetElement>\n            <IncludeRetElement>Name</IncludeRetElement>\n            <IncludeRetElement>FullName</IncludeRetElement>\n            <IncludeRetElement>BarCodeValue</IncludeRetElement>\n            <IncludeRetElement>IsActive</IncludeRetElement>\n            <IncludeRetElement>ClassRef</IncludeRetElement>\n            <IncludeRetElement>ParentRef</IncludeRetElement>\n            <IncludeRetElement>Sublevel</IncludeRetElement>\n            <IncludeRetElement>UnitOfMeasureSetRef</IncludeRetElement>\n            <IncludeRetElement>IsTaxIncluded</IncludeRetElement>\n            <IncludeRetElement>SalesTaxCodeRef</IncludeRetElement>\n            <IncludeRetElement>SalesOrPurchase</IncludeRetElement>\n            <IncludeRetElement>SalesAndPurchase</IncludeRetElement>\n            <IncludeRetElement>ExternalGUID</IncludeRetElement>\n            <IncludeRetElement>DataExtRet</IncludeRetElement>\n            <IncludeRetElement>ManufacturerPartNumber</IncludeRetElement>\n            <IncludeRetElement>SpecialItemType</IncludeRetElement>\n            <IncludeRetElement>SalesDesc</IncludeRetElement>\n            <IncludeRetElement>SalesPrice</IncludeRetElement>\n            <IncludeRetElement>IncomeAccountRef</IncludeRetElement>\n            <IncludeRetElement>PurchaseDesc</IncludeRetElement>\n            <IncludeRetElement>PurchaseCost</IncludeRetElement>\n            <IncludeRetElement>PurchaseTaxCodeRef</IncludeRetElement>\n            <IncludeRetElement>COGSAccountRef</IncludeRetElement>\n            <IncludeRetElement>PrefVendorRef</IncludeRetElement>\n            <IncludeRetElement>AssetAccountRef</IncludeRetElement>\n            <IncludeRetElement>ReorderPoint</IncludeRetElement>\n            <IncludeRetElement>Max</IncludeRetElement>\n            <IncludeRetElement>QuantityOnHand</IncludeRetElement>\n            <IncludeRetElement>AverageCost</IncludeRetElement>\n            <IncludeRetElement>QuantityOnOrder</IncludeRetElement>\n            <IncludeRetElement>QuantityOnSalesOrder</IncludeRetElement>\n            <IncludeRetElement>BuildPoint</IncludeRetElement>\n            <IncludeRetElement>ItemInventoryAssemblyLine</IncludeRetElement>\n            <IncludeRetElement>AcquiredAs</IncludeRetElement>\n            <IncludeRetElement>PurchaseDate</IncludeRetElement>\n            <IncludeRetElement>VendorOrPayeeName</IncludeRetElement>\n            <IncludeRetElement>FixedAssetSalesInfo</IncludeRetElement>\n            <IncludeRetElement>AssetDesc</IncludeRetElement>\n            <IncludeRetElement>Location</IncludeRetElement>\n            <IncludeRetElement>PONumber</IncludeRetElement>\n            <IncludeRetElement>SerialNumber</IncludeRetElement>\n            <IncludeRetElement>WarrantyExpDate</IncludeRetElement>\n            <IncludeRetElement>Notes</IncludeRetElement>\n            <IncludeRetElement>AssetNumber</IncludeRetElement>\n            <IncludeRetElement>CostBasis</IncludeRetElement>\n            <IncludeRetElement>YearEndAccumulatedDepreciation</IncludeRetElement>\n            <IncludeRetElement>YearEndBookValue</IncludeRetElement>\n            <IncludeRetElement>ItemDesc</IncludeRetElement>\n            <IncludeRetElement>DiscountRate</IncludeRetElement>\n            <IncludeRetElement>DiscountRatePercent</IncludeRetElement>\n            <IncludeRetElement>AccountRef</IncludeRetElement>\n            <IncludeRetElement>DepositToAccountRef</IncludeRetElement>\n            <IncludeRetElement>PaymentMethodRef</IncludeRetElement>\n            <IncludeRetElement>TaxRate</IncludeRetElement>\n            <IncludeRetElement>TaxVendorRef</IncludeRetElement>\n            <IncludeRetElement>SalesTaxReturnLineRef</IncludeRetElement>\n            <IncludeRetElement>ItemSalesTaxRef</IncludeRetElement>\n            <IncludeRetElement>IsPrintItemsInGroup</IncludeRetElement>\n            <IncludeRetElement>ItemGroupLine</IncludeRetElement>\n        </ItemQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      38}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4666'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=7e857e4d-8c75-59e8-8c8a-df683a1497ea
+  response:
+    body:
+      string: '{"request_id": "d2067e49-433d-548a-b7ff-b5cf7d3f0222"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:56:44 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=7e857e4d-8c75-59e8-8c8a-df683a1497ea&request_id=d2067e49-433d-548a-b7ff-b5cf7d3f0222
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><ItemQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-LOlsZtbUg\"
+        iteratorRemainingCount=\"0\" iteratorID=\"19da2ad6-484b-566b-bb06-11cc93aed22e\"><ItemServiceRet><ListID>Fake-be90b256cad3862c1be2fa0376584d9</ListID><TimeCreated>1978-10-03T01:35:19+00:00</TimeCreated><TimeModified>2026-07-08T15:21:15+00:00</TimeModified><EditSequence>9783115771</EditSequence><Name>Fake-Lisa
+        Gordon</Name><FullName>Fake-Lisa Gordon</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-a20ca73ee258edd2175854c5493e6c8</ListID><FullName>Fake-Bryan
+        Gonzalez</FullName></AccountRef></SalesOrPurchase></ItemServiceRet><ItemNonInventoryRet><ListID>Fake-715eae977a918c6416563207cb2cce7</ListID><TimeCreated>1995-07-19T13:32:25+00:00</TimeCreated><TimeModified>2025-07-28T20:15:17+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-Brian
+        House</Name><FullName>Fake-Brian House</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><ManufacturerPartNumber>13398</ManufacturerPartNumber><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>6335.34</Price><AccountRef><ListID>Fake-4f8f79403d6cff422d9ae0db0846831</ListID><FullName>Fake-Sean
+        Leonard</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-7a0f83cf0ad8c88599f47d0e321cfd0</ListID><TimeCreated>2018-01-01T09:25:42+00:00</TimeCreated><TimeModified>2025-08-28T19:20:35+00:00</TimeModified><EditSequence>1208432131</EditSequence><Name>Fake-Misty
+        Mejia</Name><FullName>Fake-Misty Mejia</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-578ad08effcd14653438dcec286b91c</ListID><TimeCreated>1978-07-24T23:21:49+00:00</TimeCreated><TimeModified>2025-08-28T19:36:27+00:00</TimeModified><EditSequence>2880923969</EditSequence><Name>Fake-Brittany
+        Nichols</Name><FullName>Fake-Brittany Nichols</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><TimeCreated>1990-09-18T18:48:34+00:00</TimeCreated><TimeModified>2026-05-08T13:07:27+00:00</TimeModified><EditSequence>0472107694</EditSequence><Name>Fake-Joe
+        Thomas</Name><FullName>Fake-Joe Thomas</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><UnitOfMeasureSetRef><ListID>Fake-cf0e353eff1481a6334e1ad7be3c45c</ListID><FullName>Fake-Bruce
+        Cook</FullName></UnitOfMeasureSetRef><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-FkvOPjJHXoj</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-54c91bd762fba38b479144ae7628e6f</ListID><TimeCreated>2000-04-09T15:35:12+00:00</TimeCreated><TimeModified>2025-12-17T18:44:12+00:00</TimeModified><EditSequence>4011741159</EditSequence><Name>Fake-Erica
+        Carr</Name><FullName>Fake-Erica Carr</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><UnitOfMeasureSetRef><ListID>Fake-a9ae779e5aa63d645cea12dbf78e696</ListID><FullName>Fake-Victoria
+        Nichols</FullName></UnitOfMeasureSetRef><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-PiUPJIKnd</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-be2a2c39ad115fa49be1a1e0a5768fe</ListID><TimeCreated>2006-02-14T09:03:39+00:00</TimeCreated><TimeModified>2025-07-31T20:53:00+00:00</TimeModified><EditSequence>9747213610</EditSequence><Name>Fake-Michelle
+        Jones</Name><FullName>Fake-Michelle Jones</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-PiUPJIKnd</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-85b985da28715a5899614a3d36e8a81</ListID><TimeCreated>1985-03-06T13:44:24+00:00</TimeCreated><TimeModified>2025-07-31T22:58:36+00:00</TimeModified><EditSequence>4737527221</EditSequence><Name>Fake-Tony
+        Manning</Name><FullName>Fake-Tony Manning</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-PiUPJIKnd</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-20c6bd7f3329a8e857587f2ed57b313</ListID><TimeCreated>1970-04-30T12:44:27+00:00</TimeCreated><TimeModified>2026-05-08T13:07:35+00:00</TimeModified><EditSequence>1215316479</EditSequence><Name>Fake-Adam
+        Maldonado</Name><FullName>Fake-Adam Maldonado</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><UnitOfMeasureSetRef><ListID>Fake-03c10a8400a257c7560188f6cb33778</ListID><FullName>Fake-Julie
+        Walker</FullName></UnitOfMeasureSetRef><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-tDxORQljIzo</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-519eef158a4bd48ad3e7ce6e9342410</ListID><TimeCreated>1999-06-05T02:46:42+00:00</TimeCreated><TimeModified>2025-12-17T18:16:28+00:00</TimeModified><EditSequence>0587470008</EditSequence><Name>Fake-Roger
+        Martin</Name><FullName>Fake-Roger Martin</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><UnitOfMeasureSetRef><ListID>Fake-8e78f510553b17ce35d559cf24fa780</ListID><FullName>Fake-Mia
+        Reyes</FullName></UnitOfMeasureSetRef><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-PiUPJIKnd</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-7f86b0e74faefcc62cc029df4c24425</ListID><TimeCreated>2000-04-09T06:11:00+00:00</TimeCreated><TimeModified>2025-12-15T21:07:24+00:00</TimeModified><EditSequence>9886983952</EditSequence><Name>Fake-Brittany
+        Brown</Name><FullName>Fake-Brittany Brown</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-PiUPJIKnd</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-5d53a4e7e133e21c284f867d18c1e4f</ListID><TimeCreated>1983-01-25T03:19:33+00:00</TimeCreated><TimeModified>2026-02-23T21:23:34+00:00</TimeModified><EditSequence>5117699830</EditSequence><Name>Fake-Mario
+        Wang</Name><FullName>Fake-Mario Wang</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-PiUPJIKnd</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-5d2fd377b06cd30e1d9a3f49053e998</ListID><TimeCreated>1975-11-04T06:03:12+00:00</TimeCreated><TimeModified>2026-03-20T17:16:36+00:00</TimeModified><EditSequence>7252955258</EditSequence><Name>Fake-Peter
+        Arias</Name><FullName>Fake-Peter Arias</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-PiUPJIKnd</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-566c3e881cc26de1aa1f4878fd5b583</ListID><TimeCreated>2024-04-20T21:42:42+00:00</TimeCreated><TimeModified>2025-12-18T22:52:51+00:00</TimeModified><EditSequence>0809241188</EditSequence><Name>Fake-Isaac
+        Lane</Name><FullName>Fake-Isaac Lane</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-epyErsan</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-8240d86201514c44a1d0817c35d595f</ListID><TimeCreated>1994-11-06T00:13:09+00:00</TimeCreated><TimeModified>2025-08-28T19:22:16+00:00</TimeModified><EditSequence>0398418448</EditSequence><Name>Fake-Bianca
+        Smith</Name><FullName>Fake-Bianca Smith</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-73b8c2c764adaff6eccb2860baf992b</ListID><TimeCreated>1988-08-29T02:18:18+00:00</TimeCreated><TimeModified>2025-08-28T19:37:45+00:00</TimeModified><EditSequence>2814456062</EditSequence><Name>Fake-Sean
+        Patton</Name><FullName>Fake-Sean Patton</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-218fab2ba3bfaddcf0eaa8269fa09c8</ListID><TimeCreated>2004-09-11T14:28:48+00:00</TimeCreated><TimeModified>2025-07-28T20:15:17+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-Elijah
+        Elliott</Name><FullName>Fake-Elijah Elliott</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-wUXWMIYeykUmwvLYnoxNhPiKU</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-d9361268ffbe5db8414b577d7f6d6ba</ListID><TimeCreated>2012-03-18T22:52:01+00:00</TimeCreated><TimeModified>2025-08-28T19:36:06+00:00</TimeModified><EditSequence>7755953432</EditSequence><Name>Fake-Ana
+        Reed</Name><FullName>Fake-Ana Reed</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-bf81849a1461f2adee0afec7a556caf</ListID><TimeCreated>2009-09-21T00:44:32+00:00</TimeCreated><TimeModified>2025-08-28T19:37:32+00:00</TimeModified><EditSequence>9199556486</EditSequence><Name>Fake-Terry
+        Andrews</Name><FullName>Fake-Terry Andrews</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-2a529a6fc9165d83ea17174d7283548</ListID><TimeCreated>2016-11-05T03:33:35+00:00</TimeCreated><TimeModified>2025-08-28T19:37:17+00:00</TimeModified><EditSequence>0157139833</EditSequence><Name>Fake-Amanda
+        Hudson</Name><FullName>Fake-Amanda Hudson</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-b1cfb4b2affbdf9a00a74adc7f91222</ListID><TimeCreated>2023-09-09T19:07:36+00:00</TimeCreated><TimeModified>2025-07-28T20:15:17+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-Alejandra
+        Oconnell</Name><FullName>Fake-Alejandra Oconnell</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><ManufacturerPartNumber>-Fallback-scrubbed-meeP</ManufacturerPartNumber><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>679.90</Price><AccountRef><ListID>Fake-4f8f79403d6cff422d9ae0db0846831</ListID><FullName>Fake-Sean
+        Leonard</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-34554d660aee420a329e633ffc7de23</ListID><TimeCreated>2006-05-07T06:36:15+00:00</TimeCreated><TimeModified>2025-07-28T20:15:17+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-Timothy
+        Nichols</Name><FullName>Fake-Timothy Nichols</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>6.70</Price><AccountRef><ListID>Fake-21d3d5a7dee3bfdede9e2ccedeebe53</ListID><FullName>Fake-Travis
+        Ryan</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-89d07ea35d6fd3eb24b5b1fc9a1021e</ListID><TimeCreated>2011-04-12T00:06:18+00:00</TimeCreated><TimeModified>2025-08-28T19:22:39+00:00</TimeModified><EditSequence>6534998997</EditSequence><Name>Fake-Susan
+        Moore</Name><FullName>Fake-Susan Moore</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-806d0ae6a706f23c94417ad94e8c754</ListID><TimeCreated>1995-05-21T21:25:00+00:00</TimeCreated><TimeModified>2025-08-28T19:20:08+00:00</TimeModified><EditSequence>9207378974</EditSequence><Name>Fake-Patrick
+        Holland</Name><FullName>Fake-Patrick Holland</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-bae062d795dffb7f0a646b214a7c823</ListID><TimeCreated>1985-10-09T16:01:33+00:00</TimeCreated><TimeModified>2025-08-28T19:21:21+00:00</TimeModified><EditSequence>7976991486</EditSequence><Name>Fake-Nicholas
+        Ingram</Name><FullName>Fake-Nicholas Ingram</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-8e6aa8e3eeacbe871d81108c2acff82</ListID><TimeCreated>1980-04-11T06:01:24+00:00</TimeCreated><TimeModified>2025-08-28T19:20:56+00:00</TimeModified><EditSequence>4106532744</EditSequence><Name>Fake-Dawn
+        Anderson</Name><FullName>Fake-Dawn Anderson</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-71a16c65c670d91634f26ca7325ad2f</ListID><TimeCreated>1982-01-18T05:26:07+00:00</TimeCreated><TimeModified>2025-08-28T19:36:47+00:00</TimeModified><EditSequence>5150387260</EditSequence><Name>Fake-Amanda
+        Lyons</Name><FullName>Fake-Amanda Lyons</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-3e7e222740e0646b5ec26602a127c1e</ListID><TimeCreated>1978-12-08T06:05:02+00:00</TimeCreated><TimeModified>2025-08-28T19:21:59+00:00</TimeModified><EditSequence>7935210793</EditSequence><Name>Fake-Joseph
+        Wong</Name><FullName>Fake-Joseph Wong</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-cc26ab2d24fe6c073f028249e6659ed</ListID><TimeCreated>1984-01-22T23:07:03+00:00</TimeCreated><TimeModified>2025-08-28T19:36:57+00:00</TimeModified><EditSequence>3227230020</EditSequence><Name>Fake-Sherry
+        Perez</Name><FullName>Fake-Sherry Perez</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-a0794a6085678169a05b8b25cb2c3b5</ListID><TimeCreated>1981-04-02T09:50:25+00:00</TimeCreated><TimeModified>2025-08-28T19:21:38+00:00</TimeModified><EditSequence>9655211883</EditSequence><Name>Fake-Cheryl
+        Vasquez</Name><FullName>Fake-Cheryl Vasquez</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-898ef6e5c4845e5e455483b0c8d5ee2</ListID><TimeCreated>1980-02-29T00:12:22+00:00</TimeCreated><TimeModified>2025-08-28T19:35:50+00:00</TimeModified><EditSequence>2251610413</EditSequence><Name>Fake-Ray
+        Austin</Name><FullName>Fake-Ray Austin</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-bbfe43f53bde16688244196b590d092</ListID><TimeCreated>1989-07-22T19:29:14+00:00</TimeCreated><TimeModified>2025-12-12T19:16:06+00:00</TimeModified><EditSequence>1801018862</EditSequence><Name>Fake-Robin
+        Jones</Name><FullName>Fake-Robin Jones</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><UnitOfMeasureSetRef><ListID>Fake-cf0e353eff1481a6334e1ad7be3c45c</ListID><FullName>Fake-Bruce
+        Cook</FullName></UnitOfMeasureSetRef><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-f387c2120fa5ff695bcd2e34eeca854</ListID><FullName>Fake-Melissa
+        Smith</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-4bced761524117cec0b07d510ded4e9</ListID><TimeCreated>2021-06-02T12:40:48+00:00</TimeCreated><TimeModified>2025-07-31T15:05:34+00:00</TimeModified><EditSequence>3533018226</EditSequence><Name>Fake-Becky
+        Hernandez</Name><FullName>Fake-Becky Hernandez</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-71c6014987369449b41a6396800e97b</ListID><TimeCreated>2024-03-28T14:02:10+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Jennifer
+        Brown</Name><FullName>Fake-Jennifer Brown</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-SUbNtApfKAlQuatmmtSInpuITwtMAcbvCuVlKdcreIzOv</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-d357cfd894cb157530f10384174b41f</ListID><TimeCreated>2024-03-28T14:02:10+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-John
+        Chen</Name><FullName>Fake-John Chen</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Desc>-Fallback-scrubbed-xXIwbZhRoWEphxswwsRoYSIMIoEelqWhEUXjHPkYQ</Desc><Price>6.70</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemNonInventoryRet><ListID>Fake-d67d7f579b62b722342727c137006ae</ListID><TimeCreated>2015-06-17T04:39:59+00:00</TimeCreated><TimeModified>2025-08-28T19:37:07+00:00</TimeModified><EditSequence>1195560563</EditSequence><Name>Fake-Janice
+        Long</Name><FullName>Fake-Janice Long</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesOrPurchase><Price>83.44</Price><AccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></AccountRef></SalesOrPurchase></ItemNonInventoryRet><ItemInventoryRet><ListID>Fake-98b863497afaaeff1c7b2ff3ce1feaf</ListID><TimeCreated>2010-10-18T11:14:32+00:00</TimeCreated><TimeModified>2026-07-08T15:32:33+00:00</TimeModified><EditSequence>1667128883</EditSequence><Name>Fake-Karl
+        Mueller</Name><FullName>Fake-Karl Mueller</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><SalesDesc>-Fallback-scrubbed-OPkIFOXb</SalesDesc><SalesPrice>01.27</SalesPrice><IncomeAccountRef><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><FullName>Fake-Natasha
+        Ramirez</FullName></IncomeAccountRef><PurchaseDesc>-Fallback-scrubbed-OPkIFOXb</PurchaseDesc><PurchaseCost>83.44</PurchaseCost><COGSAccountRef><ListID>Fake-92e5369e87ce108af9d5bac23927f78</ListID><FullName>Fake-Michael
+        Washington</FullName></COGSAccountRef><PrefVendorRef><ListID>Fake-7bc6e8f7006d70d8b8872fabc0b2f87</ListID><FullName>Fake-Thomas
+        Hunt</FullName></PrefVendorRef><AssetAccountRef><ListID>Fake-1c809d6cabde567c5f3521a156c14d4</ListID><FullName>Fake-Daniel
+        Fisher</FullName></AssetAccountRef><ReorderPoint>48</ReorderPoint><Max>469</Max><QuantityOnHand>469</QuantityOnHand><AverageCost>83.44</AverageCost><QuantityOnOrder>5</QuantityOnOrder><QuantityOnSalesOrder>5</QuantityOnSalesOrder></ItemInventoryRet><ItemSalesTaxRet><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><TimeCreated>2014-12-19T10:09:42+00:00</TimeCreated><TimeModified>2025-07-28T20:14:42+00:00</TimeModified><EditSequence>6308096150</EditSequence><Name>Fake-Kristen
+        Thomas</Name><IsActive>true</IsActive><ItemDesc>-Fallback-scrubbed-baDVtsuUB</ItemDesc><TaxRate>83.44</TaxRate><TaxVendorRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Julie
+        Cannon</FullName></TaxVendorRef></ItemSalesTaxRet></ItemQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:56:44 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '26616'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1
