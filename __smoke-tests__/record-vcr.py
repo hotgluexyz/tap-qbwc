@@ -1,4 +1,5 @@
 import hashlib
+import itertools
 import json
 import re
 import uuid
@@ -73,7 +74,7 @@ class QBWCTestRunner(VCRTapTestRunner):
                     elif re.fullmatch(r"[+-]?\d+(\.\d+)?", original.text):
                         # Monetary/quantity XSD patterns constrain decimal precision.
                         # Fake digits without changing the sign or decimal places.
-                        digest = iter(hashlib.sha256(original.text.encode()).digest())
+                        digest = itertools.cycle(hashlib.sha256(original.text.encode()).digest())
                         result.text = re.sub(r"\d", lambda _: str(next(digest) % 10), original.text)
                     limit = facets.get("{http://www.w3.org/2001/XMLSchema}maxLength")
                     if limit and len(result.text) > limit.value:
@@ -81,7 +82,13 @@ class QBWCTestRunner(VCRTapTestRunner):
                         result.text = ("Fake-" + digest)[: limit.value]
                 if "iteratorID" in original.attrib:
                     result.set("iteratorID", self.fake_id(original.attrib["iteratorID"]))
-                for child, clean_child in zip(original, result):
+                # The shared scrubber groups repeated tags, so positional pairing mismatches mixed siblings such as InvoiceLineRet and InvoiceLineGroupRet.
+                children_by_tag = {}
+                for child in reversed(result):
+                    children_by_tag.setdefault(child.tag, []).append(child)
+                ordered = [children_by_tag[child.tag].pop() for child in original]
+                result[:] = ordered
+                for child, clean_child in zip(original, ordered):
                     constrain(child, clean_child, f"{path}/{child.tag}")
 
             constrain(root, clean, root.tag)
