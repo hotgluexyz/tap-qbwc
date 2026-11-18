@@ -1,0 +1,363 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/authenticate
+  response:
+    body:
+      string: '{"session_id": "f6c9fcfa-905a-5cd8-849c-f69ac8a9597f"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:53:04 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <HostQueryRq
+      />\n    </QBXMLMsgsRq>\n</QBXML>", "request_timeout": 3600, "total_processed_records_count":
+      0, "total_estimated_records_count": 0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=f6c9fcfa-905a-5cd8-849c-f69ac8a9597f
+  response:
+    body:
+      string: '{"request_id": "22a4e6b8-edad-568a-a78a-1ea9722ae5bb"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:53:04 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=f6c9fcfa-905a-5cd8-849c-f69ac8a9597f&request_id=22a4e6b8-edad-568a-a78a-1ea9722ae5bb
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><HostQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-vGZyedDKJ\"><HostRet><ProductName>-Fallback-scrubbed-zOCMeXZcnUduDTgZgMmcSKgMBXLEmnIbocVMeXRPicRczMLIkkIMmxzFniekwBhAKoqwyvJg</ProductName><MajorVersion>49</MajorVersion><MinorVersion>5</MinorVersion><Country>Fa</Country><SupportedQBXMLVersion>8.5</SupportedQBXMLVersion><SupportedQBXMLVersion>6.4</SupportedQBXMLVersion><SupportedQBXMLVersion>6.5</SupportedQBXMLVersion><SupportedQBXMLVersion>3.0</SupportedQBXMLVersion><SupportedQBXMLVersion>4.2</SupportedQBXMLVersion><SupportedQBXMLVersion>1.8</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>1.4</SupportedQBXMLVersion><SupportedQBXMLVersion>8.9</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>18.2</SupportedQBXMLVersion><SupportedQBXMLVersion>60.7</SupportedQBXMLVersion><SupportedQBXMLVersion>97.7</SupportedQBXMLVersion><SupportedQBXMLVersion>01.1</SupportedQBXMLVersion><SupportedQBXMLVersion>16.7</SupportedQBXMLVersion><SupportedQBXMLVersion>92.3</SupportedQBXMLVersion><SupportedQBXMLVersion>72.3</SupportedQBXMLVersion><SupportedQBXMLVersion>33.2</SupportedQBXMLVersion><IsAutomaticLogin>true</IsAutomaticLogin><QBFileMode>SingleUser</QBFileMode></HostRet></HostQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:53:08 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '1507'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <CreditMemoQueryRq
+      metaData=\"MetaDataOnly\">\n            <ModifiedDateRangeFilter>\n                <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            </ModifiedDateRangeFilter>\n        </CreditMemoQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '544'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=f6c9fcfa-905a-5cd8-849c-f69ac8a9597f
+  response:
+    body:
+      string: '{"request_id": "89563893-8e81-5550-a534-44fb309f66d8"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:53:09 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=f6c9fcfa-905a-5cd8-849c-f69ac8a9597f&request_id=89563893-8e81-5550-a534-44fb309f66d8
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><CreditMemoQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-vGZyedDKJ\"
+        retCount=\"11\" /></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '214'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:53:09 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <CreditMemoQueryRq
+      iterator=\"Start\" metaData=\"NoMetaData\">\n            <MaxReturned>200</MaxReturned>\n            <ModifiedDateRangeFilter>\n                <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            </ModifiedDateRangeFilter>\n            <IncludeLineItems>true</IncludeLineItems>\n            <IncludeRetElement>TxnID</IncludeRetElement>\n            <IncludeRetElement>TimeCreated</IncludeRetElement>\n            <IncludeRetElement>TimeModified</IncludeRetElement>\n            <IncludeRetElement>EditSequence</IncludeRetElement>\n            <IncludeRetElement>TxnNumber</IncludeRetElement>\n            <IncludeRetElement>CustomerRef</IncludeRetElement>\n            <IncludeRetElement>ClassRef</IncludeRetElement>\n            <IncludeRetElement>ARAccountRef</IncludeRetElement>\n            <IncludeRetElement>TemplateRef</IncludeRetElement>\n            <IncludeRetElement>TxnDate</IncludeRetElement>\n            <IncludeRetElement>RefNumber</IncludeRetElement>\n            <IncludeRetElement>BillAddress</IncludeRetElement>\n            <IncludeRetElement>BillAddressBlock</IncludeRetElement>\n            <IncludeRetElement>ShipAddress</IncludeRetElement>\n            <IncludeRetElement>ShipAddressBlock</IncludeRetElement>\n            <IncludeRetElement>IsPending</IncludeRetElement>\n            <IncludeRetElement>PONumber</IncludeRetElement>\n            <IncludeRetElement>TermsRef</IncludeRetElement>\n            <IncludeRetElement>DueDate</IncludeRetElement>\n            <IncludeRetElement>SalesRepRef</IncludeRetElement>\n            <IncludeRetElement>FOB</IncludeRetElement>\n            <IncludeRetElement>ShipDate</IncludeRetElement>\n            <IncludeRetElement>ShipMethodRef</IncludeRetElement>\n            <IncludeRetElement>Subtotal</IncludeRetElement>\n            <IncludeRetElement>ItemSalesTaxRef</IncludeRetElement>\n            <IncludeRetElement>SalesTaxPercentage</IncludeRetElement>\n            <IncludeRetElement>SalesTaxTotal</IncludeRetElement>\n            <IncludeRetElement>TotalAmount</IncludeRetElement>\n            <IncludeRetElement>CreditRemaining</IncludeRetElement>\n            <IncludeRetElement>CurrencyRef</IncludeRetElement>\n            <IncludeRetElement>ExchangeRate</IncludeRetElement>\n            <IncludeRetElement>CreditRemainingInHomeCurrency</IncludeRetElement>\n            <IncludeRetElement>Memo</IncludeRetElement>\n            <IncludeRetElement>CustomerMsgRef</IncludeRetElement>\n            <IncludeRetElement>IsToBePrinted</IncludeRetElement>\n            <IncludeRetElement>IsToBeEmailed</IncludeRetElement>\n            <IncludeRetElement>IsTaxIncluded</IncludeRetElement>\n            <IncludeRetElement>CustomerSalesTaxCodeRef</IncludeRetElement>\n            <IncludeRetElement>Other</IncludeRetElement>\n            <IncludeRetElement>ExternalGUID</IncludeRetElement>\n            <IncludeRetElement>LinkedTxn</IncludeRetElement>\n            <IncludeRetElement>CreditMemoLineRet</IncludeRetElement>\n            <IncludeRetElement>CreditMemoLineGroupRet</IncludeRetElement>\n            <IncludeRetElement>DiscountLineRet</IncludeRetElement>\n            <IncludeRetElement>SalesTaxLineRet</IncludeRetElement>\n            <IncludeRetElement>ShippingLineRet</IncludeRetElement>\n            <IncludeRetElement>DataExtRet</IncludeRetElement>\n        </CreditMemoQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      11}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3712'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=f6c9fcfa-905a-5cd8-849c-f69ac8a9597f
+  response:
+    body:
+      string: '{"request_id": "c18c1cc2-0c22-5c45-934a-3fc9da9631a5"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:53:09 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=f6c9fcfa-905a-5cd8-849c-f69ac8a9597f&request_id=c18c1cc2-0c22-5c45-934a-3fc9da9631a5
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><CreditMemoQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-vGZyedDKJ\"
+        iteratorRemainingCount=\"0\" iteratorID=\"0df9235f-63fb-5d92-8e8b-fb10e50dfc6d\"><CreditMemoRet><TxnID>-Fallback-scrubbed-GeSyYRQIxAZDpn</TxnID><TimeCreated>1985-05-27T13:14:18+00:00</TimeCreated><TimeModified>2025-07-29T13:39:10+00:00</TimeModified><EditSequence>3352097190</EditSequence><TxnNumber>94</TxnNumber><CustomerRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Andrew
+        Johnson</FullName></CustomerRef><ARAccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Belinda
+        Perez</FullName></ARAccountRef><TemplateRef><ListID>Fake-f8c82274d797c4348635b5dc7177feb</ListID><FullName>Fake-Brian
+        Morrison</FullName></TemplateRef><TxnDate>2025-07-28</TxnDate><RefNumber>Fake-023cd6</RefNumber><BillAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddressBlock><ShipAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddress><ShipAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddressBlock><IsPending>true</IsPending><PONumber>Fake-70e07b4519ff36c777ad</PONumber><DueDate>2018-08-04</DueDate><ShipDate>2010-09-11</ShipDate><Subtotal>581.31</Subtotal><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Richard
+        Anderson</FullName></ItemSalesTaxRef><SalesTaxPercentage>83.44</SalesTaxPercentage><SalesTaxTotal>6.70</SalesTaxTotal><TotalAmount>581.31</TotalAmount><CreditRemaining>581.31</CreditRemaining><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        Schwartz</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditRemainingInHomeCurrency>581.31</CreditRemainingInHomeCurrency><IsToBePrinted>false</IsToBePrinted><IsToBeEmailed>true</IsToBeEmailed><CustomerSalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></CustomerSalesTaxCodeRef><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-syCKIwNirgEkPH</TxnLineID><ItemRef><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><FullName>Fake-Barry
+        Thompson</FullName></ItemRef><Desc>-Fallback-scrubbed-UcJpowhmI</Desc><Quantity>8</Quantity><Rate>05</Rate><Amount>11.44</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-LsojEQiyKBIcaC</TxnLineID><ItemRef><ListID>Fake-566c3e881cc26de1aa1f4878fd5b583</ListID><FullName>Fake-Nancy
+        Stevens</FullName></ItemRef><Desc>-Fallback-scrubbed-RwpvFCYF</Desc><Quantity>8</Quantity><Rate>01</Rate><Amount>82.68</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-ZiDlFgUKMxoBxL</TxnLineID><ItemRef><ListID>Fake-218fab2ba3bfaddcf0eaa8269fa09c8</ListID><FullName>Fake-Angela
+        Perez</FullName></ItemRef><Desc>-Fallback-scrubbed-KpfpmjnsMNyNvXFWZRgtqEUJL</Desc><Quantity>7</Quantity><Rate>6.70</Rate><Amount>6.70</Amount><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet></CreditMemoRet><CreditMemoRet><TxnID>-Fallback-scrubbed-AuPrOeCGdMKdED</TxnID><TimeCreated>1996-08-12T03:33:20+00:00</TimeCreated><TimeModified>2025-07-30T18:42:14+00:00</TimeModified><EditSequence>0346437922</EditSequence><TxnNumber>88</TxnNumber><CustomerRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Andrew
+        Johnson</FullName></CustomerRef><ARAccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Belinda
+        Perez</FullName></ARAccountRef><TemplateRef><ListID>Fake-f8c82274d797c4348635b5dc7177feb</ListID><FullName>Fake-Brian
+        Morrison</FullName></TemplateRef><TxnDate>2025-07-28</TxnDate><RefNumber>Fake-fb46c4</RefNumber><BillAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddressBlock><ShipAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddress><ShipAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddressBlock><IsPending>true</IsPending><PONumber>Fake-70e07b4519ff36c777ad</PONumber><DueDate>2018-08-04</DueDate><ShipDate>2010-09-11</ShipDate><Subtotal>581.31</Subtotal><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Richard
+        Anderson</FullName></ItemSalesTaxRef><SalesTaxPercentage>83.44</SalesTaxPercentage><SalesTaxTotal>6.70</SalesTaxTotal><TotalAmount>581.31</TotalAmount><CreditRemaining>581.31</CreditRemaining><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        Schwartz</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditRemainingInHomeCurrency>581.31</CreditRemainingInHomeCurrency><IsToBePrinted>false</IsToBePrinted><IsToBeEmailed>true</IsToBeEmailed><CustomerSalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></CustomerSalesTaxCodeRef><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-UbFWpIAAEoIMhn</TxnLineID><ItemRef><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><FullName>Fake-Barry
+        Thompson</FullName></ItemRef><Desc>-Fallback-scrubbed-UcJpowhmI</Desc><Quantity>8</Quantity><Rate>05</Rate><Amount>11.44</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-BcFovFXLbgbqXh</TxnLineID><ItemRef><ListID>Fake-566c3e881cc26de1aa1f4878fd5b583</ListID><FullName>Fake-Nancy
+        Stevens</FullName></ItemRef><Desc>-Fallback-scrubbed-RwpvFCYF</Desc><Quantity>8</Quantity><Rate>01</Rate><Amount>82.68</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-RLTPlsmAtNtIvZ</TxnLineID><ItemRef><ListID>Fake-218fab2ba3bfaddcf0eaa8269fa09c8</ListID><FullName>Fake-Angela
+        Perez</FullName></ItemRef><Desc>-Fallback-scrubbed-KpfpmjnsMNyNvXFWZRgtqEUJL</Desc><Quantity>7</Quantity><Rate>6.70</Rate><Amount>6.70</Amount><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet></CreditMemoRet><CreditMemoRet><TxnID>-Fallback-scrubbed-VZyTLfBoSltRlY</TxnID><TimeCreated>2014-07-11T03:37:40+00:00</TimeCreated><TimeModified>2025-07-31T14:47:46+00:00</TimeModified><EditSequence>2299818729</EditSequence><TxnNumber>88</TxnNumber><CustomerRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Andrew
+        Johnson</FullName></CustomerRef><ARAccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Belinda
+        Perez</FullName></ARAccountRef><TemplateRef><ListID>Fake-f8c82274d797c4348635b5dc7177feb</ListID><FullName>Fake-Brian
+        Morrison</FullName></TemplateRef><TxnDate>2025-07-28</TxnDate><RefNumber>Fake-06f866</RefNumber><BillAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddressBlock><ShipAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddress><ShipAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddressBlock><IsPending>true</IsPending><PONumber>Fake-83cee2722579b11b7040</PONumber><DueDate>2018-08-04</DueDate><ShipDate>2010-09-11</ShipDate><Subtotal>581.31</Subtotal><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Richard
+        Anderson</FullName></ItemSalesTaxRef><SalesTaxPercentage>83.44</SalesTaxPercentage><SalesTaxTotal>6.70</SalesTaxTotal><TotalAmount>581.31</TotalAmount><CreditRemaining>581.31</CreditRemaining><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        Schwartz</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditRemainingInHomeCurrency>581.31</CreditRemainingInHomeCurrency><IsToBePrinted>false</IsToBePrinted><IsToBeEmailed>true</IsToBeEmailed><CustomerSalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></CustomerSalesTaxCodeRef><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-MHvysbeFCJbgAa</TxnLineID><ItemRef><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><FullName>Fake-Barry
+        Thompson</FullName></ItemRef><Desc>-Fallback-scrubbed-UcJpowhmI</Desc><Quantity>8</Quantity><Rate>05</Rate><Amount>11.44</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-VHuZZwtsuzzwJC</TxnLineID><ItemRef><ListID>Fake-566c3e881cc26de1aa1f4878fd5b583</ListID><FullName>Fake-Nancy
+        Stevens</FullName></ItemRef><Desc>-Fallback-scrubbed-RwpvFCYF</Desc><Quantity>8</Quantity><Rate>01</Rate><Amount>82.68</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-flZlWFLidhsoge</TxnLineID><ItemRef><ListID>Fake-218fab2ba3bfaddcf0eaa8269fa09c8</ListID><FullName>Fake-Angela
+        Perez</FullName></ItemRef><Desc>-Fallback-scrubbed-KpfpmjnsMNyNvXFWZRgtqEUJL</Desc><Quantity>7</Quantity><Rate>6.70</Rate><Amount>6.70</Amount><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet></CreditMemoRet><CreditMemoRet><TxnID>-Fallback-scrubbed-kOAGIsQHmvADmJ</TxnID><TimeCreated>1989-09-15T01:54:36+00:00</TimeCreated><TimeModified>2025-07-31T20:53:01+00:00</TimeModified><EditSequence>1792772488</EditSequence><TxnNumber>50</TxnNumber><CustomerRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Andrew
+        Johnson</FullName></CustomerRef><ARAccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Belinda
+        Perez</FullName></ARAccountRef><TemplateRef><ListID>Fake-f8c82274d797c4348635b5dc7177feb</ListID><FullName>Fake-Brian
+        Morrison</FullName></TemplateRef><TxnDate>2025-07-28</TxnDate><RefNumber>Fake-b87a6b</RefNumber><BillAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddressBlock><ShipAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddress><ShipAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddressBlock><IsPending>true</IsPending><PONumber>Fake-70e07b4519ff36c777ad</PONumber><DueDate>2018-08-04</DueDate><ShipDate>2010-09-11</ShipDate><Subtotal>581.31</Subtotal><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Richard
+        Anderson</FullName></ItemSalesTaxRef><SalesTaxPercentage>83.44</SalesTaxPercentage><SalesTaxTotal>6.70</SalesTaxTotal><TotalAmount>581.31</TotalAmount><CreditRemaining>581.31</CreditRemaining><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        Schwartz</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditRemainingInHomeCurrency>581.31</CreditRemainingInHomeCurrency><IsToBePrinted>false</IsToBePrinted><IsToBeEmailed>true</IsToBeEmailed><CustomerSalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></CustomerSalesTaxCodeRef><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-wrvbaqAFVKNIaB</TxnLineID><ItemRef><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><FullName>Fake-Barry
+        Thompson</FullName></ItemRef><Desc>-Fallback-scrubbed-UcJpowhmI</Desc><Quantity>8</Quantity><Rate>05</Rate><Amount>11.44</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-cslTFiBBdPkmZv</TxnLineID><ItemRef><ListID>Fake-566c3e881cc26de1aa1f4878fd5b583</ListID><FullName>Fake-Nancy
+        Stevens</FullName></ItemRef><Desc>-Fallback-scrubbed-RwpvFCYF</Desc><Quantity>8</Quantity><Rate>01</Rate><Amount>82.68</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-sYnhOmUBgiGsZn</TxnLineID><ItemRef><ListID>Fake-218fab2ba3bfaddcf0eaa8269fa09c8</ListID><FullName>Fake-Angela
+        Perez</FullName></ItemRef><Desc>-Fallback-scrubbed-KpfpmjnsMNyNvXFWZRgtqEUJL</Desc><Quantity>7</Quantity><Rate>6.70</Rate><Amount>6.70</Amount><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet></CreditMemoRet><CreditMemoRet><TxnID>-Fallback-scrubbed-WlddsZUSpmZWSh</TxnID><TimeCreated>1986-10-02T10:56:42+00:00</TimeCreated><TimeModified>2025-07-31T22:58:37+00:00</TimeModified><EditSequence>3712823298</EditSequence><TxnNumber>54</TxnNumber><CustomerRef><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><FullName>Fake-Andrew
+        Johnson</FullName></CustomerRef><ARAccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Belinda
+        Perez</FullName></ARAccountRef><TemplateRef><ListID>Fake-f8c82274d797c4348635b5dc7177feb</ListID><FullName>Fake-Brian
+        Morrison</FullName></TemplateRef><TxnDate>2025-07-28</TxnDate><RefNumber>Fake-ee0890</RefNumber><BillAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddressBlock><ShipAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddress><ShipAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddressBlock><IsPending>true</IsPending><PONumber>Fake-70e07b4519ff36c777ad</PONumber><DueDate>2018-08-04</DueDate><ShipDate>2010-09-11</ShipDate><Subtotal>581.31</Subtotal><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Richard
+        Anderson</FullName></ItemSalesTaxRef><SalesTaxPercentage>83.44</SalesTaxPercentage><SalesTaxTotal>6.70</SalesTaxTotal><TotalAmount>581.31</TotalAmount><CreditRemaining>581.31</CreditRemaining><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        Schwartz</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditRemainingInHomeCurrency>581.31</CreditRemainingInHomeCurrency><IsToBePrinted>false</IsToBePrinted><IsToBeEmailed>true</IsToBeEmailed><CustomerSalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></CustomerSalesTaxCodeRef><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-sBeAfeLyewmRjQ</TxnLineID><ItemRef><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><FullName>Fake-Barry
+        Thompson</FullName></ItemRef><Desc>-Fallback-scrubbed-UcJpowhmI</Desc><Quantity>8</Quantity><Rate>05</Rate><Amount>11.44</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-HLGTCBSipFgtEg</TxnLineID><ItemRef><ListID>Fake-566c3e881cc26de1aa1f4878fd5b583</ListID><FullName>Fake-Nancy
+        Stevens</FullName></ItemRef><Desc>-Fallback-scrubbed-RwpvFCYF</Desc><Quantity>8</Quantity><Rate>01</Rate><Amount>82.68</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-XPCTxPcrWgSsbH</TxnLineID><ItemRef><ListID>Fake-218fab2ba3bfaddcf0eaa8269fa09c8</ListID><FullName>Fake-Angela
+        Perez</FullName></ItemRef><Desc>-Fallback-scrubbed-KpfpmjnsMNyNvXFWZRgtqEUJL</Desc><Quantity>7</Quantity><Rate>6.70</Rate><Amount>6.70</Amount><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet></CreditMemoRet><CreditMemoRet><TxnID>-Fallback-scrubbed-gpIPTRZoYWzRTJ</TxnID><TimeCreated>1994-08-29T14:12:02+00:00</TimeCreated><TimeModified>2025-09-22T09:28:13+00:00</TimeModified><EditSequence>3360303277</EditSequence><TxnNumber>759</TxnNumber><CustomerRef><ListID>Fake-143c682169f43fc94945a942e92c0a4</ListID><FullName>Fake-Christopher
+        Castillo</FullName></CustomerRef><ARAccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Belinda
+        Perez</FullName></ARAccountRef><TemplateRef><ListID>Fake-f8c82274d797c4348635b5dc7177feb</ListID><FullName>Fake-Brian
+        Morrison</FullName></TemplateRef><TxnDate>2025-07-28</TxnDate><RefNumber>Fake-feb9cf</RefNumber><BillAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddressBlock><ShipAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddress><ShipAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddressBlock><IsPending>true</IsPending><PONumber>Fake-70e07b4519ff36c777ad</PONumber><DueDate>2018-08-04</DueDate><ShipDate>2010-09-11</ShipDate><Subtotal>581.31</Subtotal><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Richard
+        Anderson</FullName></ItemSalesTaxRef><SalesTaxPercentage>83.44</SalesTaxPercentage><SalesTaxTotal>6.70</SalesTaxTotal><TotalAmount>581.31</TotalAmount><CreditRemaining>581.31</CreditRemaining><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        Schwartz</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditRemainingInHomeCurrency>581.31</CreditRemainingInHomeCurrency><IsToBePrinted>false</IsToBePrinted><IsToBeEmailed>true</IsToBeEmailed><CustomerSalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></CustomerSalesTaxCodeRef><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-DvBsglNAawUVwN</TxnLineID><ItemRef><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><FullName>Fake-Barry
+        Thompson</FullName></ItemRef><Desc>-Fallback-scrubbed-UcJpowhmI</Desc><Quantity>8</Quantity><Rate>05</Rate><Amount>11.44</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-ROxsRXijnGjtxd</TxnLineID><ItemRef><ListID>Fake-566c3e881cc26de1aa1f4878fd5b583</ListID><FullName>Fake-Nancy
+        Stevens</FullName></ItemRef><Desc>-Fallback-scrubbed-RwpvFCYF</Desc><Quantity>8</Quantity><Rate>01</Rate><Amount>82.68</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-XohjCcVxddKtrl</TxnLineID><ItemRef><ListID>Fake-218fab2ba3bfaddcf0eaa8269fa09c8</ListID><FullName>Fake-Angela
+        Perez</FullName></ItemRef><Desc>-Fallback-scrubbed-KpfpmjnsMNyNvXFWZRgtqEUJL</Desc><Quantity>7</Quantity><Rate>6.70</Rate><Amount>6.70</Amount><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet></CreditMemoRet><CreditMemoRet><TxnID>-Fallback-scrubbed-CJUKhCFyTwQnVV</TxnID><TimeCreated>1993-09-24T18:18:19+00:00</TimeCreated><TimeModified>2025-12-15T21:07:24+00:00</TimeModified><EditSequence>9886983952</EditSequence><TxnNumber>385</TxnNumber><CustomerRef><ListID>Fake-181a2eba2afa4fbc290d8d043306975</ListID><FullName>Fake-Bruce
+        Rivers</FullName></CustomerRef><ARAccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Belinda
+        Perez</FullName></ARAccountRef><TemplateRef><ListID>Fake-f8c82274d797c4348635b5dc7177feb</ListID><FullName>Fake-Brian
+        Morrison</FullName></TemplateRef><TxnDate>2025-07-28</TxnDate><RefNumber>Fake-4139a5</RefNumber><BillAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddressBlock><ShipAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddress><ShipAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddressBlock><IsPending>true</IsPending><PONumber>Fake-70e07b4519ff36c777ad</PONumber><DueDate>2018-08-04</DueDate><ShipDate>2010-09-11</ShipDate><Subtotal>581.31</Subtotal><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Richard
+        Anderson</FullName></ItemSalesTaxRef><SalesTaxPercentage>83.44</SalesTaxPercentage><SalesTaxTotal>6.70</SalesTaxTotal><TotalAmount>581.31</TotalAmount><CreditRemaining>581.31</CreditRemaining><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        Schwartz</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditRemainingInHomeCurrency>581.31</CreditRemainingInHomeCurrency><IsToBePrinted>false</IsToBePrinted><IsToBeEmailed>true</IsToBeEmailed><CustomerSalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></CustomerSalesTaxCodeRef><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-WSQFECMudAfkaA</TxnLineID><ItemRef><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><FullName>Fake-Barry
+        Thompson</FullName></ItemRef><Desc>-Fallback-scrubbed-UcJpowhmI</Desc><Quantity>8</Quantity><UnitOfMeasure>-Fallback-scrubbed-AmLA</UnitOfMeasure><OverrideUOMSetRef><ListID>Fake-cf0e353eff1481a6334e1ad7be3c45c</ListID><FullName>Fake-Stephanie
+        Watson</FullName></OverrideUOMSetRef><Rate>05</Rate><Amount>11.44</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-NmZxWXGugzMmky</TxnLineID><ItemRef><ListID>Fake-566c3e881cc26de1aa1f4878fd5b583</ListID><FullName>Fake-Nancy
+        Stevens</FullName></ItemRef><Desc>-Fallback-scrubbed-RwpvFCYF</Desc><Quantity>8</Quantity><Rate>01</Rate><Amount>82.68</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-DOLCGFGLgaRDvQ</TxnLineID><ItemRef><ListID>Fake-218fab2ba3bfaddcf0eaa8269fa09c8</ListID><FullName>Fake-Angela
+        Perez</FullName></ItemRef><Desc>-Fallback-scrubbed-KpfpmjnsMNyNvXFWZRgtqEUJL</Desc><Quantity>7</Quantity><Rate>6.70</Rate><Amount>6.70</Amount><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet></CreditMemoRet><CreditMemoRet><TxnID>-Fallback-scrubbed-QlWGvXZjFEavlY</TxnID><TimeCreated>2004-03-18T12:59:39+00:00</TimeCreated><TimeModified>2025-12-18T21:32:34+00:00</TimeModified><EditSequence>3803330009</EditSequence><TxnNumber>825</TxnNumber><CustomerRef><ListID>Fake-181a2eba2afa4fbc290d8d043306975</ListID><FullName>Fake-Bruce
+        Rivers</FullName></CustomerRef><ARAccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Belinda
+        Perez</FullName></ARAccountRef><TemplateRef><ListID>Fake-f8c82274d797c4348635b5dc7177feb</ListID><FullName>Fake-Brian
+        Morrison</FullName></TemplateRef><TxnDate>2025-07-28</TxnDate><RefNumber>Fake-987033</RefNumber><BillAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddressBlock><ShipAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddress><ShipAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddressBlock><IsPending>true</IsPending><PONumber>Fake-70e07b4519ff36c777ad</PONumber><DueDate>2018-08-04</DueDate><ShipDate>2010-09-11</ShipDate><Subtotal>581.31</Subtotal><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Richard
+        Anderson</FullName></ItemSalesTaxRef><SalesTaxPercentage>83.44</SalesTaxPercentage><SalesTaxTotal>6.70</SalesTaxTotal><TotalAmount>581.31</TotalAmount><CreditRemaining>581.31</CreditRemaining><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        Schwartz</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditRemainingInHomeCurrency>581.31</CreditRemainingInHomeCurrency><IsToBePrinted>false</IsToBePrinted><IsToBeEmailed>true</IsToBeEmailed><CustomerSalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></CustomerSalesTaxCodeRef><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-QVaEPdaVXRuLyh</TxnLineID><ItemRef><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><FullName>Fake-Barry
+        Thompson</FullName></ItemRef><Desc>-Fallback-scrubbed-UcJpowhmI</Desc><Quantity>8</Quantity><UnitOfMeasure>-Fallback-scrubbed-AmLA</UnitOfMeasure><OverrideUOMSetRef><ListID>Fake-cf0e353eff1481a6334e1ad7be3c45c</ListID><FullName>Fake-Stephanie
+        Watson</FullName></OverrideUOMSetRef><Rate>05</Rate><Amount>11.44</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-NOpuWnLnoFjrFe</TxnLineID><ItemRef><ListID>Fake-566c3e881cc26de1aa1f4878fd5b583</ListID><FullName>Fake-Nancy
+        Stevens</FullName></ItemRef><Desc>-Fallback-scrubbed-RwpvFCYF</Desc><Quantity>8</Quantity><Rate>01</Rate><Amount>82.68</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-dZeAPkDRXjfBZh</TxnLineID><ItemRef><ListID>Fake-218fab2ba3bfaddcf0eaa8269fa09c8</ListID><FullName>Fake-Angela
+        Perez</FullName></ItemRef><Desc>-Fallback-scrubbed-KpfpmjnsMNyNvXFWZRgtqEUJL</Desc><Quantity>7</Quantity><Rate>6.70</Rate><Amount>6.70</Amount><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet></CreditMemoRet><CreditMemoRet><TxnID>-Fallback-scrubbed-gPPorsfYxLAKHf</TxnID><TimeCreated>2022-05-24T03:29:59+00:00</TimeCreated><TimeModified>2025-12-19T00:27:11+00:00</TimeModified><EditSequence>9638855854</EditSequence><TxnNumber>644</TxnNumber><CustomerRef><ListID>Fake-181a2eba2afa4fbc290d8d043306975</ListID><FullName>Fake-Bruce
+        Rivers</FullName></CustomerRef><ARAccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Belinda
+        Perez</FullName></ARAccountRef><TemplateRef><ListID>Fake-f8c82274d797c4348635b5dc7177feb</ListID><FullName>Fake-Brian
+        Morrison</FullName></TemplateRef><TxnDate>2025-07-28</TxnDate><RefNumber>Fake-976b50</RefNumber><BillAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddressBlock><ShipAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddress><ShipAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddressBlock><IsPending>true</IsPending><PONumber>Fake-70e07b4519ff36c777ad</PONumber><DueDate>2018-08-04</DueDate><ShipDate>2010-09-11</ShipDate><Subtotal>160.33</Subtotal><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Richard
+        Anderson</FullName></ItemSalesTaxRef><SalesTaxPercentage>83.44</SalesTaxPercentage><SalesTaxTotal>6.70</SalesTaxTotal><TotalAmount>160.33</TotalAmount><CreditRemaining>160.33</CreditRemaining><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        Schwartz</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditRemainingInHomeCurrency>160.33</CreditRemainingInHomeCurrency><IsToBePrinted>false</IsToBePrinted><IsToBeEmailed>true</IsToBeEmailed><CustomerSalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></CustomerSalesTaxCodeRef><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-NvBDcFJrNLbVKP</TxnLineID><ItemRef><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><FullName>Fake-Barry
+        Thompson</FullName></ItemRef><Desc>-Fallback-scrubbed-UcJpowhmI</Desc><Quantity>9</Quantity><UnitOfMeasure>-Fallback-scrubbed-AmLA</UnitOfMeasure><OverrideUOMSetRef><ListID>Fake-cf0e353eff1481a6334e1ad7be3c45c</ListID><FullName>Fake-Stephanie
+        Watson</FullName></OverrideUOMSetRef><Rate>33.0</Rate><Amount>11.44</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-iPGZWwrpuDGNOO</TxnLineID><ItemRef><ListID>Fake-566c3e881cc26de1aa1f4878fd5b583</ListID><FullName>Fake-Nancy
+        Stevens</FullName></ItemRef><Desc>-Fallback-scrubbed-ILIrCeOGPNYWruTLERxaiAgMZzcq</Desc><Quantity>9</Quantity><Rate>5</Rate><Amount>82.68</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-ByycCruvqTfHaF</TxnLineID><ItemRef><ListID>Fake-54c91bd762fba38b479144ae7628e6f</ListID><FullName>Fake-Lindsay
+        Reynolds</FullName></ItemRef><Desc>-Fallback-scrubbed-HywwuTLmJlEcEHTdxbwvRPLowEnhk</Desc><Quantity>61</Quantity><UnitOfMeasure>-Fallback-scrubbed-IOL</UnitOfMeasure><OverrideUOMSetRef><ListID>Fake-a9ae779e5aa63d645cea12dbf78e696</ListID><FullName>Fake-Fernando
+        Terry</FullName></OverrideUOMSetRef><Rate>6.09</Rate><Amount>11.44</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet></CreditMemoRet><CreditMemoRet><TxnID>-Fallback-scrubbed-AkUHTgFMzfXbEc</TxnID><TimeCreated>1998-06-18T20:05:24+00:00</TimeCreated><TimeModified>2026-02-23T21:23:36+00:00</TimeModified><EditSequence>6620138389</EditSequence><TxnNumber>104</TxnNumber><CustomerRef><ListID>Fake-181a2eba2afa4fbc290d8d043306975</ListID><FullName>Fake-Bruce
+        Rivers</FullName></CustomerRef><ARAccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Belinda
+        Perez</FullName></ARAccountRef><TemplateRef><ListID>Fake-f8c82274d797c4348635b5dc7177feb</ListID><FullName>Fake-Brian
+        Morrison</FullName></TemplateRef><TxnDate>2026-01-08</TxnDate><RefNumber>Fake-3635ac</RefNumber><BillAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></BillAddressBlock><ShipAddress><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddress><ShipAddressBlock><Addr1>Fake-6f3aa4efdb0df364e41cd32113d142ec63db</Addr1></ShipAddressBlock><IsPending>true</IsPending><PONumber>Fake-70e07b4519ff36c777ad</PONumber><DueDate>1980-10-01</DueDate><ShipDate>1989-08-22</ShipDate><Subtotal>581.31</Subtotal><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Richard
+        Anderson</FullName></ItemSalesTaxRef><SalesTaxPercentage>83.44</SalesTaxPercentage><SalesTaxTotal>6.70</SalesTaxTotal><TotalAmount>581.31</TotalAmount><CreditRemaining>581.31</CreditRemaining><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        Schwartz</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditRemainingInHomeCurrency>581.31</CreditRemainingInHomeCurrency><IsToBePrinted>false</IsToBePrinted><IsToBeEmailed>true</IsToBeEmailed><CustomerSalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></CustomerSalesTaxCodeRef><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-ugqvZUckzTKDUY</TxnLineID><ItemRef><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><FullName>Fake-Barry
+        Thompson</FullName></ItemRef><Desc>-Fallback-scrubbed-UcJpowhmI</Desc><Quantity>8</Quantity><UnitOfMeasure>-Fallback-scrubbed-AmLA</UnitOfMeasure><OverrideUOMSetRef><ListID>Fake-cf0e353eff1481a6334e1ad7be3c45c</ListID><FullName>Fake-Stephanie
+        Watson</FullName></OverrideUOMSetRef><Rate>05</Rate><Amount>11.44</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-ZsYuZXFKoXpeFT</TxnLineID><ItemRef><ListID>Fake-566c3e881cc26de1aa1f4878fd5b583</ListID><FullName>Fake-Nancy
+        Stevens</FullName></ItemRef><Desc>-Fallback-scrubbed-RwpvFCYF</Desc><Quantity>8</Quantity><Rate>01</Rate><Amount>82.68</Amount><SalesTaxCodeRef><ListID>Fake-ba66a4dd32eafbb97dca746487f8923</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-TmcqMAwZxFtitd</TxnLineID><ItemRef><ListID>Fake-218fab2ba3bfaddcf0eaa8269fa09c8</ListID><FullName>Fake-Angela
+        Perez</FullName></ItemRef><Desc>-Fallback-scrubbed-KpfpmjnsMNyNvXFWZRgtqEUJL</Desc><Quantity>7</Quantity><Rate>6.70</Rate><Amount>6.70</Amount><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet></CreditMemoRet><CreditMemoRet><TxnID>-Fallback-scrubbed-vDtCInMHAiYxJz</TxnID><TimeCreated>2013-10-01T06:41:55+00:00</TimeCreated><TimeModified>2026-06-08T22:49:56+00:00</TimeModified><EditSequence>1500113518</EditSequence><TxnNumber>930</TxnNumber><CustomerRef><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><FullName>Fake-Taylor
+        Kennedy</FullName></CustomerRef><ARAccountRef><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><FullName>Fake-Belinda
+        Perez</FullName></ARAccountRef><TemplateRef><ListID>Fake-f8c82274d797c4348635b5dc7177feb</ListID><FullName>Fake-Brian
+        Morrison</FullName></TemplateRef><TxnDate>2026-06-08</TxnDate><RefNumber>Fake-e56349</RefNumber><IsPending>true</IsPending><DueDate>2024-08-07</DueDate><ShipDate>2024-08-07</ShipDate><Subtotal>78.32</Subtotal><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Richard
+        Anderson</FullName></ItemSalesTaxRef><SalesTaxPercentage>83.44</SalesTaxPercentage><SalesTaxTotal>3.84</SalesTaxTotal><TotalAmount>46.69</TotalAmount><CreditRemaining>46.69</CreditRemaining><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        Schwartz</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditRemainingInHomeCurrency>46.69</CreditRemainingInHomeCurrency><Memo>-Fallback-scrubbed-bAxoOqrjDhyKeJxidLOoLUboIUZBeVQzSafcvWjiFfjDQAVWdcT</Memo><IsToBePrinted>false</IsToBePrinted><IsToBeEmailed>true</IsToBeEmailed><CustomerSalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></CustomerSalesTaxCodeRef><CreditMemoLineRet><TxnLineID>-Fallback-scrubbed-iDNurTOqPsUQbx</TxnLineID><ItemRef><ListID>Fake-7ce5fb6a4f6cf2b2c3ccdc71ab7a394</ListID><FullName>Fake-Barry
+        Thompson</FullName></ItemRef><Desc>-Fallback-scrubbed-YeEwcROYU</Desc><Quantity>7</Quantity><UnitOfMeasure>-Fallback-scrubbed-AmLA</UnitOfMeasure><OverrideUOMSetRef><ListID>Fake-cf0e353eff1481a6334e1ad7be3c45c</ListID><FullName>Fake-Stephanie
+        Watson</FullName></OverrideUOMSetRef><Rate>35</Rate><Amount>78.32</Amount><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef></CreditMemoLineRet></CreditMemoRet></CreditMemoQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:53:10 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '35036'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1

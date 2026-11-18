@@ -134,3 +134,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Colocated smoke-test inputs are scrubbed; runtime and raw recordings stay local.
+!__smoke-tests__/**/config.json
+__smoke-tests__/**/test_runtime/
+__smoke-tests__/unsanitized_*_test/

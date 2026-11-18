@@ -1,0 +1,287 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/authenticate
+  response:
+    body:
+      string: '{"session_id": "8d69c2a0-32d0-5565-a63c-de829a7c8d89"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:46:01 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <HostQueryRq
+      />\n    </QBXMLMsgsRq>\n</QBXML>", "request_timeout": 3600, "total_processed_records_count":
+      0, "total_estimated_records_count": 0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=8d69c2a0-32d0-5565-a63c-de829a7c8d89
+  response:
+    body:
+      string: '{"request_id": "2fd945e2-cf83-5733-b826-971d7dddceba"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:46:02 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=8d69c2a0-32d0-5565-a63c-de829a7c8d89&request_id=2fd945e2-cf83-5733-b826-971d7dddceba
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><HostQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-noZdXjvPG\"><HostRet><ProductName>-Fallback-scrubbed-hDBGozMuMWFPxsxgjCxhGeBIwUCVeSzZnNuzilfDsMuEbpqqOQoiyjWhgMPwpYZADHosLOHr</ProductName><MajorVersion>49</MajorVersion><MinorVersion>5</MinorVersion><Country>Fa</Country><SupportedQBXMLVersion>8.5</SupportedQBXMLVersion><SupportedQBXMLVersion>6.4</SupportedQBXMLVersion><SupportedQBXMLVersion>6.5</SupportedQBXMLVersion><SupportedQBXMLVersion>3.0</SupportedQBXMLVersion><SupportedQBXMLVersion>4.2</SupportedQBXMLVersion><SupportedQBXMLVersion>1.8</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>1.4</SupportedQBXMLVersion><SupportedQBXMLVersion>8.9</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>18.2</SupportedQBXMLVersion><SupportedQBXMLVersion>60.7</SupportedQBXMLVersion><SupportedQBXMLVersion>97.7</SupportedQBXMLVersion><SupportedQBXMLVersion>01.1</SupportedQBXMLVersion><SupportedQBXMLVersion>16.7</SupportedQBXMLVersion><SupportedQBXMLVersion>92.3</SupportedQBXMLVersion><SupportedQBXMLVersion>72.3</SupportedQBXMLVersion><SupportedQBXMLVersion>33.2</SupportedQBXMLVersion><IsAutomaticLogin>true</IsAutomaticLogin><QBFileMode>SingleUser</QBFileMode></HostRet></HostQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:46:06 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '1507'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <BillPaymentCreditCardQueryRq
+      metaData=\"MetaDataOnly\">\n            <ModifiedDateRangeFilter>\n                <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            </ModifiedDateRangeFilter>\n        </BillPaymentCreditCardQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '566'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=8d69c2a0-32d0-5565-a63c-de829a7c8d89
+  response:
+    body:
+      string: '{"request_id": "bab8c11d-47ea-5576-add4-f2e19477077d"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:46:07 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=8d69c2a0-32d0-5565-a63c-de829a7c8d89&request_id=bab8c11d-47ea-5576-add4-f2e19477077d
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><BillPaymentCreditCardQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-noZdXjvPG\"
+        retCount=\"4\" /></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '224'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:46:07 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <BillPaymentCreditCardQueryRq
+      iterator=\"Start\" metaData=\"NoMetaData\">\n            <MaxReturned>200</MaxReturned>\n            <ModifiedDateRangeFilter>\n                <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            </ModifiedDateRangeFilter>\n            <IncludeLineItems>true</IncludeLineItems>\n            <IncludeRetElement>TxnID</IncludeRetElement>\n            <IncludeRetElement>TimeCreated</IncludeRetElement>\n            <IncludeRetElement>TimeModified</IncludeRetElement>\n            <IncludeRetElement>EditSequence</IncludeRetElement>\n            <IncludeRetElement>TxnNumber</IncludeRetElement>\n            <IncludeRetElement>PayeeEntityRef</IncludeRetElement>\n            <IncludeRetElement>APAccountRef</IncludeRetElement>\n            <IncludeRetElement>TxnDate</IncludeRetElement>\n            <IncludeRetElement>CreditCardAccountRef</IncludeRetElement>\n            <IncludeRetElement>Amount</IncludeRetElement>\n            <IncludeRetElement>CurrencyRef</IncludeRetElement>\n            <IncludeRetElement>ExchangeRate</IncludeRetElement>\n            <IncludeRetElement>AmountInHomeCurrency</IncludeRetElement>\n            <IncludeRetElement>RefNumber</IncludeRetElement>\n            <IncludeRetElement>Memo</IncludeRetElement>\n            <IncludeRetElement>ExternalGUID</IncludeRetElement>\n            <IncludeRetElement>AppliedToTxnRet</IncludeRetElement>\n            <IncludeRetElement>DataExtRet</IncludeRetElement>\n        </BillPaymentCreditCardQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      4}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1837'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=8d69c2a0-32d0-5565-a63c-de829a7c8d89
+  response:
+    body:
+      string: '{"request_id": "09292c4a-d6fc-5787-92ca-7cc74e495484"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:46:07 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=8d69c2a0-32d0-5565-a63c-de829a7c8d89&request_id=09292c4a-d6fc-5787-92ca-7cc74e495484
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><BillPaymentCreditCardQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-noZdXjvPG\"
+        iteratorRemainingCount=\"0\" iteratorID=\"572badde-8be2-501b-836c-f276ec37939f\"><BillPaymentCreditCardRet><TxnID>-Fallback-scrubbed-UPJsvOpeyTfAPE</TxnID><TimeCreated>1990-06-03T02:58:51+00:00</TimeCreated><TimeModified>2026-01-28T09:47:31+00:00</TimeModified><EditSequence>6945328211</EditSequence><TxnNumber>349</TxnNumber><PayeeEntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Michelle
+        Pierce</FullName></PayeeEntityRef><APAccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Stephanie
+        Hanna</FullName></APAccountRef><TxnDate>2026-01-28</TxnDate><CreditCardAccountRef><ListID>Fake-9e7e3a0059a86103b73c380e74cda75</ListID><FullName>Fake-Thomas
+        Christian</FullName></CreditCardAccountRef><Amount>449.01</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Danielle
+        Williams</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>449.01</AmountInHomeCurrency><AppliedToTxnRet><TxnID>-Fallback-scrubbed-uzAUuQGYfIOTVv</TxnID><TxnType>Bill</TxnType><TxnDate>2026-01-28</TxnDate><RefNumber>Fake-602a14af3c40b9a</RefNumber><BalanceRemaining>6.70</BalanceRemaining><Amount>449.01</Amount></AppliedToTxnRet></BillPaymentCreditCardRet><BillPaymentCreditCardRet><TxnID>-Fallback-scrubbed-fCCopqBANSCNOu</TxnID><TimeCreated>1993-03-17T04:01:02+00:00</TimeCreated><TimeModified>2026-01-28T10:09:04+00:00</TimeModified><EditSequence>7381326064</EditSequence><TxnNumber>936</TxnNumber><PayeeEntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Michelle
+        Pierce</FullName></PayeeEntityRef><APAccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Stephanie
+        Hanna</FullName></APAccountRef><TxnDate>2026-01-29</TxnDate><CreditCardAccountRef><ListID>Fake-9e7e3a0059a86103b73c380e74cda75</ListID><FullName>Fake-Thomas
+        Christian</FullName></CreditCardAccountRef><Amount>045.33</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Danielle
+        Williams</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>045.33</AmountInHomeCurrency><AppliedToTxnRet><TxnID>-Fallback-scrubbed-iIEhctPwiUvxOU</TxnID><TxnType>Bill</TxnType><TxnDate>2026-01-26</TxnDate><RefNumber>Fake-b981644f05ebcf5</RefNumber><BalanceRemaining>6.70</BalanceRemaining><Amount>045.33</Amount></AppliedToTxnRet></BillPaymentCreditCardRet><BillPaymentCreditCardRet><TxnID>-Fallback-scrubbed-dYcGtRRMDPuusa</TxnID><TimeCreated>1972-06-17T11:25:50+00:00</TimeCreated><TimeModified>2026-01-28T12:58:15+00:00</TimeModified><EditSequence>7578991356</EditSequence><TxnNumber>589</TxnNumber><PayeeEntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Michelle
+        Pierce</FullName></PayeeEntityRef><APAccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Stephanie
+        Hanna</FullName></APAccountRef><TxnDate>2026-01-30</TxnDate><CreditCardAccountRef><ListID>Fake-9e7e3a0059a86103b73c380e74cda75</ListID><FullName>Fake-Thomas
+        Christian</FullName></CreditCardAccountRef><Amount>432.62</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Danielle
+        Williams</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>432.62</AmountInHomeCurrency><AppliedToTxnRet><TxnID>-Fallback-scrubbed-gQsScaABUBHiwx</TxnID><TxnType>Bill</TxnType><TxnDate>2026-01-28</TxnDate><RefNumber>Fake-c485636d3bb6775</RefNumber><BalanceRemaining>6.70</BalanceRemaining><Amount>432.62</Amount><LinkedTxn><TxnID>-Fallback-scrubbed-rrRGQFlQfJONVC</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-01-29</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-914.68</Amount></LinkedTxn></AppliedToTxnRet></BillPaymentCreditCardRet><BillPaymentCreditCardRet><TxnID>-Fallback-scrubbed-DNRHrcFYomZvwu</TxnID><TimeCreated>1976-02-19T14:42:26+00:00</TimeCreated><TimeModified>2026-06-09T19:30:32+00:00</TimeModified><EditSequence>3081872835</EditSequence><TxnNumber>596</TxnNumber><PayeeEntityRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Michelle
+        Pierce</FullName></PayeeEntityRef><APAccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Stephanie
+        Hanna</FullName></APAccountRef><TxnDate>2026-06-03</TxnDate><CreditCardAccountRef><ListID>Fake-9e7e3a0059a86103b73c380e74cda75</ListID><FullName>Fake-Thomas
+        Christian</FullName></CreditCardAccountRef><Amount>783.21</Amount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Danielle
+        Williams</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><AmountInHomeCurrency>783.21</AmountInHomeCurrency><AppliedToTxnRet><TxnID>-Fallback-scrubbed-bNcGNwlbdzrTYi</TxnID><TxnType>Bill</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-2f5f4a2e0b98820</RefNumber><BalanceRemaining>494.57</BalanceRemaining><Amount>69.02</Amount><LinkedTxn><TxnID>-Fallback-scrubbed-BWfcwIfPwPTGXC</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-20.56</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-iFARyoYuLBzJFf</TxnID><TxnType>VendorCredit</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-160ad958d40e2f7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-315.49</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-qpludIFOEXzjlL</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>2</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-65.10</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-EEtvHrKNXjVzSh</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-08</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-92.30</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-ZanlJhmWcYNJey</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-90.47</Amount></LinkedTxn></AppliedToTxnRet><AppliedToTxnRet><TxnID>-Fallback-scrubbed-sFycGgOjOoNhEZ</TxnID><TxnType>Bill</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-a420cd3a60dc1b0</RefNumber><BalanceRemaining>495.81</BalanceRemaining><Amount>29.29</Amount><LinkedTxn><TxnID>-Fallback-scrubbed-BWfcwIfPwPTGXC</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><LinkType>AMTTYPE</LinkType><Amount>-32.61</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-iFARyoYuLBzJFf</TxnID><TxnType>VendorCredit</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-160ad958d40e2f7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-06.03</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-qpludIFOEXzjlL</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>2</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-34.84</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-ZanlJhmWcYNJey</TxnID><TxnType>BillPaymentCheck</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>7</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-67.29</Amount></LinkedTxn></AppliedToTxnRet></BillPaymentCreditCardRet></BillPaymentCreditCardQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:46:08 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '7239'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1

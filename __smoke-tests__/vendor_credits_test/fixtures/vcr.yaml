@@ -1,0 +1,308 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/authenticate
+  response:
+    body:
+      string: '{"session_id": "fa975253-5ff1-5890-8b1e-e1fcb29d0454"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 22:01:39 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <HostQueryRq
+      />\n    </QBXMLMsgsRq>\n</QBXML>", "request_timeout": 3600, "total_processed_records_count":
+      0, "total_estimated_records_count": 0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=fa975253-5ff1-5890-8b1e-e1fcb29d0454
+  response:
+    body:
+      string: '{"request_id": "6f2e28a8-5859-5f3f-8178-085a7b0c3682"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 22:01:39 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=fa975253-5ff1-5890-8b1e-e1fcb29d0454&request_id=6f2e28a8-5859-5f3f-8178-085a7b0c3682
+  response:
+    body:
+      string: '{"status": "in_progress"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '25'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 22:02:00 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=fa975253-5ff1-5890-8b1e-e1fcb29d0454&request_id=6f2e28a8-5859-5f3f-8178-085a7b0c3682
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><HostQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-eBmBTHNMY\"><HostRet><ProductName>-Fallback-scrubbed-USWwNyWsZRNzGxqSOmrcvvQsRCZxXBMTLBKliDNXvuaMdRcMDVaZfSigchoPnsFFxLJwmOxd</ProductName><MajorVersion>49</MajorVersion><MinorVersion>5</MinorVersion><Country>Fa</Country><SupportedQBXMLVersion>8.5</SupportedQBXMLVersion><SupportedQBXMLVersion>6.4</SupportedQBXMLVersion><SupportedQBXMLVersion>6.5</SupportedQBXMLVersion><SupportedQBXMLVersion>3.0</SupportedQBXMLVersion><SupportedQBXMLVersion>4.2</SupportedQBXMLVersion><SupportedQBXMLVersion>1.8</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>1.4</SupportedQBXMLVersion><SupportedQBXMLVersion>8.9</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>18.2</SupportedQBXMLVersion><SupportedQBXMLVersion>60.7</SupportedQBXMLVersion><SupportedQBXMLVersion>97.7</SupportedQBXMLVersion><SupportedQBXMLVersion>01.1</SupportedQBXMLVersion><SupportedQBXMLVersion>16.7</SupportedQBXMLVersion><SupportedQBXMLVersion>92.3</SupportedQBXMLVersion><SupportedQBXMLVersion>72.3</SupportedQBXMLVersion><SupportedQBXMLVersion>33.2</SupportedQBXMLVersion><IsAutomaticLogin>false</IsAutomaticLogin><QBFileMode>SingleUser</QBFileMode></HostRet></HostQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 22:02:01 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '1508'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <VendorCreditQueryRq
+      metaData=\"MetaDataOnly\">\n            <ModifiedDateRangeFilter>\n                <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            </ModifiedDateRangeFilter>\n        </VendorCreditQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '548'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=fa975253-5ff1-5890-8b1e-e1fcb29d0454
+  response:
+    body:
+      string: '{"request_id": "a3edf05b-4793-58f6-ae45-67e56999df8c"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 22:02:02 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=fa975253-5ff1-5890-8b1e-e1fcb29d0454&request_id=a3edf05b-4793-58f6-ae45-67e56999df8c
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><VendorCreditQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-eBmBTHNMY\"
+        retCount=\"1\" /></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '215'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 22:02:02 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <VendorCreditQueryRq
+      iterator=\"Start\" metaData=\"NoMetaData\">\n            <MaxReturned>200</MaxReturned>\n            <ModifiedDateRangeFilter>\n                <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            </ModifiedDateRangeFilter>\n            <IncludeLineItems>true</IncludeLineItems>\n            <IncludeRetElement>TxnID</IncludeRetElement>\n            <IncludeRetElement>TimeCreated</IncludeRetElement>\n            <IncludeRetElement>TimeModified</IncludeRetElement>\n            <IncludeRetElement>EditSequence</IncludeRetElement>\n            <IncludeRetElement>TxnNumber</IncludeRetElement>\n            <IncludeRetElement>VendorRef</IncludeRetElement>\n            <IncludeRetElement>APAccountRef</IncludeRetElement>\n            <IncludeRetElement>TxnDate</IncludeRetElement>\n            <IncludeRetElement>CreditAmount</IncludeRetElement>\n            <IncludeRetElement>CurrencyRef</IncludeRetElement>\n            <IncludeRetElement>ExchangeRate</IncludeRetElement>\n            <IncludeRetElement>CreditAmountInHomeCurrency</IncludeRetElement>\n            <IncludeRetElement>RefNumber</IncludeRetElement>\n            <IncludeRetElement>Memo</IncludeRetElement>\n            <IncludeRetElement>IsTaxIncluded</IncludeRetElement>\n            <IncludeRetElement>SalesTaxCodeRef</IncludeRetElement>\n            <IncludeRetElement>ExternalGUID</IncludeRetElement>\n            <IncludeRetElement>LinkedTxn</IncludeRetElement>\n            <IncludeRetElement>ExpenseLineRet</IncludeRetElement>\n            <IncludeRetElement>ItemLineRet</IncludeRetElement>\n            <IncludeRetElement>ItemGroupLineRet</IncludeRetElement>\n            <IncludeRetElement>OpenAmount</IncludeRetElement>\n            <IncludeRetElement>DataExtRet</IncludeRetElement>\n        </VendorCreditQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      1}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2144'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=fa975253-5ff1-5890-8b1e-e1fcb29d0454
+  response:
+    body:
+      string: '{"request_id": "bef4dfc9-b88f-5ad4-b2c5-778fa0588775"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 22:02:03 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=fa975253-5ff1-5890-8b1e-e1fcb29d0454&request_id=bef4dfc9-b88f-5ad4-b2c5-778fa0588775
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><VendorCreditQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-eBmBTHNMY\"
+        iteratorRemainingCount=\"0\" iteratorID=\"9ab79dbb-6223-59a2-9735-145d1268646e\"><VendorCreditRet><TxnID>-Fallback-scrubbed-VFYbqgujkWUfdG</TxnID><TimeCreated>1981-04-12T22:26:03+00:00</TimeCreated><TimeModified>2026-06-09T19:30:34+00:00</TimeModified><EditSequence>6912946469</EditSequence><TxnNumber>792</TxnNumber><VendorRef><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><FullName>Fake-Lisa
+        Smith</FullName></VendorRef><APAccountRef><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><FullName>Fake-Marcus
+        Newton</FullName></APAccountRef><TxnDate>2026-06-03</TxnDate><CreditAmount>39119.59</CreditAmount><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Brian
+        Smith</FullName></CurrencyRef><ExchangeRate>7</ExchangeRate><CreditAmountInHomeCurrency>39119.59</CreditAmountInHomeCurrency><RefNumber>Fake-160ad958d40e2f7</RefNumber><Memo>-Fallback-scrubbed-RXpomi</Memo><LinkedTxn><TxnID>-Fallback-scrubbed-dMOQBIEscQIwog</TxnID><TxnType>Bill</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-a420cd3a60dc1b0</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-06.03</Amount></LinkedTxn><LinkedTxn><TxnID>-Fallback-scrubbed-SlyQeoomZmBaAo</TxnID><TxnType>Bill</TxnType><TxnDate>2026-06-03</TxnDate><RefNumber>Fake-2f5f4a2e0b98820</RefNumber><LinkType>AMTTYPE</LinkType><Amount>-315.49</Amount></LinkedTxn><ExpenseLineRet><TxnLineID>-Fallback-scrubbed-sFHoSpeXgTXvcZ</TxnLineID><AccountRef><ListID>Fake-40aa4ff2f5a785bd358df62c45abfa1</ListID><FullName>Fake-Jessica
+        Thomas</FullName></AccountRef><Amount>39119.59</Amount></ExpenseLineRet><OpenAmount>56334.96</OpenAmount></VendorCreditRet></VendorCreditQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 22:02:03 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '1847'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,359 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/authenticate
+  response:
+    body:
+      string: '{"session_id": "b7d19b24-789a-5268-8781-48c464730fee"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:40:01 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <HostQueryRq
+      />\n    </QBXMLMsgsRq>\n</QBXML>", "request_timeout": 3600, "total_processed_records_count":
+      0, "total_estimated_records_count": 0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=b7d19b24-789a-5268-8781-48c464730fee
+  response:
+    body:
+      string: '{"request_id": "07fc43fe-d88c-5876-b111-2ef5303195e7"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:40:02 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=b7d19b24-789a-5268-8781-48c464730fee&request_id=07fc43fe-d88c-5876-b111-2ef5303195e7
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><HostQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-cHhcTjofK\"><HostRet><ProductName>-Fallback-scrubbed-XYJiZLIMqzPhKPbRYVDHlExRxGmkQwiYlmokxBvJoRGxDAizatHhBHIoJqppSchffPTQLTib</ProductName><MajorVersion>49</MajorVersion><MinorVersion>5</MinorVersion><Country>Fa</Country><SupportedQBXMLVersion>8.5</SupportedQBXMLVersion><SupportedQBXMLVersion>6.4</SupportedQBXMLVersion><SupportedQBXMLVersion>6.5</SupportedQBXMLVersion><SupportedQBXMLVersion>3.0</SupportedQBXMLVersion><SupportedQBXMLVersion>4.2</SupportedQBXMLVersion><SupportedQBXMLVersion>1.8</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>1.4</SupportedQBXMLVersion><SupportedQBXMLVersion>8.9</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>18.2</SupportedQBXMLVersion><SupportedQBXMLVersion>60.7</SupportedQBXMLVersion><SupportedQBXMLVersion>97.7</SupportedQBXMLVersion><SupportedQBXMLVersion>01.1</SupportedQBXMLVersion><SupportedQBXMLVersion>16.7</SupportedQBXMLVersion><SupportedQBXMLVersion>92.3</SupportedQBXMLVersion><SupportedQBXMLVersion>72.3</SupportedQBXMLVersion><SupportedQBXMLVersion>33.2</SupportedQBXMLVersion><IsAutomaticLogin>false</IsAutomaticLogin><QBFileMode>SingleUser</QBFileMode></HostRet></HostQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:40:07 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '1508'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <VendorQueryRq
+      metaData=\"MetaDataOnly\">\n            <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n        </VendorQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '453'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=b7d19b24-789a-5268-8781-48c464730fee
+  response:
+    body:
+      string: '{"request_id": "01fa3094-d329-598f-9ba6-78b0cc6c5e76"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:40:07 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=b7d19b24-789a-5268-8781-48c464730fee&request_id=01fa3094-d329-598f-9ba6-78b0cc6c5e76
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><VendorQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-cHhcTjofK\"
+        retCount=\"18\" /></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '210'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:40:07 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <VendorQueryRq
+      iterator=\"Start\" metaData=\"NoMetaData\">\n            <MaxReturned>200</MaxReturned>\n            <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            <IncludeRetElement>ListID</IncludeRetElement>\n            <IncludeRetElement>TimeCreated</IncludeRetElement>\n            <IncludeRetElement>TimeModified</IncludeRetElement>\n            <IncludeRetElement>EditSequence</IncludeRetElement>\n            <IncludeRetElement>Name</IncludeRetElement>\n            <IncludeRetElement>IsActive</IncludeRetElement>\n            <IncludeRetElement>ClassRef</IncludeRetElement>\n            <IncludeRetElement>IsTaxAgency</IncludeRetElement>\n            <IncludeRetElement>CompanyName</IncludeRetElement>\n            <IncludeRetElement>Salutation</IncludeRetElement>\n            <IncludeRetElement>FirstName</IncludeRetElement>\n            <IncludeRetElement>MiddleName</IncludeRetElement>\n            <IncludeRetElement>LastName</IncludeRetElement>\n            <IncludeRetElement>Suffix</IncludeRetElement>\n            <IncludeRetElement>JobTitle</IncludeRetElement>\n            <IncludeRetElement>VendorAddress</IncludeRetElement>\n            <IncludeRetElement>VendorAddressBlock</IncludeRetElement>\n            <IncludeRetElement>ShipAddress</IncludeRetElement>\n            <IncludeRetElement>Phone</IncludeRetElement>\n            <IncludeRetElement>Mobile</IncludeRetElement>\n            <IncludeRetElement>Pager</IncludeRetElement>\n            <IncludeRetElement>AltPhone</IncludeRetElement>\n            <IncludeRetElement>Fax</IncludeRetElement>\n            <IncludeRetElement>Email</IncludeRetElement>\n            <IncludeRetElement>Cc</IncludeRetElement>\n            <IncludeRetElement>Contact</IncludeRetElement>\n            <IncludeRetElement>AltContact</IncludeRetElement>\n            <IncludeRetElement>AdditionalContactRef</IncludeRetElement>\n            <IncludeRetElement>ContactsRet</IncludeRetElement>\n            <IncludeRetElement>NameOnCheck</IncludeRetElement>\n            <IncludeRetElement>AccountNumber</IncludeRetElement>\n            <IncludeRetElement>Notes</IncludeRetElement>\n            <IncludeRetElement>AdditionalNotesRet</IncludeRetElement>\n            <IncludeRetElement>VendorTypeRef</IncludeRetElement>\n            <IncludeRetElement>TermsRef</IncludeRetElement>\n            <IncludeRetElement>CreditLimit</IncludeRetElement>\n            <IncludeRetElement>VendorTaxIdent</IncludeRetElement>\n            <IncludeRetElement>IsVendorEligibleFor1099</IncludeRetElement>\n            <IncludeRetElement>Balance</IncludeRetElement>\n            <IncludeRetElement>BillingRateRef</IncludeRetElement>\n            <IncludeRetElement>ExternalGUID</IncludeRetElement>\n            <IncludeRetElement>SalesTaxCodeRef</IncludeRetElement>\n            <IncludeRetElement>SalesTaxCountry</IncludeRetElement>\n            <IncludeRetElement>IsSalesTaxAgency</IncludeRetElement>\n            <IncludeRetElement>SalesTaxReturnRef</IncludeRetElement>\n            <IncludeRetElement>TaxRegistrationNumber</IncludeRetElement>\n            <IncludeRetElement>ReportingPeriod</IncludeRetElement>\n            <IncludeRetElement>IsTaxTrackedOnPurchases</IncludeRetElement>\n            <IncludeRetElement>TaxOnPurchasesAccountRef</IncludeRetElement>\n            <IncludeRetElement>IsTaxTrackedOnSales</IncludeRetElement>\n            <IncludeRetElement>TaxOnSalesAccountRef</IncludeRetElement>\n            <IncludeRetElement>IsTaxOnTax</IncludeRetElement>\n            <IncludeRetElement>PrefillAccountRef</IncludeRetElement>\n            <IncludeRetElement>CurrencyRef</IncludeRetElement>\n            <IncludeRetElement>DataExtRet</IncludeRetElement>\n        </VendorQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      18}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4070'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=b7d19b24-789a-5268-8781-48c464730fee
+  response:
+    body:
+      string: '{"request_id": "43dda1dd-5fb6-501a-8b70-aa281fc5ccf5"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:40:08 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=b7d19b24-789a-5268-8781-48c464730fee&request_id=43dda1dd-5fb6-501a-8b70-aa281fc5ccf5
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><VendorQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-cHhcTjofK\"
+        iteratorRemainingCount=\"0\" iteratorID=\"1fb55ebc-4d59-583d-aa6d-e2287ae7e58f\"><VendorRet><ListID>Fake-6d9feb9605d923500213245135b4092</ListID><TimeCreated>1994-03-12T14:15:41+00:00</TimeCreated><TimeModified>2025-08-28T19:41:44+00:00</TimeModified><EditSequence>8888346376</EditSequence><Name>Fake-Andrea
+        Miller</Name><IsActive>false</IsActive><CompanyName>Fake-Andrea Miller</CompanyName><FirstName>Fake-Andrea
+        Miller</FirstName><LastName>Fake-Andrea Miller</LastName><VendorAddress><Addr1>Fake-Andrea
+        Miller</Addr1><Addr2>Fake-Andrea Miller</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Andrea
+        Miller</Addr1><Addr2>Fake-Andrea Miller</Addr2></VendorAddressBlock><NameOnCheck>Fake-Andrea
+        Miller</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>34835.39</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-301fd38f7766a8eb19c50f5e45a452a</ListID><TimeCreated>2022-01-25T01:06:26+00:00</TimeCreated><TimeModified>2026-07-15T21:46:16+00:00</TimeModified><EditSequence>8361950365</EditSequence><Name>Fake-Michael
+        Costa</Name><IsActive>false</IsActive><CompanyName>Fake-Michael Costa</CompanyName><VendorAddress><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><City>Fake-Austinbury</City><State>-Fallback-scrubbed-aH</State><PostalCode>60735</PostalCode><Country>-Fallback-scrubbed-ZhF</Country></VendorAddress><VendorAddressBlock><Addr1>Fake-fef671916e1283406e6442ad607a182d542d</Addr1><Addr2>Fake-8271c056291d9928a51c7702bf57c66d6c1d</Addr2><Addr3>Fake-3068a3e8027c6e86ad0907f95a94d2576d71</Addr3><Addr4>Fake-fb7a152fe007605abbd950afc5c94a35d05e</Addr4><Addr5>Fake-42505e3b57e34ccac611dcc61f2f4a23fcac</Addr5></VendorAddressBlock><NameOnCheck>Fake-Michael
+        Costa</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>56334.96</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-3c3c32dd978fcdb39847e511af9c151</ListID><TimeCreated>1998-07-15T20:10:33+00:00</TimeCreated><TimeModified>2026-07-09T13:36:57+00:00</TimeModified><EditSequence>2619569016</EditSequence><Name>Fake-Benjamin
+        Hurley</Name><IsActive>false</IsActive><CompanyName>Fake-Benjamin Hurley</CompanyName><FirstName>Fake-Sabrina</FirstName><LastName>Fake-Sabrina</LastName><VendorAddress><Addr1>Fake-Benjamin
+        Hurley</Addr1><Addr2>Fake-Sabrina</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Benjamin
+        Hurley</Addr1><Addr2>Fake-Sabrina</Addr2></VendorAddressBlock><NameOnCheck>Fake-Benjamin
+        Hurley</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>44851.22</Balance><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Kenneth
+        Adams</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-7a302c0ecdca8e0f8153ef93c2011ec</ListID><TimeCreated>1976-09-26T07:15:48+00:00</TimeCreated><TimeModified>2025-08-28T19:42:18+00:00</TimeModified><EditSequence>6189588361</EditSequence><Name>Fake-Ashley
+        Turner</Name><IsActive>false</IsActive><CompanyName>Fake-Ashley Turner</CompanyName><FirstName>Fake-Lisa</FirstName><LastName>Fake-Lisa</LastName><VendorAddress><Addr1>Fake-Ashley
+        Turner</Addr1><Addr2>Fake-Lisa</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Ashley
+        Turner</Addr1><Addr2>Fake-Lisa</Addr2></VendorAddressBlock><NameOnCheck>Fake-Ashley
+        Turner</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>02318.22</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-778eed7b220e8550ed84108ae0c8bc4</ListID><TimeCreated>1980-10-14T03:05:46+00:00</TimeCreated><TimeModified>2026-01-08T19:20:28+00:00</TimeModified><EditSequence>8644481742</EditSequence><Name>Fake-Marcus
+        Jenkins</Name><IsActive>false</IsActive><CompanyName>Fake-Marcus Jenkins</CompanyName><FirstName>Fake-Marcus
+        Jenkins</FirstName><LastName>Fake-Marcus Jenkins</LastName><VendorAddress><Addr1>Fake-Marcus
+        Jenkins</Addr1><Addr2>Fake-Marcus Jenkins</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Marcus
+        Jenkins</Addr1><Addr2>Fake-Marcus Jenkins</Addr2></VendorAddressBlock><NameOnCheck>Fake-Marcus
+        Jenkins</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>6426.32</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-05bea03a54d814f5be27b9ffff19a75</ListID><TimeCreated>1987-11-13T06:11:53+00:00</TimeCreated><TimeModified>2026-01-09T15:22:31+00:00</TimeModified><EditSequence>5828499506</EditSequence><Name>Fake-Patrick
+        Hess</Name><IsActive>false</IsActive><CompanyName>Fake-Patrick Hess</CompanyName><VendorAddress><Addr1>Fake-Patrick
+        Hess</Addr1></VendorAddress><VendorAddressBlock><Addr1>Fake-Patrick Hess</Addr1></VendorAddressBlock><NameOnCheck>Fake-Patrick
+        Hess</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>948.41</Balance><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Kenneth
+        Adams</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-39b5d38092310196bcbae85d33888e2</ListID><TimeCreated>2001-08-16T15:55:31+00:00</TimeCreated><TimeModified>2026-01-19T19:04:34+00:00</TimeModified><EditSequence>7832396645</EditSequence><Name>Fake-Ashley
+        Bennett</Name><IsActive>false</IsActive><CompanyName>Fake-Ashley Bennett</CompanyName><VendorAddress><Addr1>-Fallback-scrubbed-ZcttQuv</Addr1><Country>-Fallback-scrubbed-VXlOCZXwfRs</Country></VendorAddress><VendorAddressBlock><Addr1>Fake-Ashley
+        Bennett</Addr1></VendorAddressBlock><NameOnCheck>Fake-Ashley Bennett</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>948.41</Balance><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Kenneth
+        Adams</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-1506fa7644714106612730c58120bba</ListID><TimeCreated>1988-11-24T14:00:59+00:00</TimeCreated><TimeModified>2025-08-28T19:17:04+00:00</TimeModified><EditSequence>0376386210</EditSequence><Name>Fake-Susan
+        Stanley</Name><IsActive>false</IsActive><CompanyName>Fake-Susan Stanley</CompanyName><JobTitle>-Fallback-scrubbed-uqeD</JobTitle><VendorAddress><Addr1>Fake-Susan
+        Stanley</Addr1></VendorAddress><VendorAddressBlock><Addr1>Fake-Susan Stanley</Addr1></VendorAddressBlock><NameOnCheck>Fake-Susan
+        Stanley</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>550718.73</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-129385f9087c498244e8be35219287b</ListID><TimeCreated>1974-03-22T17:38:38+00:00</TimeCreated><TimeModified>2025-08-28T19:42:16+00:00</TimeModified><EditSequence>5222241110</EditSequence><Name>Fake-Kenneth
+        Mueller</Name><IsActive>false</IsActive><CompanyName>Fake-Kenneth Mueller</CompanyName><FirstName>Fake-Charles</FirstName><LastName>Fake-Charles</LastName><VendorAddress><Addr1>Fake-Kenneth
+        Mueller</Addr1><Addr2>Fake-Charles</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Kenneth
+        Mueller</Addr1><Addr2>Fake-Charles</Addr2></VendorAddressBlock><NameOnCheck>Fake-Kenneth
+        Mueller</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>92681.33</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-0ddb5a908b11d8cfa8213f30d5fbbe1</ListID><TimeCreated>1981-05-13T02:11:25+00:00</TimeCreated><TimeModified>2025-08-28T19:42:18+00:00</TimeModified><EditSequence>1962616579</EditSequence><Name>Fake-Victoria
+        Miller</Name><IsActive>false</IsActive><CompanyName>Fake-Victoria Miller</CompanyName><FirstName>Fake-Jennifer</FirstName><LastName>Fake-Jennifer</LastName><VendorAddress><Addr1>Fake-Victoria
+        Miller</Addr1><Addr2>Fake-Jennifer</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Victoria
+        Miller</Addr1><Addr2>Fake-Jennifer</Addr2></VendorAddressBlock><NameOnCheck>Fake-Victoria
+        Miller</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>4348739.01</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-48cd4305b4ccf741abf3f54ec6be8bf</ListID><TimeCreated>1999-07-02T14:57:20+00:00</TimeCreated><TimeModified>2025-08-28T19:42:17+00:00</TimeModified><EditSequence>6283181322</EditSequence><Name>Fake-Amanda
+        Ibarra</Name><IsActive>false</IsActive><CompanyName>Fake-Amanda Ibarra</CompanyName><FirstName>Fake-Amanda
+        Ibarra</FirstName><LastName>Fake-Amanda Ibarra</LastName><VendorAddress><Addr1>Fake-Amanda
+        Ibarra</Addr1><Addr2>Fake-6966d6cee2375bb4d43a6ca8eaf9484fcad9</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Amanda
+        Ibarra</Addr1><Addr2>Fake-6966d6cee2375bb4d43a6ca8eaf9484fcad9</Addr2></VendorAddressBlock><NameOnCheck>Fake-Amanda
+        Ibarra</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>53446.39</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-d595342a8ed6d07498f3d6b7d555e83</ListID><TimeCreated>2022-01-23T18:23:02+00:00</TimeCreated><TimeModified>2025-08-28T19:30:20+00:00</TimeModified><EditSequence>0610553358</EditSequence><Name>Fake-Sergio
+        Stein</Name><IsActive>false</IsActive><CompanyName>Fake-Sergio Stein</CompanyName><FirstName>Fake-Sergio
+        Stein</FirstName><LastName>Fake-Sergio Stein</LastName><VendorAddress><Addr1>Fake-Sergio
+        Stein</Addr1><Addr2>Fake-Sergio Stein</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Sergio
+        Stein</Addr1><Addr2>Fake-Sergio Stein</Addr2></VendorAddressBlock><NameOnCheck>Fake-Sergio
+        Stein</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>748497.37</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-5aa62aee7bd7837421011581fac1225</ListID><TimeCreated>2004-01-17T09:38:24+00:00</TimeCreated><TimeModified>2025-08-28T19:42:17+00:00</TimeModified><EditSequence>6589568396</EditSequence><Name>Fake-Sabrina
+        Gardner</Name><IsActive>false</IsActive><CompanyName>Fake-Sabrina Gardner</CompanyName><FirstName>Fake-Sabrina
+        Gardner</FirstName><LastName>Fake-Sabrina Gardner</LastName><VendorAddress><Addr1>Fake-Sabrina
+        Gardner</Addr1><Addr2>Fake-c762395d23073cddc1408b4e879c761fe1bd</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Sabrina
+        Gardner</Addr1><Addr2>Fake-c762395d23073cddc1408b4e879c761fe1bd</Addr2></VendorAddressBlock><NameOnCheck>Fake-Sabrina
+        Gardner</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>742754.09</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-7bc6e8f7006d70d8b8872fabc0b2f87</ListID><TimeCreated>1970-01-28T03:23:51+00:00</TimeCreated><TimeModified>2025-08-28T19:41:44+00:00</TimeModified><EditSequence>3573761579</EditSequence><Name>Fake-Lisa
+        Sims</Name><IsActive>false</IsActive><CompanyName>Fake-Lisa Sims</CompanyName><FirstName>Fake-Jonathan</FirstName><LastName>Fake-Ford</LastName><VendorAddress><Addr1>Fake-Lisa
+        Sims</Addr1><Addr2>Fake-603155320673785c4d878ee48d8439b27c18</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Lisa
+        Sims</Addr1><Addr2>Fake-603155320673785c4d878ee48d8439b27c18</Addr2></VendorAddressBlock><NameOnCheck>Fake-Lisa
+        Sims</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>65897.34</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-19d6ea64c61c91df01bae0f0d6cb622</ListID><TimeCreated>1973-05-10T03:30:35+00:00</TimeCreated><TimeModified>2025-08-28T19:42:16+00:00</TimeModified><EditSequence>3107341098</EditSequence><Name>Fake-Dustin
+        Brown</Name><IsActive>false</IsActive><CompanyName>Fake-Dustin Brown</CompanyName><FirstName>Fake-Dustin
+        Brown</FirstName><LastName>Fake-Dustin Brown</LastName><VendorAddress><Addr1>Fake-Dustin
+        Brown</Addr1><Addr2>Fake-9ca57c0a705ebbe737d113c73bc590313e62</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Dustin
+        Brown</Addr1><Addr2>Fake-9ca57c0a705ebbe737d113c73bc590313e62</Addr2></VendorAddressBlock><NameOnCheck>Fake-Dustin
+        Brown</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>231256.33</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-b386f4e9c485ee7fe669c453a66054c</ListID><TimeCreated>1998-05-11T07:19:20+00:00</TimeCreated><TimeModified>2025-04-02T19:50:09+00:00</TimeModified><EditSequence>4584548211</EditSequence><Name>Fake-Gerald
+        Pearson DDS</Name><IsActive>false</IsActive><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>96.65</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-64adc3cb4bebde0fcf930a1f5f1cd96</ListID><TimeCreated>2001-09-04T20:23:46+00:00</TimeCreated><TimeModified>2025-08-28T19:42:15+00:00</TimeModified><EditSequence>8192845204</EditSequence><Name>Fake-Wendy
+        Hansen</Name><IsActive>false</IsActive><CompanyName>Fake-Wendy Hansen</CompanyName><FirstName>Fake-Paula</FirstName><LastName>Fake-Paula</LastName><VendorAddress><Addr1>Fake-Wendy
+        Hansen</Addr1><Addr2>Fake-Paula</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Wendy
+        Hansen</Addr1><Addr2>Fake-Paula</Addr2></VendorAddressBlock><NameOnCheck>Fake-Wendy
+        Hansen</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>243179.37</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet><VendorRet><ListID>Fake-14efb12f7cfd4f9d5ca349039c1f227</ListID><TimeCreated>1993-12-21T14:12:03+00:00</TimeCreated><TimeModified>2025-08-28T19:42:19+00:00</TimeModified><EditSequence>7720933516</EditSequence><Name>Fake-Colleen
+        Espinoza</Name><IsActive>false</IsActive><CompanyName>Fake-Colleen Espinoza</CompanyName><FirstName>Fake-Colleen
+        Espinoza</FirstName><LastName>Fake-Colleen Espinoza</LastName><VendorAddress><Addr1>Fake-Colleen
+        Espinoza</Addr1><Addr2>Fake-Colleen Espinoza</Addr2></VendorAddress><VendorAddressBlock><Addr1>Fake-Colleen
+        Espinoza</Addr1><Addr2>Fake-Colleen Espinoza</Addr2></VendorAddressBlock><NameOnCheck>Fake-Colleen
+        Espinoza</NameOnCheck><IsVendorEligibleFor1099>false</IsVendorEligibleFor1099><Balance>1331341.96</Balance><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Michael
+        Richard</FullName></CurrencyRef></VendorRet></VendorQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:40:08 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '15485'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,365 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/authenticate
+  response:
+    body:
+      string: '{"session_id": "2274de9a-ed34-5f75-a6d1-2804f8a2a8b9"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:47:07 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <HostQueryRq
+      />\n    </QBXMLMsgsRq>\n</QBXML>", "request_timeout": 3600, "total_processed_records_count":
+      0, "total_estimated_records_count": 0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=2274de9a-ed34-5f75-a6d1-2804f8a2a8b9
+  response:
+    body:
+      string: '{"request_id": "ff1d86ef-bec1-560b-b870-19b394a115e9"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:47:08 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=2274de9a-ed34-5f75-a6d1-2804f8a2a8b9&request_id=ff1d86ef-bec1-560b-b870-19b394a115e9
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><HostQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-aQarEmNkB\"><HostRet><ProductName>-Fallback-scrubbed-ugLDQqSxgdQAYUGfiTZLaGKBqYihQsoDwjWnfjkopWpLjkFQoZqoWSBEqOKMgmsCobOdtrhl</ProductName><MajorVersion>49</MajorVersion><MinorVersion>5</MinorVersion><Country>Fa</Country><SupportedQBXMLVersion>8.5</SupportedQBXMLVersion><SupportedQBXMLVersion>6.4</SupportedQBXMLVersion><SupportedQBXMLVersion>6.5</SupportedQBXMLVersion><SupportedQBXMLVersion>3.0</SupportedQBXMLVersion><SupportedQBXMLVersion>4.2</SupportedQBXMLVersion><SupportedQBXMLVersion>1.8</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>1.4</SupportedQBXMLVersion><SupportedQBXMLVersion>8.9</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>18.2</SupportedQBXMLVersion><SupportedQBXMLVersion>60.7</SupportedQBXMLVersion><SupportedQBXMLVersion>97.7</SupportedQBXMLVersion><SupportedQBXMLVersion>01.1</SupportedQBXMLVersion><SupportedQBXMLVersion>16.7</SupportedQBXMLVersion><SupportedQBXMLVersion>92.3</SupportedQBXMLVersion><SupportedQBXMLVersion>72.3</SupportedQBXMLVersion><SupportedQBXMLVersion>33.2</SupportedQBXMLVersion><IsAutomaticLogin>true</IsAutomaticLogin><QBFileMode>SingleUser</QBFileMode></HostRet></HostQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:47:12 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '1507'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <AccountQueryRq
+      metaData=\"MetaDataOnly\">\n            <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n        </AccountQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '455'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=2274de9a-ed34-5f75-a6d1-2804f8a2a8b9
+  response:
+    body:
+      string: '{"request_id": "e5975ece-feb7-58f0-9ced-23f0f3c7e14b"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:47:12 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=2274de9a-ed34-5f75-a6d1-2804f8a2a8b9&request_id=e5975ece-feb7-58f0-9ced-23f0f3c7e14b
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><AccountQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-aQarEmNkB\"
+        retCount=\"47\" /></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '211'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:47:12 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <AccountQueryRq
+      metaData=\"NoMetaData\">\n            <MaxReturned>5000</MaxReturned>\n            <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            <IncludeRetElement>ListID</IncludeRetElement>\n            <IncludeRetElement>TimeCreated</IncludeRetElement>\n            <IncludeRetElement>TimeModified</IncludeRetElement>\n            <IncludeRetElement>EditSequence</IncludeRetElement>\n            <IncludeRetElement>Name</IncludeRetElement>\n            <IncludeRetElement>FullName</IncludeRetElement>\n            <IncludeRetElement>IsActive</IncludeRetElement>\n            <IncludeRetElement>ParentRef</IncludeRetElement>\n            <IncludeRetElement>Sublevel</IncludeRetElement>\n            <IncludeRetElement>AccountType</IncludeRetElement>\n            <IncludeRetElement>DetailAccountType</IncludeRetElement>\n            <IncludeRetElement>SpecialAccountType</IncludeRetElement>\n            <IncludeRetElement>IsTaxAccount</IncludeRetElement>\n            <IncludeRetElement>AccountNumber</IncludeRetElement>\n            <IncludeRetElement>BankNumber</IncludeRetElement>\n            <IncludeRetElement>LastCheckNumber</IncludeRetElement>\n            <IncludeRetElement>Desc</IncludeRetElement>\n            <IncludeRetElement>Balance</IncludeRetElement>\n            <IncludeRetElement>TotalBalance</IncludeRetElement>\n            <IncludeRetElement>SalesTaxCodeRef</IncludeRetElement>\n            <IncludeRetElement>TaxLineInfoRet</IncludeRetElement>\n            <IncludeRetElement>CashFlowClassification</IncludeRetElement>\n            <IncludeRetElement>CurrencyRef</IncludeRetElement>\n            <IncludeRetElement>DataExtRet</IncludeRetElement>\n        </AccountQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      47}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2040'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=2274de9a-ed34-5f75-a6d1-2804f8a2a8b9
+  response:
+    body:
+      string: '{"request_id": "ed5b83a3-ec8b-5f04-9839-e34ffb5030ea"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:47:13 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=2274de9a-ed34-5f75-a6d1-2804f8a2a8b9&request_id=ed5b83a3-ec8b-5f04-9839-e34ffb5030ea
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><AccountQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-aQarEmNkB\"><AccountRet><ListID>Fake-0e76030ae5dc42800031b35d00f07b0</ListID><TimeCreated>2003-10-31T08:56:58+00:00</TimeCreated><TimeModified>2026-06-09T19:30:34+00:00</TimeModified><EditSequence>6796787199</EditSequence><Name>Fake-Eric
+        Sawyer</Name><FullName>Fake-Eric Sawyer</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Bank</AccountType><Balance>-3610.26</Balance><TotalBalance>-3610.26</TotalBalance><CashFlowClassification>NotApplicable</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-eb9c7cefa86fd1c5ff14cbefe238aa3</ListID><TimeCreated>1973-03-28T10:12:06+00:00</TimeCreated><TimeModified>2026-07-09T13:55:53+00:00</TimeModified><EditSequence>3488665815</EditSequence><Name>Fake-William
+        Mitchell</Name><FullName>Fake-William Mitchell</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>AccountsReceivable</AccountType><SpecialAccountType>AccountsReceivable</SpecialAccountType><AccountNumber>31174</AccountNumber><Desc>-Fallback-scrubbed-POzMvfkxMCyAohFzTOwEqPrjVfewJFxjcYbYFEwLPnUsgOjmB</Desc><Balance>32520.99</Balance><TotalBalance>32520.99</TotalBalance><CashFlowClassification>Operating</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-0fc16f23b8c9452cf10008eeaaf6ed6</ListID><TimeCreated>2006-05-26T08:05:24+00:00</TimeCreated><TimeModified>2025-07-16T02:07:01+00:00</TimeModified><EditSequence>2759448351</EditSequence><Name>Fake-Maria
+        Short</Name><FullName>Fake-Maria Short</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>OtherCurrentAsset</AccountType><SpecialAccountType>UndepositedFunds</SpecialAccountType><AccountNumber>79461</AccountNumber><Desc>-Fallback-scrubbed-LwseawrRQNRTMtrZObAzKKLrKWKoZbTyAAOdVtCRvRBINWWvqLauJHE</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>NotApplicable</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-1c809d6cabde567c5f3521a156c14d4</ListID><TimeCreated>2007-05-24T10:48:47+00:00</TimeCreated><TimeModified>2026-07-08T15:32:33+00:00</TimeModified><EditSequence>7099858421</EditSequence><Name>Fake-Elizabeth
+        Rich</Name><FullName>Fake-Elizabeth Rich</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>OtherCurrentAsset</AccountType><SpecialAccountType>InventoryAssets</SpecialAccountType><AccountNumber>59636</AccountNumber><Desc>-Fallback-scrubbed-KRUGIAdIgSfeCtcdHoMELJjUxxZQftUBMZXMclD</Desc><Balance>5029.14</Balance><TotalBalance>5029.14</TotalBalance><CashFlowClassification>Operating</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-3aa18a40b54f7dccf3db8e990fd3d0d</ListID><TimeCreated>1998-01-22T18:15:49+00:00</TimeCreated><TimeModified>2025-10-23T20:37:48+00:00</TimeModified><EditSequence>6029107831</EditSequence><Name>Fake-Jennifer
+        Williams</Name><FullName>Fake-Jennifer Williams</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>FixedAsset</AccountType><Balance>2614.08</Balance><TotalBalance>2614.08</TotalBalance><CashFlowClassification>Investing</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-f387c2120fa5ff695bcd2e34eeca854</ListID><TimeCreated>2013-02-19T06:47:19+00:00</TimeCreated><TimeModified>2025-08-01T13:58:17+00:00</TimeModified><EditSequence>6425729911</EditSequence><Name>Fake-Carmen
+        Collins</Name><FullName>Fake-Carmen Collins</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>FixedAsset</AccountType><Desc>-Fallback-scrubbed-jUYh</Desc><Balance>91644.33</Balance><TotalBalance>91644.33</TotalBalance><CashFlowClassification>Investing</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-4e3f7f17f7c38ff35392e18454bc82e</ListID><TimeCreated>1977-01-09T12:09:31+00:00</TimeCreated><TimeModified>2026-07-15T21:46:16+00:00</TimeModified><EditSequence>4607038307</EditSequence><Name>Fake-Kimberly
+        Anderson</Name><FullName>Fake-Kimberly Anderson</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>FixedAsset</AccountType><Balance>96.65</Balance><TotalBalance>96.65</TotalBalance><CashFlowClassification>Investing</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-4f8f79403d6cff422d9ae0db0846831</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2026-07-15T21:46:16+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Kyle
+        Blair DDS</Name><FullName>Fake-Kyle Blair DDS</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>FixedAsset</AccountType><AccountNumber>21347</AccountNumber><Desc>-Fallback-scrubbed-GquWGfVdZOpsHmHNPjZnGWfAUcdRooQFnItqxWXuTdVXLPeGhGWRTgZvLVr</Desc><Balance>47495.70</Balance><TotalBalance>47495.70</TotalBalance><CashFlowClassification>Investing</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-b6efe8a6f432c807838032578b5e180</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Henry
+        Green</Name><FullName>Fake-Henry Green</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>FixedAsset</AccountType><AccountNumber>33056</AccountNumber><Desc>-Fallback-scrubbed-TzjFJLqkfkbaDuUrvyAwcYsZUHqgwAzIjEfQwYUCRoVKYDiLwiyXfVkfoLfEBREMO</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>Investing</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-135f3a01047f4a4543c062b43e4ebdd</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Tina
+        Price</Name><FullName>Fake-Tina Price</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>OtherAsset</AccountType><AccountNumber>11594</AccountNumber><Desc>-Fallback-scrubbed-SUZXikhzWpVTfzZtSiWUZosVCNCzArntKtkmFdzEJsCkCJsQRubDMSZBjLHyJTPPtGkXlKkOoSYPZssEgK</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>Investing</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-d34c78f005d0bd334e22d4c1a79f9f2</ListID><TimeCreated>1972-06-27T21:42:15+00:00</TimeCreated><TimeModified>2026-06-09T19:30:34+00:00</TimeModified><EditSequence>1475217073</EditSequence><Name>Fake-Emily
+        Nelson</Name><FullName>Fake-Emily Nelson</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>AccountsPayable</AccountType><SpecialAccountType>AccountsPayable</SpecialAccountType><AccountNumber>58527</AccountNumber><Desc>-Fallback-scrubbed-eSAjroWHxGSalQvfBVktPRyPLGtYlVOVwvNlarvWCIx</Desc><Balance>89743499.46</Balance><TotalBalance>89743499.46</TotalBalance><CashFlowClassification>Operating</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-040705e9772ab5a45b71397b52074cc</ListID><TimeCreated>1979-11-04T09:55:18+00:00</TimeCreated><TimeModified>2026-07-09T13:36:57+00:00</TimeModified><EditSequence>2619569016</EditSequence><Name>Fake-Steve
+        Phillips</Name><FullName>Fake-Steve Phillips</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>AccountsPayable</AccountType><SpecialAccountType>AccountsPayable</SpecialAccountType><AccountNumber>20839</AccountNumber><Desc>-Fallback-scrubbed-eSAjroWHxGSalQvfBVktPRyPLGtYlVOVwvNlarvWCIx</Desc><Balance>08978.81</Balance><TotalBalance>08978.81</TotalBalance><CashFlowClassification>Operating</CashFlowClassification><CurrencyRef><ListID>Fake-db7e0232251eb37e70ae1db9a8ec8ac</ListID><FullName>Fake-Karla
+        Brock</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-9e7e3a0059a86103b73c380e74cda75</ListID><TimeCreated>2021-10-17T01:41:44+00:00</TimeCreated><TimeModified>2026-06-08T16:49:34+00:00</TimeModified><EditSequence>6388068488</EditSequence><Name>Fake-Nathan
+        Carter</Name><FullName>Fake-Nathan Carter</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>CreditCard</AccountType><Balance>674.34</Balance><TotalBalance>674.34</TotalBalance><CashFlowClassification>Operating</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-d1aef8b4d4476548ff544607d9fda84</ListID><TimeCreated>2016-01-29T10:25:25+00:00</TimeCreated><TimeModified>2024-03-07T20:17:57+00:00</TimeModified><EditSequence>5081456773</EditSequence><Name>Fake-Laura
+        Perkins</Name><FullName>Fake-Laura Perkins</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>OtherCurrentLiability</AccountType><SpecialAccountType>PayrollLiabilities</SpecialAccountType><AccountNumber>64931</AccountNumber><Desc>-Fallback-scrubbed-VIpEBOUMeOirZmsWDdoxswsmajGvRXHQevJxTZglOiNwVWqukhqugPpgkbatoapldUKsSjSWz</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>Operating</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-529ab3ab7a62959a45e5e66ba5f5c03</ListID><TimeCreated>1987-11-03T11:21:21+00:00</TimeCreated><TimeModified>2026-07-09T13:55:53+00:00</TimeModified><EditSequence>8561415813</EditSequence><Name>Fake-Allison
+        Washington</Name><FullName>Fake-Allison Washington</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>OtherCurrentLiability</AccountType><SpecialAccountType>SalesTaxPayable</SpecialAccountType><AccountNumber>55938</AccountNumber><Desc>-Fallback-scrubbed-EfcSfpPBocOmPSpDnDHpIygmAsgnTYoTgUUyzvJEOsIXMsWkQVfhQOGbZXchYhHeZYotLFNbgeIbINnJ</Desc><Balance>8224.91</Balance><TotalBalance>-07759.55</TotalBalance><CashFlowClassification>Operating</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-34a71e15043f653ee0a29681faa818f</ListID><TimeCreated>1977-05-18T04:58:45+00:00</TimeCreated><TimeModified>2026-07-09T13:36:57+00:00</TimeModified><EditSequence>8825426567</EditSequence><Name>Fake-Kevin
+        Martinez</Name><FullName>Fake-John Jones</FullName><IsActive>true</IsActive><ParentRef><ListID>Fake-529ab3ab7a62959a45e5e66ba5f5c03</ListID><FullName>Fake-Allison
+        Washington</FullName></ParentRef><Sublevel>7</Sublevel><AccountType>OtherCurrentLiability</AccountType><Balance>-06422.71</Balance><TotalBalance>-06422.71</TotalBalance><CashFlowClassification>Operating</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-176ac3e29077e00b572df3d604bb273</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2026-07-08T15:32:33+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Rebecca
+        Green</Name><FullName>Fake-Rebecca Green</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Equity</AccountType><SpecialAccountType>OpeningBalanceEquity</SpecialAccountType><AccountNumber>75531</AccountNumber><Desc>-Fallback-scrubbed-IPuFbQmwGyLepSoDevhPQsuXBHXTHOieXZNUAlKWHKRiKxGhNlnpSkruLwLWdkGnoSUiPbjjgAnJJfYLWpRhMFUNtoXFvMEXYNLQgzNsKYzYfQLBdEiGjdKEGi</Desc><Balance>5029.14</Balance><TotalBalance>5029.14</TotalBalance><CashFlowClassification>Financing</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-d6e7a51ca7fe37ff65d7ef0d006f07d</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Lisa
+        Griffin</Name><FullName>Fake-Lisa Griffin</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Equity</AccountType><AccountNumber>44131</AccountNumber><Desc>-Fallback-scrubbed-iIegzrGaoTXdpYyFnxjjuDyepajTFSggAaSWUOKsJzoXjX</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>Financing</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-ae278cff92a11545438fbce6bc482d3</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:57+00:00</TimeModified><EditSequence>5081456773</EditSequence><Name>Fake-Katie
+        Holt</Name><FullName>Fake-Katie Holt</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Equity</AccountType><SpecialAccountType>RetainedEarnings</SpecialAccountType><AccountNumber>37774</AccountNumber><Desc>-Fallback-scrubbed-uCunAYkuUoOIvTTMWoVpMsZjERCqjzkkdDFyAWRXYcrNPjVyLwEEgKXXlrwWtNnZIRvLbIorszdDbQdHRzA</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>Financing</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-d0944df2a5c85f0cbb1c599e4b97b36</ListID><TimeCreated>2010-02-19T18:00:57+00:00</TimeCreated><TimeModified>2026-02-26T11:19:41+00:00</TimeModified><EditSequence>9735446878</EditSequence><Name>Fake-Amanda
+        Mccarthy</Name><FullName>Fake-Amanda Mccarthy</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Income</AccountType><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-a42848c7c9545836adb3b7e4df6a031</ListID><TimeCreated>2008-05-16T23:24:47+00:00</TimeCreated><TimeModified>2026-02-25T19:03:32+00:00</TimeModified><EditSequence>5473823967</EditSequence><Name>Fake-Michael
+        Hall</Name><FullName>Fake-Michael Hall</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Income</AccountType><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-e4e219661ccf7a8b386f3153398d26f</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2026-07-09T13:55:53+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Crystal
+        Hernandez</Name><FullName>Fake-Crystal Hernandez</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Income</AccountType><AccountNumber>19842</AccountNumber><Desc>-Fallback-scrubbed-gzcFJCYnaanVBhAljpJd</Desc><Balance>-0642904.74</Balance><TotalBalance>-0642904.74</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-27ea01df57eb9dabcc613c11dc7730e</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-David
+        Burnett</Name><FullName>Fake-David Burnett</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Income</AccountType><AccountNumber>49314</AccountNumber><Desc>-Fallback-scrubbed-LoJUtzTSUkfhxeIKczYFGfQBSnFU</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-92e5369e87ce108af9d5bac23927f78</ListID><TimeCreated>2007-05-24T10:48:47+00:00</TimeCreated><TimeModified>2025-12-17T17:10:59+00:00</TimeModified><EditSequence>7099858421</EditSequence><Name>Fake-James
+        Aguilar</Name><FullName>Fake-James Aguilar</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>CostOfGoodsSold</AccountType><SpecialAccountType>CostOfGoodsSold</SpecialAccountType><AccountNumber>65935</AccountNumber><Desc>-Fallback-scrubbed-jUOcFClpTskSuCkSqVZQkrabGHnWxclRwnMkAHppbAyZaxndZfA</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-21d3d5a7dee3bfdede9e2ccedeebe53</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2026-01-28T10:07:46+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Jason
+        Valdez</Name><FullName>Fake-Jason Valdez</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>CostOfGoodsSold</AccountType><AccountNumber>35083</AccountNumber><Desc>-Fallback-scrubbed-jyLiQWFwPGTjCjIyUmEJwVqBnoYEJILwMrEOJYZUXHwnfkBeNTOoePuGaweNswrDQXRxihruPiTBCVn</Desc><Balance>449.01</Balance><TotalBalance>449.01</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-a20ca73ee258edd2175854c5493e6c8</ListID><TimeCreated>1973-08-13T21:25:37+00:00</TimeCreated><TimeModified>2026-07-15T21:46:16+00:00</TimeModified><EditSequence>2138187562</EditSequence><Name>Fake-Lisa
+        Norris MD</Name><FullName>Fake-Lisa Norris MD</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><Balance>096.30</Balance><TotalBalance>096.30</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-7ccd36c93f8f0c1b67990c6078d9fc6</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2026-06-09T19:30:34+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Ronald
+        Perez</Name><FullName>Fake-Ronald Perez</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>33182</AccountNumber><Desc>-Fallback-scrubbed-hkjXBtrDwzSakgxufducNTZonaNYPjIrYjNtvCsOdrGBAKfSztoVQscMtDrEOvxvkpeqQt</Desc><Balance>181.04</Balance><TotalBalance>181.04</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-40aa4ff2f5a785bd358df62c45abfa1</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2026-06-09T19:30:34+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Patricia
+        Baker</Name><FullName>Fake-Patricia Baker</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>77200</AccountNumber><Desc>-Fallback-scrubbed-aOvrccAkGAEuWpGGwYRRXOInZZSdmKXCisBQuatKdUlCndXVRhtyiVJBGCEmuiGApiqMnQA</Desc><Balance>-1033.93</Balance><TotalBalance>-1033.93</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-5f2a9150cb55cebd8ed65d7ed5d7150</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Dennis
+        Wagner</Name><FullName>Fake-Dennis Wagner</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>73773</AccountNumber><Desc>-Fallback-scrubbed-RlshyYibQBFOIAdLjbxtYrQQouWPqHIcLBKKAYqIhUrgfQqnOjFInSqcQUgXIHUW</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-944ba5b4581cf93434825219205d61c</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Kristen
+        Maddox</Name><FullName>Fake-Kristen Maddox</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>94962</AccountNumber><Desc>-Fallback-scrubbed-oYpgyOObUtEMZieWvGqeUJOLfQazGGoxWgmvWKojofekzIYNoTPCftNFxUSEFVRgozHVImpisCXAdKXUryDohJrbkidYFEEZFqRmLDy</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-7cd16ba95821da8401634ccf690659d</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Thomas
+        Miller</Name><FullName>Fake-Thomas Miller</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>35871</AccountNumber><Desc>-Fallback-scrubbed-jGCnqjLdjoCYqIDeEDxRXOAJfemlnISjHOcWAXysECjnDpLyCelye</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-d601073e9d0a81e1c1ed4a12da7d179</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Steven
+        Butler</Name><FullName>Fake-Steven Butler</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>52188</AccountNumber><Desc>-Fallback-scrubbed-nrIYJNkOZpEDswtEfN</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-bc2b435854acf930555141dc7a61768</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Elizabeth
+        Chandler</Name><FullName>Fake-Elizabeth Chandler</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>55106</AccountNumber><Desc>-Fallback-scrubbed-JJBWqaNUWMgkLAAQUJzFpPbHewLFkHdanGSdCXHoneaYulyhAdFdrkKjvCMhizkgaELOSARottBbsRsgs</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-59232de640f30ef825b89f53c2ba13e</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Gregory
+        Harris</Name><FullName>Fake-Gregory Harris</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>35019</AccountNumber><Desc>-Fallback-scrubbed-uHvtKMVoMoBPppWWuJATBwMvdWZBIJUefLoTsKxIi</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-5870fbac7ba9871d4c16508b10fc9cc</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Curtis
+        Jones</Name><FullName>Fake-Curtis Jones</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>22876</AccountNumber><Desc>-Fallback-scrubbed-hwZFYCrdFadBhGNNFDbXNVVDuValTtZAJACZdBXcbPCTcJQCJLIzIMkpJWNNqnmlSbEPlYoPCoioDFUPjuIhKBUqxJpnyFlDBCBfziwvCZ</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-079bd1ce4fbf26b3726856e2c74b6f9</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Kyle
+        Carter</Name><FullName>Fake-Kyle Carter</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>76349</AccountNumber><Desc>-Fallback-scrubbed-nXJLIuHRZFFGlBDGultuaNw</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-6643ccce4ab4e26f1a6ba161e935c85</ListID><TimeCreated>2016-01-29T10:25:25+00:00</TimeCreated><TimeModified>2024-03-07T20:17:57+00:00</TimeModified><EditSequence>5081456773</EditSequence><Name>Fake-Gina
+        Figueroa</Name><FullName>Fake-Gina Figueroa</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><SpecialAccountType>PayrollExpenses</SpecialAccountType><AccountNumber>50029</AccountNumber><Desc>-Fallback-scrubbed-yZxRNrfjZWWfCPaD</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-55827c2b9b524b19fe2ee9f5f1b3fc7</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Sharon
+        Williams</Name><FullName>Fake-Sharon Williams</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>58375</AccountNumber><Desc>-Fallback-scrubbed-ybhzSrNMtQXgoFwCSeBXIOQhcHBOEdHbdryTfCzWVIivrmCpJgrxqKvptFVbUEzivABHsOBmmQCLlvzHqdG</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-93ba76ea5cb97bdd2f61755910bf320</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2026-01-08T19:20:28+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Sarah
+        Smith</Name><FullName>Fake-Sarah Smith</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>83021</AccountNumber><Desc>-Fallback-scrubbed-hhBZigHXNWBQtEHwWKzkvMhGYLNWGVYLLOivHcfiAyrFyNOcNwjKUZhXBZGPZdEAQFiCFe</Desc><Balance>50.71</Balance><TotalBalance>50.71</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-97b6ea0b051748191bf51b612879999</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Diane
+        Chavez</Name><FullName>Fake-Diane Chavez</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>88834</AccountNumber><Desc>-Fallback-scrubbed-NsTYhHUTGFjAKvwsHbNAdglRKsZzeEdaOyYoNGciWbmBzJYOdVdZODhAFzQEhPwEKExyiLCOrXGzJClfRGwMomCbgsFnrnVeKxlltsXfPhELTpaWYU</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-dfdda322600f3453cd139cb82bba8a6</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2024-03-07T20:17:56+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Ashley
+        Garrison</Name><FullName>Fake-Ashley Garrison</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>14270</AccountNumber><Desc>-Fallback-scrubbed-TwvIwKsQFPIWbbMraQzRJnNEFlmKNQfyKklBmxryZntrTxbcrwDJcgKifmffoVHpOxuKktFArPUZKqtEpLi</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-dd860bbd4fa5acb7a1cf38a5eac8bce</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2026-01-08T19:19:59+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Kevin
+        Rose</Name><FullName>Fake-Kevin Rose</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>48117</AccountNumber><Desc>-Fallback-scrubbed-whDyEhMRXVHrgzCWiUJcPaIYeJsVYcHXvihwSa</Desc><Balance>83.44</Balance><TotalBalance>83.44</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-7469d2d0946ef0085bf42dcc496b1ba</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2025-03-19T18:37:18+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Brian
+        Payne</Name><FullName>Fake-Brian Payne</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><AccountNumber>55729</AccountNumber><Desc>-Fallback-scrubbed-tAnTuXgYQWHUsdeCRBeGMMLVEuBQIGJHlbvbrSuJgOijDYoOJOaeTTmDvHMgkQt</Desc><Balance>96.65</Balance><TotalBalance>96.65</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-de6de05af7c1ce2d0c8fcf306fa9506</ListID><TimeCreated>1979-11-04T09:55:18+00:00</TimeCreated><TimeModified>2025-08-28T19:05:57+00:00</TimeModified><EditSequence>2619569016</EditSequence><Name>Fake-Thomas
+        Butler</Name><FullName>Fake-Thomas Butler</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>Expense</AccountType><SpecialAccountType>UncategorizedExpenses</SpecialAccountType><AccountNumber>32387</AccountNumber><Desc>-Fallback-scrubbed-yUuWWeWuuUksuKYfXGPZxDweDRXSKrmiGn</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-9aea7b0e793af70fcaf3c2ff9d4bf2c</ListID><TimeCreated>2009-02-03T00:53:27+00:00</TimeCreated><TimeModified>2025-08-28T19:42:19+00:00</TimeModified><EditSequence>4703925500</EditSequence><Name>Fake-Rachel
+        Boyd</Name><FullName>Fake-Rachel Boyd</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>OtherExpense</AccountType><AccountNumber>18090</AccountNumber><Desc>-Fallback-scrubbed-EIfEcSDNlWTbjJFbWNiaLXDXbjkNgjzQhACUrybkGrPdrTSQDxoBpHJcFyeCAEiyQOeMimfGN</Desc><Balance>1775221.07</Balance><TotalBalance>1775221.07</TotalBalance><CashFlowClassification>None</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-5fcfa10e8436ae50956c911af449e99</ListID><TimeCreated>1975-08-01T17:29:12+00:00</TimeCreated><TimeModified>2026-04-13T14:56:10+00:00</TimeModified><EditSequence>0798258459</EditSequence><Name>Fake-Luis
+        Sherman</Name><FullName>Fake-Luis Sherman</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>NonPosting</AccountType><SpecialAccountType>Estimates</SpecialAccountType><AccountNumber>25043</AccountNumber><Desc>-Fallback-scrubbed-umXqwEFvfpHJxfnjJVMBAfYvETPPLTxzmiUBNgkmIWHuYmZchgzRYYjjjimZmWJbDcMvpvSAbskCgnUcluNxgBGFnpERoymRkYMXlNgneXvIiLgQHFMBXEjqXYTuSgfWoMxB</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>NotApplicable</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet><AccountRet><ListID>Fake-104b9638374b68f55764f360ad43a97</ListID><TimeCreated>2018-05-10T05:08:48+00:00</TimeCreated><TimeModified>2025-08-18T03:37:01+00:00</TimeModified><EditSequence>7908726630</EditSequence><Name>Fake-Jackson
+        Shepherd</Name><FullName>Fake-Jackson Shepherd</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><AccountType>NonPosting</AccountType><SpecialAccountType>SalesOrders</SpecialAccountType><AccountNumber>45530</AccountNumber><Desc>-Fallback-scrubbed-KtimxppjrcDWCuSaLbcBUgalTtkCadCXypvmzocrNftxrXEIfBaOtCaMBSrphNiUwjfhTQHeTaSfGOHx</Desc><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><CashFlowClassification>NotApplicable</CashFlowClassification><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Crystal
+        Olson</FullName></CurrencyRef></AccountRet></AccountQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:47:13 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '34884'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1

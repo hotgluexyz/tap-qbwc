@@ -1,0 +1,401 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/authenticate
+  response:
+    body:
+      string: '{"session_id": "8c30c5ce-7d71-57ca-9e5d-1d61050db949"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:34:48 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <HostQueryRq
+      />\n    </QBXMLMsgsRq>\n</QBXML>", "request_timeout": 3600, "total_processed_records_count":
+      0, "total_estimated_records_count": 0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=8c30c5ce-7d71-57ca-9e5d-1d61050db949
+  response:
+    body:
+      string: '{"request_id": "9ec7e86c-f9a4-575e-9279-1fe1442d898b"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:34:48 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=8c30c5ce-7d71-57ca-9e5d-1d61050db949&request_id=9ec7e86c-f9a4-575e-9279-1fe1442d898b
+  response:
+    body:
+      string: '{"status": "queued"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '20'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:35:08 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=8c30c5ce-7d71-57ca-9e5d-1d61050db949&request_id=9ec7e86c-f9a4-575e-9279-1fe1442d898b
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><HostQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-CcqxLfkUH\"><HostRet><ProductName>-Fallback-scrubbed-sCjaCVvHISFAVUfhMzlpgDEnQCSxdygjBmatXxJbigCTkDpgJDiOiKSzBmmuwAZwnvWrcwkc</ProductName><MajorVersion>49</MajorVersion><MinorVersion>5</MinorVersion><Country>Fa</Country><SupportedQBXMLVersion>8.5</SupportedQBXMLVersion><SupportedQBXMLVersion>6.4</SupportedQBXMLVersion><SupportedQBXMLVersion>6.5</SupportedQBXMLVersion><SupportedQBXMLVersion>3.0</SupportedQBXMLVersion><SupportedQBXMLVersion>4.2</SupportedQBXMLVersion><SupportedQBXMLVersion>1.8</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>1.4</SupportedQBXMLVersion><SupportedQBXMLVersion>8.9</SupportedQBXMLVersion><SupportedQBXMLVersion>3.1</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>3.7</SupportedQBXMLVersion><SupportedQBXMLVersion>18.2</SupportedQBXMLVersion><SupportedQBXMLVersion>60.7</SupportedQBXMLVersion><SupportedQBXMLVersion>97.7</SupportedQBXMLVersion><SupportedQBXMLVersion>01.1</SupportedQBXMLVersion><SupportedQBXMLVersion>16.7</SupportedQBXMLVersion><SupportedQBXMLVersion>92.3</SupportedQBXMLVersion><SupportedQBXMLVersion>72.3</SupportedQBXMLVersion><SupportedQBXMLVersion>33.2</SupportedQBXMLVersion><IsAutomaticLogin>false</IsAutomaticLogin><QBFileMode>SingleUser</QBFileMode></HostRet></HostQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:35:11 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '1508'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <CustomerQueryRq
+      metaData=\"MetaDataOnly\">\n            <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n        </CustomerQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '457'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=8c30c5ce-7d71-57ca-9e5d-1d61050db949
+  response:
+    body:
+      string: '{"request_id": "f712d709-a193-5d5c-be3f-085ec47f6fe6"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:35:11 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=8c30c5ce-7d71-57ca-9e5d-1d61050db949&request_id=f712d709-a193-5d5c-be3f-085ec47f6fe6
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><CustomerQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-CcqxLfkUH\"
+        retCount=\"25\" /></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '212'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:35:12 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"request_payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml
+      version=\"13.0\"?>\n\n<QBXML>\n    <QBXMLMsgsRq onError=\"stopOnError\" responseData=\"includeAll\">\n        <CustomerQueryRq
+      iterator=\"Start\" metaData=\"NoMetaData\">\n            <MaxReturned>200</MaxReturned>\n            <FromModifiedDate>2000-01-01T00:00:00+00:00</FromModifiedDate>\n            <IncludeRetElement>ListID</IncludeRetElement>\n            <IncludeRetElement>TimeCreated</IncludeRetElement>\n            <IncludeRetElement>TimeModified</IncludeRetElement>\n            <IncludeRetElement>EditSequence</IncludeRetElement>\n            <IncludeRetElement>Name</IncludeRetElement>\n            <IncludeRetElement>FullName</IncludeRetElement>\n            <IncludeRetElement>IsActive</IncludeRetElement>\n            <IncludeRetElement>ClassRef</IncludeRetElement>\n            <IncludeRetElement>ParentRef</IncludeRetElement>\n            <IncludeRetElement>Sublevel</IncludeRetElement>\n            <IncludeRetElement>CompanyName</IncludeRetElement>\n            <IncludeRetElement>Salutation</IncludeRetElement>\n            <IncludeRetElement>FirstName</IncludeRetElement>\n            <IncludeRetElement>MiddleName</IncludeRetElement>\n            <IncludeRetElement>LastName</IncludeRetElement>\n            <IncludeRetElement>Suffix</IncludeRetElement>\n            <IncludeRetElement>JobTitle</IncludeRetElement>\n            <IncludeRetElement>BillAddress</IncludeRetElement>\n            <IncludeRetElement>BillAddressBlock</IncludeRetElement>\n            <IncludeRetElement>ShipAddress</IncludeRetElement>\n            <IncludeRetElement>ShipAddressBlock</IncludeRetElement>\n            <IncludeRetElement>ShipToAddress</IncludeRetElement>\n            <IncludeRetElement>PrintAs</IncludeRetElement>\n            <IncludeRetElement>Phone</IncludeRetElement>\n            <IncludeRetElement>Mobile</IncludeRetElement>\n            <IncludeRetElement>Pager</IncludeRetElement>\n            <IncludeRetElement>AltPhone</IncludeRetElement>\n            <IncludeRetElement>Fax</IncludeRetElement>\n            <IncludeRetElement>Email</IncludeRetElement>\n            <IncludeRetElement>Cc</IncludeRetElement>\n            <IncludeRetElement>Contact</IncludeRetElement>\n            <IncludeRetElement>AltContact</IncludeRetElement>\n            <IncludeRetElement>AdditionalContactRef</IncludeRetElement>\n            <IncludeRetElement>ContactsRet</IncludeRetElement>\n            <IncludeRetElement>CustomerTypeRef</IncludeRetElement>\n            <IncludeRetElement>TermsRef</IncludeRetElement>\n            <IncludeRetElement>SalesRepRef</IncludeRetElement>\n            <IncludeRetElement>Balance</IncludeRetElement>\n            <IncludeRetElement>TotalBalance</IncludeRetElement>\n            <IncludeRetElement>SalesTaxCodeRef</IncludeRetElement>\n            <IncludeRetElement>ItemSalesTaxRef</IncludeRetElement>\n            <IncludeRetElement>SalesTaxCountry</IncludeRetElement>\n            <IncludeRetElement>ResaleNumber</IncludeRetElement>\n            <IncludeRetElement>AccountNumber</IncludeRetElement>\n            <IncludeRetElement>CreditLimit</IncludeRetElement>\n            <IncludeRetElement>PreferredPaymentMethodRef</IncludeRetElement>\n            <IncludeRetElement>CreditCardInfo</IncludeRetElement>\n            <IncludeRetElement>JobStatus</IncludeRetElement>\n            <IncludeRetElement>JobStartDate</IncludeRetElement>\n            <IncludeRetElement>JobProjectedEndDate</IncludeRetElement>\n            <IncludeRetElement>JobEndDate</IncludeRetElement>\n            <IncludeRetElement>JobDesc</IncludeRetElement>\n            <IncludeRetElement>JobTypeRef</IncludeRetElement>\n            <IncludeRetElement>Notes</IncludeRetElement>\n            <IncludeRetElement>AdditionalNotesRet</IncludeRetElement>\n            <IncludeRetElement>IsStatementWithParent</IncludeRetElement>\n            <IncludeRetElement>DeliveryMethod</IncludeRetElement>\n            <IncludeRetElement>PreferredDeliveryMethod</IncludeRetElement>\n            <IncludeRetElement>PriceLevelRef</IncludeRetElement>\n            <IncludeRetElement>ExternalGUID</IncludeRetElement>\n            <IncludeRetElement>TaxRegistrationNumber</IncludeRetElement>\n            <IncludeRetElement>CurrencyRef</IncludeRetElement>\n            <IncludeRetElement>DataExtRet</IncludeRetElement>\n        </CustomerQueryRq>\n    </QBXMLMsgsRq>\n</QBXML>",
+      "request_timeout": 1200, "total_processed_records_count": 0, "total_estimated_records_count":
+      25}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4550'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.34.2
+    method: POST
+    uri: https://qbwc-qa.hotglue.xyz/send_qbwc_request?session_id=8c30c5ce-7d71-57ca-9e5d-1d61050db949
+  response:
+    body:
+      string: '{"request_id": "b4c54271-925a-502a-b3d5-8d8e0fdc033a"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:35:12 GMT
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://qbwc-qa.hotglue.xyz/get_qbwc_response?session_id=8c30c5ce-7d71-57ca-9e5d-1d61050db949&request_id=b4c54271-925a-502a-b3d5-8d8e0fdc033a
+  response:
+    body:
+      string: '{"status": "completed", "response_payload": "<QBXML><QBXMLMsgsRs><CustomerQueryRs
+        statusCode=\"0\" statusSeverity=\"Info\" statusMessage=\"-Fallback-scrubbed-CcqxLfkUH\"
+        iteratorRemainingCount=\"0\" iteratorID=\"bfef602f-aaee-52bc-9d50-ed47e2d7c0bf\"><CustomerRet><ListID>Fake-5646bece0f00c3397a4d3b32879daf2</ListID><TimeCreated>2007-03-24T08:43:40+00:00</TimeCreated><TimeModified>2026-05-13T14:59:39+00:00</TimeModified><EditSequence>9944873681</EditSequence><Name>204</Name><FullName>204</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Thornton,
+        Jackson and Day</CompanyName><BillAddress><Addr1>Fake-2f1e51db7923ea02a707621f1ab52bf95142</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-2f1e51db7923ea02a707621f1ab52bf95142</Addr1></BillAddressBlock><ShipAddress><Addr1>Fake-2f1e51db7923ea02a707621f1ab52bf95142</Addr1></ShipAddress><ShipAddressBlock><Addr1>Fake-2f1e51db7923ea02a707621f1ab52bf95142</Addr1></ShipAddressBlock><ShipToAddress><Name>Fake-Dawn
+        Davis</Name><Addr1>Fake-2f1e51db7923ea02a707621f1ab52bf95142</Addr1><DefaultShipTo>true</DefaultShipTo></ShipToAddress><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-813fcf6f85d2620c798a6e22b737c8c</ListID><TimeCreated>1998-09-12T06:45:33+00:00</TimeCreated><TimeModified>2026-06-22T18:16:32+00:00</TimeModified><EditSequence>2906944787</EditSequence><Name>Fake-Patricia
+        Rowe</Name><FullName>Fake-Patricia Rowe</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>Email</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-a237d1e18b5439d8ca39900b9406a02</ListID><TimeCreated>1971-11-02T13:54:46+00:00</TimeCreated><TimeModified>2026-06-22T18:16:34+00:00</TimeModified><EditSequence>7103380200</EditSequence><Name>Fake-Matthew
+        Lewis</Name><FullName>Fake-Austin Ball</FullName><IsActive>true</IsActive><ParentRef><ListID>Fake-813fcf6f85d2620c798a6e22b737c8c</ListID><FullName>Fake-Patricia
+        Rowe</FullName></ParentRef><Sublevel>7</Sublevel><CompanyName>Fake-Thornton,
+        Jackson and Day</CompanyName><BillAddress><Addr1>Fake-2f1e51db7923ea02a707621f1ab52bf95142</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-2f1e51db7923ea02a707621f1ab52bf95142</Addr1></BillAddressBlock><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-8518c8b94433bdb45b686b7789dd976</ListID><TimeCreated>1976-11-13T18:32:31+00:00</TimeCreated><TimeModified>2026-03-20T16:49:25+00:00</TimeModified><EditSequence>4198388238</EditSequence><Name>Fake-Jeremy
+        Sullivan</Name><FullName>Fake-Jeremy Sullivan</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Carter,
+        Jones and Scott</CompanyName><BillAddress><Addr1>-Fallback-scrubbed-aCWxWwPSgJToD</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-ffa721c5bff21b32075715212001a324a4be</Note></BillAddress><BillAddressBlock><Addr1>-Fallback-scrubbed-aCWxWwPSgJToD</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-ffa721c5bff21b32075715212001a324a4be</Addr5></BillAddressBlock><ShipAddress><Addr1>-Fallback-scrubbed-aoqNxTWLgCvca</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note></ShipAddress><ShipAddressBlock><Addr1>-Fallback-scrubbed-aoqNxTWLgCvca</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-41e82d758f92e0b494f500578558fb60d85d</Addr5></ShipAddressBlock><ShipToAddress><Name>Fake-Dawn
+        Davis</Name><Addr1>-Fallback-scrubbed-aoqNxTWLgCvca</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note><DefaultShipTo>true</DefaultShipTo></ShipToAddress><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-c751757c9f2dabc45c4e3f96b485b7c</ListID><TimeCreated>2026-07-30T22:56:56+00:00</TimeCreated><TimeModified>2026-07-09T13:55:53+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-Joel
+        Williams</Name><FullName>Fake-Joel Williams</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Roberts-Foster</CompanyName><Email>fake.lisa68@example.com</Email><AdditionalContactRef><ContactName>-Fallback-scrubbed-BpSijUaehG</ContactName><ContactValue>fake.lisa68@example.com</ContactValue></AdditionalContactRef><Balance>92433.19</Balance><TotalBalance>92433.19</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-c05c26dbd2a7019e442565be03f6055</ListID><TimeCreated>1988-08-25T20:13:49+00:00</TimeCreated><TimeModified>2025-07-28T20:15:17+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-David
+        Riley</Name><FullName>Fake-David Riley</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Roberts-Foster</CompanyName><Phone>614</Phone><Email>fake.mcdonaldhoward@example.com</Email><AdditionalContactRef><ContactName>-Fallback-scrubbed-vGeBpMjOfd</ContactName><ContactValue>614</ContactValue></AdditionalContactRef><AdditionalContactRef><ContactName>-Fallback-scrubbed-BpSijUaehG</ContactName><ContactValue>fake.mcdonaldhoward@example.com</ContactValue></AdditionalContactRef><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-c3362316727a36d7c4223d01bd73fd7</ListID><TimeCreated>2001-03-12T16:07:57+00:00</TimeCreated><TimeModified>2025-07-28T20:15:17+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-Linda
+        Nguyen</Name><FullName>Fake-Linda Nguyen</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Roberts-Foster</CompanyName><Email>fake.laura44@example.com</Email><AdditionalContactRef><ContactName>-Fallback-scrubbed-BpSijUaehG</ContactName><ContactValue>fake.laura44@example.com</ContactValue></AdditionalContactRef><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-4b3497038f6d24f145bd79b51867a85</ListID><TimeCreated>2006-03-15T18:51:02+00:00</TimeCreated><TimeModified>2025-07-31T22:58:37+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-Matthew
+        Romero</Name><FullName>Fake-Matthew Romero</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Matthew
+        Romero</CompanyName><BillAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-ffa721c5bff21b32075715212001a324a4be</Note></BillAddress><BillAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-ffa721c5bff21b32075715212001a324a4be</Addr5></BillAddressBlock><ShipAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note></ShipAddress><ShipAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-41e82d758f92e0b494f500578558fb60d85d</Addr5></ShipAddressBlock><ShipToAddress><Name>Fake-Dawn
+        Davis</Name><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note><DefaultShipTo>true</DefaultShipTo></ShipToAddress><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-59f20ddc1dabc5d44a4f4371289922e</ListID><TimeCreated>1970-02-24T19:50:34+00:00</TimeCreated><TimeModified>2025-07-31T20:53:00+00:00</TimeModified><EditSequence>9747213610</EditSequence><Name>Fake-Kim
+        Perez</Name><FullName>Fake-Kim Perez</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Matthew
+        Romero</CompanyName><BillAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-ffa721c5bff21b32075715212001a324a4be</Note></BillAddress><BillAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-ffa721c5bff21b32075715212001a324a4be</Addr5></BillAddressBlock><ShipAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note></ShipAddress><ShipAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-41e82d758f92e0b494f500578558fb60d85d</Addr5></ShipAddressBlock><ShipToAddress><Name>Fake-Dawn
+        Davis</Name><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note><DefaultShipTo>true</DefaultShipTo></ShipToAddress><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-3dfcc6ea4691c412e7d4fcc97558f17</ListID><TimeCreated>1981-05-24T12:27:04+00:00</TimeCreated><TimeModified>2025-07-31T22:58:36+00:00</TimeModified><EditSequence>4737527221</EditSequence><Name>Fake-Ernest
+        Everett</Name><FullName>Fake-Ernest Everett</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Matthew
+        Romero</CompanyName><BillAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-ffa721c5bff21b32075715212001a324a4be</Note></BillAddress><BillAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-ffa721c5bff21b32075715212001a324a4be</Addr5></BillAddressBlock><ShipAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note></ShipAddress><ShipAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-41e82d758f92e0b494f500578558fb60d85d</Addr5></ShipAddressBlock><ShipToAddress><Name>Fake-Dawn
+        Davis</Name><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note><DefaultShipTo>true</DefaultShipTo></ShipToAddress><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-fcad1051e9f9b4372616a54e055e2a4</ListID><TimeCreated>2023-03-15T11:30:01+00:00</TimeCreated><TimeModified>2025-07-30T15:07:03+00:00</TimeModified><EditSequence>9212251826</EditSequence><Name>Fake-Sharon
+        Clarke</Name><FullName>Fake-Sharon Clarke</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Matthew
+        Romero</CompanyName><BillAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-ffa721c5bff21b32075715212001a324a4be</Note></BillAddress><BillAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-ffa721c5bff21b32075715212001a324a4be</Addr5></BillAddressBlock><ShipAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note></ShipAddress><ShipAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-41e82d758f92e0b494f500578558fb60d85d</Addr5></ShipAddressBlock><ShipToAddress><Name>Fake-Dawn
+        Davis</Name><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note><DefaultShipTo>true</DefaultShipTo></ShipToAddress><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-85af670dc442080552f179bc3f2d0fa</ListID><TimeCreated>1970-08-08T00:37:31+00:00</TimeCreated><TimeModified>2025-07-30T18:41:37+00:00</TimeModified><EditSequence>6388895675</EditSequence><Name>Fake-Shaun
+        Lloyd</Name><FullName>Fake-Shaun Lloyd</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Matthew
+        Romero</CompanyName><BillAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-ffa721c5bff21b32075715212001a324a4be</Note></BillAddress><BillAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-ffa721c5bff21b32075715212001a324a4be</Addr5></BillAddressBlock><ShipAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note></ShipAddress><ShipAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-41e82d758f92e0b494f500578558fb60d85d</Addr5></ShipAddressBlock><ShipToAddress><Name>Fake-Dawn
+        Davis</Name><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note><DefaultShipTo>true</DefaultShipTo></ShipToAddress><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-f6e5ea03996174ea1b725fd2e7e5c18</ListID><TimeCreated>2007-10-24T10:06:46+00:00</TimeCreated><TimeModified>2025-07-31T14:47:30+00:00</TimeModified><EditSequence>2478603826</EditSequence><Name>Fake-Ronnie
+        Moran</Name><FullName>Fake-Ronnie Moran</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Matthew
+        Romero</CompanyName><BillAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-ffa721c5bff21b32075715212001a324a4be</Note></BillAddress><BillAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-ffa721c5bff21b32075715212001a324a4be</Addr5></BillAddressBlock><ShipAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note></ShipAddress><ShipAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-41e82d758f92e0b494f500578558fb60d85d</Addr5></ShipAddressBlock><ShipToAddress><Name>Fake-Dawn
+        Davis</Name><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note><DefaultShipTo>true</DefaultShipTo></ShipToAddress><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-143c682169f43fc94945a942e92c0a4</ListID><TimeCreated>2017-12-10T01:10:25+00:00</TimeCreated><TimeModified>2025-09-22T09:28:13+00:00</TimeModified><EditSequence>9909297655</EditSequence><Name>Fake-Jacob
+        Hall</Name><FullName>Fake-Jacob Hall</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Goodman,
+        Smith and Page</CompanyName><BillAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-ffa721c5bff21b32075715212001a324a4be</Note></BillAddress><BillAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-ffa721c5bff21b32075715212001a324a4be</Addr5></BillAddressBlock><ShipAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note></ShipAddress><ShipAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-41e82d758f92e0b494f500578558fb60d85d</Addr5></ShipAddressBlock><ShipToAddress><Name>Fake-Dawn
+        Davis</Name><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note><DefaultShipTo>true</DefaultShipTo></ShipToAddress><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-181a2eba2afa4fbc290d8d043306975</ListID><TimeCreated>2024-12-29T09:52:53+00:00</TimeCreated><TimeModified>2026-02-23T21:23:36+00:00</TimeModified><EditSequence>1770610389</EditSequence><Name>Fake-Angel
+        Harmon</Name><FullName>Fake-Angel Harmon</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Moore,
+        Love and Wu</CompanyName><BillAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-ffa721c5bff21b32075715212001a324a4be</Note></BillAddress><BillAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-ffa721c5bff21b32075715212001a324a4be</Addr5></BillAddressBlock><ShipAddress><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note></ShipAddress><ShipAddressBlock><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><Addr4>-Fallback-scrubbed-JUzQEzkmZjMgOwKfidPxi</Addr4><Addr5>Fake-41e82d758f92e0b494f500578558fb60d85d</Addr5></ShipAddressBlock><ShipToAddress><Name>Fake-Dawn
+        Davis</Name><Addr1>Fake-377ae21ee1a3e740f0f9c9e331070b89ec2e</Addr1><Addr2>-Fallback-scrubbed-GIwXI</Addr2><Addr3>-Fallback-scrubbed-ZUch</Addr3><City>Fake-Laurenville</City><State>-Fallback-scrubbed-Pm</State><PostalCode>04739</PostalCode><Country>-Fallback-scrubbed-bpc</Country><Note>Fake-41e82d758f92e0b494f500578558fb60d85d</Note><DefaultShipTo>true</DefaultShipTo></ShipToAddress><Balance>-636.76</Balance><TotalBalance>-636.76</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-811d069d1420543ae8e84967778a829</ListID><TimeCreated>1991-08-23T08:12:17+00:00</TimeCreated><TimeModified>2025-07-28T20:15:17+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-Matthew
+        Lam</Name><FullName>Fake-Matthew Lam</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Nelson,
+        Snyder and Smith</CompanyName><Email>fake.sotosue@example.com</Email><AdditionalContactRef><ContactName>-Fallback-scrubbed-BpSijUaehG</ContactName><ContactValue>fake.sotosue@example.com</ContactValue></AdditionalContactRef><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-78108629d8f46df09acae9fb47c0bac</ListID><TimeCreated>2012-04-06T13:24:03+00:00</TimeCreated><TimeModified>2026-07-02T01:09:49+00:00</TimeModified><EditSequence>6999189116</EditSequence><Name>Fake-Thomas
+        Thomas</Name><FullName>Fake-Thomas Thomas</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Colon,
+        Wilson and Rojas</CompanyName><Phone>555-0118</Phone><AdditionalContactRef><ContactName>-Fallback-scrubbed-vGeBpMjOfd</ContactName><ContactValue>555-0118</ContactValue></AdditionalContactRef><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-d944e3e1963c98e0ef91b1ea9734132</ListID><TimeCreated>2025-12-02T11:06:15+00:00</TimeCreated><TimeModified>2026-07-07T20:41:18+00:00</TimeModified><EditSequence>2528141841</EditSequence><Name>Fake-Spencer
+        Ramos</Name><FullName>Fake-Spencer Ramos</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Colon,
+        Wilson and Rojas</CompanyName><Phone>555-0118</Phone><AdditionalContactRef><ContactName>-Fallback-scrubbed-vGeBpMjOfd</ContactName><ContactValue>555-0118</ContactValue></AdditionalContactRef><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-e4410c46996baf42ed0170d732deded</ListID><TimeCreated>2009-09-04T16:34:19+00:00</TimeCreated><TimeModified>2026-07-07T21:54:22+00:00</TimeModified><EditSequence>4598567922</EditSequence><Name>Fake-Joseph
+        Smith</Name><FullName>Fake-Joseph Smith</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Colon,
+        Wilson and Rojas</CompanyName><Phone>555-0118</Phone><AdditionalContactRef><ContactName>-Fallback-scrubbed-vGeBpMjOfd</ContactName><ContactValue>555-0118</ContactValue></AdditionalContactRef><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-d254f9dd64b1bfca8d215fe675662c9</ListID><TimeCreated>2016-05-18T07:52:04+00:00</TimeCreated><TimeModified>2026-07-07T22:07:04+00:00</TimeModified><EditSequence>0265436211</EditSequence><Name>Fake-James
+        White</Name><FullName>Fake-James White</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Colon,
+        Wilson and Rojas</CompanyName><Phone>555-0118</Phone><AdditionalContactRef><ContactName>-Fallback-scrubbed-vGeBpMjOfd</ContactName><ContactValue>555-0118</ContactValue></AdditionalContactRef><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-23dc101176b5473ab620d3770d1f0d3</ListID><TimeCreated>1980-05-01T01:03:55+00:00</TimeCreated><TimeModified>2026-07-09T13:36:54+00:00</TimeModified><EditSequence>0368711703</EditSequence><Name>Fake-Latasha
+        Rodriguez</Name><FullName>Fake-Latasha Rodriguez</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Colon,
+        Wilson and Rojas</CompanyName><Phone>555-0118</Phone><AdditionalContactRef><ContactName>-Fallback-scrubbed-vGeBpMjOfd</ContactName><ContactValue>555-0118</ContactValue></AdditionalContactRef><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-d647a80fd1dbeaba251cab5c58be308</ListID><TimeCreated>1970-09-17T16:58:29+00:00</TimeCreated><TimeModified>2026-07-02T01:29:43+00:00</TimeModified><EditSequence>2720963867</EditSequence><Name>Fake-Robert
+        Black</Name><FullName>Fake-Robert Black</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Bates-Martinez</CompanyName><Phone>555-0108</Phone><AdditionalContactRef><ContactName>-Fallback-scrubbed-vGeBpMjOfd</ContactName><ContactValue>555-0108</ContactValue></AdditionalContactRef><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><ItemSalesTaxRef><ListID>Fake-74d59d124f73eecc777f730a8330c42</ListID><FullName>Fake-Michael
+        Rodgers</FullName></ItemSalesTaxRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>None</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-842b97b5fe6e5fc3d93a0ce4d83902c</ListID><TimeCreated>1990-03-21T05:07:55+00:00</TimeCreated><TimeModified>2025-07-28T20:15:17+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-Lisa
+        Fowler</Name><FullName>Fake-Lisa Fowler</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>Email</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-1f6304b296630e05f06e46f5d859e74</ListID><TimeCreated>1988-05-26T08:47:16+00:00</TimeCreated><TimeModified>2025-07-28T20:15:17+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-Kyle
+        Bell</Name><FullName>Fake-Kyle Bell</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Allen,
+        Morales and Nguyen</CompanyName><BillAddress><Addr1>Fake-Allen, Morales and
+        Nguyen</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-Allen, Morales and
+        Nguyen</Addr1></BillAddressBlock><Email>fake.timothykline@example.com</Email><AdditionalContactRef><ContactName>-Fallback-scrubbed-BpSijUaehG</ContactName><ContactValue>fake.timothykline@example.com</ContactValue></AdditionalContactRef><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>Email</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet><CustomerRet><ListID>Fake-136fcbca8599bfc1f3f1e4ab7d55ce9</ListID><TimeCreated>2018-12-04T20:59:21+00:00</TimeCreated><TimeModified>2025-07-28T20:15:17+00:00</TimeModified><EditSequence>7904752831</EditSequence><Name>Fake-Christopher
+        Butler</Name><FullName>Fake-Christopher Butler</FullName><IsActive>true</IsActive><Sublevel>5</Sublevel><CompanyName>Fake-Lee-Nguyen</CompanyName><BillAddress><Addr1>Fake-Lee-Nguyen</Addr1></BillAddress><BillAddressBlock><Addr1>Fake-Lee-Nguyen</Addr1></BillAddressBlock><Email>fake.andrew45@example.com</Email><AdditionalContactRef><ContactName>-Fallback-scrubbed-BpSijUaehG</ContactName><ContactValue>fake.andrew45@example.com</ContactValue></AdditionalContactRef><Balance>6.70</Balance><TotalBalance>6.70</TotalBalance><SalesTaxCodeRef><ListID>Fake-a210fbc5c8a858312d83f799d12f2e1</ListID><FullName>Fak</FullName></SalesTaxCodeRef><JobStatus>None</JobStatus><PreferredDeliveryMethod>Email</PreferredDeliveryMethod><CurrencyRef><ListID>Fake-6c91331cc01abdfe9b88fcfed004a61</ListID><FullName>Fake-Robert
+        King</FullName></CurrencyRef></CustomerRet></CustomerQueryRs></QBXMLMsgsRs></QBXML>"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jul 2026 21:35:12 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Amz-Cf-Pop:
+      - GRU1-P5
+      - GRU1-P9
+      X-Cache:
+      - Miss from cloudfront
+      content-length:
+      - '39771'
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1
